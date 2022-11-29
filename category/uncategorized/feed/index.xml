@@ -8,8 +8,8 @@
 	>
 
 <channel>
-	<title>Intro to becoming an AI ninja</title>
-	<atom:link href="http://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
+	<title>Uncategorized &#8211; Intro to becoming an AI ninja</title>
+	<atom:link href="http://rettend.github.io/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
 	<link>http://rettend.github.io</link>
 	<description></description>
 	<lastBuildDate>Tue, 29 Nov 2022 18:06:25 +0000</lastBuildDate>
@@ -22,7 +22,7 @@
 
 <image>
 	<url>http://rettend.github.io/wp-content/uploads/2022/11/ninja-cat_1f431-200d-1f464.png</url>
-	<title>Intro to becoming an AI ninja</title>
+	<title>Uncategorized &#8211; Intro to becoming an AI ninja</title>
 	<link>http://rettend.github.io</link>
 	<width>32</width>
 	<height>32</height>
