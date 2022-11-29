@@ -12,7 +12,7 @@
 	<atom:link href="http://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>http://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Tue, 29 Nov 2022 18:06:25 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 29 Nov 2022 20:44:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -37,8 +37,10 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">http://rettend.github.io/?p=29</guid>
 
-					<description><![CDATA[]]></description>
-										<content:encoded><![CDATA[]]></content:encoded>
+					<description><![CDATA[a]]></description>
+										<content:encoded><![CDATA[
+<p>a</p>
+]]></content:encoded>
 					
 					<wfw:commentRss>http://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
