@@ -9,10 +9,10 @@
 
 <channel>
 	<title>Intro to becoming an AI ninja</title>
-	<atom:link href="https://github.com/Rettend/rettend.github.io/feed/" rel="self" type="application/rss+xml" />
-	<link>https://github.com/Rettend/rettend.github.io</link>
+	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
+	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Mon, 05 Dec 2022 19:44:54 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Dec 2022 20:49:05 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,16 +21,20 @@
 	<generator>https://wordpress.org/?v=6.1.1</generator>
 	<item>
 		<title>It&#8217;s 2022 and you&#8217;re in the future</title>
-		<link>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/</link>
-					<comments>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/#respond</comments>
+		<link>https://rettend.github.io/2022/11/29/future/</link>
+					<comments>https://rettend.github.io/2022/11/29/future/#respond</comments>
 		
 		<dc:creator><![CDATA[root]]></dc:creator>
 		<pubDate>Tue, 29 Nov 2022 16:47:13 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">https://github.com/Rettend/rettend.github.io/?p=29</guid>
+		<guid isPermaLink="false">https://rettend.github.io/?p=29</guid>
 
 					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model.Papi szeretne valamit mondani: Okay szóval a Hugging Face a Software 2.0 GitHub, és egy nagyon [&#8230;]]]></description>
 										<content:encoded><![CDATA[
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/11/stick-ninja-waving-2.png" alt="" class="wp-image-16" width="256" height="256"/></figure>
+
+
+
 <p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta:</p>
 
 
@@ -40,7 +44,7 @@
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Machine learning for developers with GitHub and Hugging Face - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/qd19W227W6c?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" title="Machine learning for developers with GitHub and Hugging Face - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/qd19W227W6c?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div></figure>
 
 
@@ -76,20 +80,20 @@
 <p class="has-small-font-size">És akkor telepítés</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/feed/</wfw:commentRss>
+					<wfw:commentRss>https://rettend.github.io/2022/11/29/future/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Winter is not coming</title>
-		<link>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/</link>
-					<comments>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/#respond</comments>
+		<link>https://rettend.github.io/2022/09/29/ai-winter/</link>
+					<comments>https://rettend.github.io/2022/09/29/ai-winter/#respond</comments>
 		
 		<dc:creator><![CDATA[root]]></dc:creator>
 		<pubDate>Thu, 29 Sep 2022 21:04:02 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">https://github.com/Rettend/rettend.github.io/?p=1</guid>
+		<guid isPermaLink="false">https://rettend.github.io/?p=1</guid>
 
 					<description><![CDATA[Elsőnek is pár dologgal tisztában kell lenned. És azok előtt is talán az AI fogalmával. &#8220;AI is whatever hasn&#8217;t been done yet.&#8221; — Larry Tesler Igen.. ez egy nagyon félreértett ágazat, olyannyira hogy már nem is merik definiálni. Biztosan hallottál róla már valamit, hogy a meg b és hogy mennyire nagy dolog. És pont ezért [&#8230;]]]></description>
 										<content:encoded><![CDATA[
@@ -103,7 +107,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://github.com/Rettend/rettend.github.io/wp-content/uploads/2022/11/stick-ninja-no-comment-2.png" alt="" class="wp-image-17" width="257" height="257"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/11/stick-ninja-no-comment-2.png" alt="" class="wp-image-17" width="257" height="257"/></figure>
 
 
 
@@ -115,7 +119,7 @@
 
 
 
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://github.com/Rettend/rettend.github.io/wp-content/uploads/2022/11/AI_ML_DL_circles-2.png" alt="" class="wp-image-41" width="473" height="488"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/11/AI_ML_DL_circles-2.png" alt="" class="wp-image-41" width="473" height="488"/></figure>
 
 
 
@@ -149,10 +153,10 @@
 
 
 
-<p class="has-small-font-size">Következő poszt: <a href="https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/" data-type="post" data-id="29">It’s 2022 and you’re in the future</a></p>
+<p class="has-small-font-size">Következő poszt: <a href="https://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/" data-type="post" data-id="29">It’s 2022 and you’re in the future</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
+					<wfw:commentRss>https://rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
