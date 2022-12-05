@@ -9,99 +9,133 @@
 
 <channel>
 	<title>Intro to becoming an AI ninja</title>
-	<atom:link href="http://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
-	<link>http://rettend.github.io</link>
+	<atom:link href="https://github.com/Rettend/rettend.github.io/feed/" rel="self" type="application/rss+xml" />
+	<link>https://github.com/Rettend/rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Tue, 29 Nov 2022 20:44:39 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Dec 2022 19:44:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.1.1</generator>
-
-<image>
-	<url>http://rettend.github.io/wp-content/uploads/2022/11/ninja-cat_1f431-200d-1f464.png</url>
-	<title>Intro to becoming an AI ninja</title>
-	<link>http://rettend.github.io</link>
-	<width>32</width>
-	<height>32</height>
-</image> 
 	<item>
 		<title>It&#8217;s 2022 and you&#8217;re in the future</title>
-		<link>http://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/</link>
-					<comments>http://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/#respond</comments>
+		<link>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/</link>
+					<comments>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/#respond</comments>
 		
 		<dc:creator><![CDATA[root]]></dc:creator>
 		<pubDate>Tue, 29 Nov 2022 16:47:13 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">http://rettend.github.io/?p=29</guid>
+		<guid isPermaLink="false">https://github.com/Rettend/rettend.github.io/?p=29</guid>
 
-					<description><![CDATA[a]]></description>
+					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model.Papi szeretne valamit mondani: Okay szóval a Hugging Face a Software 2.0 GitHub, és egy nagyon [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<p>a</p>
+<p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta:</p>
+
+
+
+<p class="has-small-font-size"><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f917.png" alt="🤗" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Hugging Face, GitHub Copilot és a Transformer model.<br>Papi szeretne valamit mondani:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Machine learning for developers with GitHub and Hugging Face - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/qd19W227W6c?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p class="has-small-font-size">Okay szóval a Hugging Face a Software 2.0 GitHub, és egy nagyon hasznos hely az alkalmazás-fejlesztéshez, bár még csak kezdeti fázisban van és pl vision terén nem túl nagy segítség.</p>
+
+
+
+<p class="has-small-font-size">Térjünk rá a Copilot-ra. Remember <a rel="noreferrer noopener" href="https://miro.medium.com/max/750/1*7aTCueMW8oBRiqkyobunVA.webp" target="_blank">gradient descent</a>? This is him now.<br>Ha még semmit se hallottál volna róla, akkor lényegében olyan mint az IntelliSense, csak sokkal több, egy Smart Ctrl C + Ctrl V. A következő egy nagyon hosszú 8 perc lesz Im sorry.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="How GitHub Copilot can impact developer happiness - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/jr38-yiTr8k?list=PL0lo9MOBetEGWpxPIXR8I46O-HHV7JbrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p class="has-small-font-size">&#8220;De ha ez megír helyettem mindent akkor az miért jó?&#8221;<br>Okay okay Guido van Rossum is szeretne valamit mondani:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Guido van Rossum on GitHub Copilot: It helps take care of the boring stuff | Lex Fridman" width="500" height="281" src="https://www.youtube.com/embed/_KjSkGgaJ1k?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p class="has-small-font-size">Az utolsó amit el szeretnék mondani mielőtt rátérünk a fincsi részre, hogy ez  a Software 2.0 felé az első lépés, és körülbelül olyan mint amikor mindenki (illetve csak nagyon kevés hozzáértő ember) még low-level progi nyelveket használt. Majd mikor kezdtek megjelenni a high-level programozási nyelvek, akkor bizonyára hasonló dolog merülhetett fel sokakban, hogy &#8220;akkor most mindenki fog tudni programozni és nem lesz munkánk?&#8221; ami helyett pont az ellenkezője történt, ugyan ez az új absztrakció lehetővé, hogy rengetegen elkezdjék a programozást, még annál is több munkahely jött létre.</p>
+
+
+
+<p class="has-small-font-size">És akkor telepítés</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>http://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/feed/</wfw:commentRss>
+					<wfw:commentRss>https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
-		<title>Winter is not comming</title>
-		<link>http://rettend.github.io/2022/09/29/ai-winter/</link>
-					<comments>http://rettend.github.io/2022/09/29/ai-winter/#respond</comments>
+		<title>Winter is not coming</title>
+		<link>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/</link>
+					<comments>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/#respond</comments>
 		
 		<dc:creator><![CDATA[root]]></dc:creator>
 		<pubDate>Thu, 29 Sep 2022 21:04:02 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">http://rettend.github.io/?p=1</guid>
+		<guid isPermaLink="false">https://github.com/Rettend/rettend.github.io/?p=1</guid>
 
 					<description><![CDATA[Elsőnek is pár dologgal tisztában kell lenned. És azok előtt is talán az AI fogalmával. &#8220;AI is whatever hasn&#8217;t been done yet.&#8221; — Larry Tesler Igen.. ez egy nagyon félreértett ágazat, olyannyira hogy már nem is merik definiálni. Biztosan hallottál róla már valamit, hogy a meg b és hogy mennyire nagy dolog. És pont ezért [&#8230;]]]></description>
 										<content:encoded><![CDATA[
-<p class="wp-elements-aea800f70d995d2d6b0da2185e3a4c1a has-link-color">Elsőnek is pár dologgal tisztában kell lenned. És azok előtt is talán az AI fogalmával.</p>
+<p class="wp-elements-8cb8aa7c2d304695e98e941c7c658f10 has-link-color has-small-font-size">Elsőnek is pár dologgal tisztában kell lenned. És azok előtt is talán az AI fogalmával.</p>
 
 
 
-<blockquote class="wp-block-quote">
-<p>&#8220;AI is whatever hasn&#8217;t been done yet.&#8221;</p>
+<blockquote class="wp-block-quote has-small-font-size">
+<p class="has-small-font-size">&#8220;AI is whatever hasn&#8217;t been done yet.&#8221;</p>
 <cite>— Larry Tesler</cite></blockquote>
 
 
 
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="http://rettend.github.io/wp-content/uploads/2022/11/stick-ninja-no-comment.png" alt="" class="wp-image-15" width="257" height="257"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://github.com/Rettend/rettend.github.io/wp-content/uploads/2022/11/stick-ninja-no-comment-2.png" alt="" class="wp-image-17" width="257" height="257"/></figure>
 
 
 
-<p class="wp-elements-c5a731a3d678d62f265386f2d7fe5b95 has-link-color">Igen.. ez egy nagyon félreértett ágazat, olyannyira hogy már nem is merik definiálni. Biztosan hallottál róla már valamit, hogy <em>a</em> meg <em>b</em> és hogy mennyire nagy dolog. És pont ezért most arra kérlek, hogy ezeket mind tedd kicsit félre, mert soooook dolog van amit el szeretnék mondani.</p>
+<p class="wp-elements-ff62e1b1121c6748ad2212d1fcc5be56 has-link-color has-small-font-size">Igen.. ez egy nagyon félreértett ágazat, olyannyira hogy már nem is merik definiálni. Biztosan hallottál róla már valamit, hogy <em>a</em> meg <em>b</em> és hogy mennyire nagy dolog. És pont ezért most arra kérlek, hogy ezeket mind tedd kicsit félre, mert soooook dolog van amit el szeretnék mondani.</p>
 
 
 
-<p class="wp-elements-1cc973f7aa1b8bc8e54f6d12f6a6f716 has-link-color">Szóval, az AI elég tág fogalom: <em>&#8220;Making things smart&#8221;</em>, és egy ideje már foglalkoznak vele emberek (idősebb mint az internet). Sőt, nem is ez az első, hogy nagyon felkapott lett (<a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">AI winter</a>). Ami most más az kicsit mélyebben van:</p>
+<p class="wp-elements-cbdef21b87671b6044a8a5facc8b4610 has-link-color has-small-font-size">Szóval, az AI elég tág fogalom: <em>&#8220;Making things smart&#8221;</em>, és egy ideje már foglalkoznak vele emberek (idősebb mint az internet). Sőt, nem is ez az első, hogy nagyon felkapott lett (<a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">AI winter</a>). Ami most más az kicsit mélyebben van:</p>
 
 
 
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://rettend.github.io/wp-content/uploads/2022/11/AI_ML_DL_circles.png" alt="" class="wp-image-41" width="473" height="488"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://github.com/Rettend/rettend.github.io/wp-content/uploads/2022/11/AI_ML_DL_circles-2.png" alt="" class="wp-image-41" width="473" height="488"/></figure>
 
 
 
-<p>A Deep Learning (DL) megjelenésével jött el az AI ideje.</p>
+<p class="has-small-font-size">A Deep Learning (DL) megjelenésével jött el az AI ideje.</p>
 
 
 
-<p>Amikor arról beszélünk, hogy neurálus hálózatok (NN), akkor egy DL modell architektúráját értjük ezalatt. Ez neuronok hálózata, de egy neuron igazából csak egy valós szám, ami eltérő módon befolyásol más neuronak, és amik értékét egy algoritmus állítgat. Ennyi. És ami még meglepőbb, hogy mennyire kevés eszközünk van, amik a háló &#8220;tanulását&#8221; valósítják meg: gradient descent és backpropagation. Ezekről külön fejezet lesz.</p>
+<p class="has-small-font-size">Amikor arról beszélünk, hogy neurálus hálózatok (NN), akkor egy DL modell architektúráját értjük ezalatt. Ez neuronok hálózata, de egy neuron igazából csak egy valós szám, ami eltérő módon befolyásol más neuronak, és amik értékét egy algoritmus állítgat. Ennyi. És ami még meglepőbb, hogy mennyire kevés eszközünk van, amik a háló &#8220;tanulását&#8221; valósítják meg: gradient descent és backpropagation. Ezekről külön fejezet lesz.</p>
 
 
 
-<p class="wp-elements-919fa23f697071cf65ab48751db78ec9 has-link-color">Bármikor valami nagy dolgot elért valaki &#8211; például AlphaZero legyőzi a világbajnok sakkjátékost &#8211; az emberek első reakciója az, hogy:<em> &#8220;Ez nem igazi intelligencia, csak végigpróbálgatta az összes lehetséges lépést!&#8221;</em>. Egyszóval kikerül az AI hatóköréből és akkor már érthető a fenti Larry Tesler idézet.</p>
+<p class="wp-elements-e30f457348850efb337f5a803b30866c has-link-color has-small-font-size">Bármikor valami nagy dolgot elért valaki &#8211; például AlphaZero legyőzi a világbajnok sakkjátékost &#8211; az emberek első reakciója az, hogy:<em> &#8220;Ez nem igazi intelligencia, csak végig próbálgatta az összes lehetséges lépést!&#8221;</em>. Egyszóval kikerül az AI hatóköréből és akkor már érthető a fenti Larry Tesler idézet.</p>
 
 
 
-<p>Ugyanígy minden DL modellről elmondható, hogy <em>&#8220;nem igazi intelligencia, csak matek&#8221;</em>, az a probléma viszont most, hogy az emberi agy se sokkal több ennél. A valóság az, hogy mi emberek különlegesnek érezzük magunkat, és ha valami ezt megkérdőjelezi, akkor arra hevesen reagálunk. És ennek az eredménye az <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_effect" target="_blank">AI effect</a>.</p>
+<p class="has-small-font-size">Ugyanígy minden DL modellről elmondható, hogy <em>&#8220;nem igazi intelligencia, csak matek&#8221;</em>, az a probléma viszont most, hogy az emberi agy se sokkal több ennél. A valóság az, hogy mi emberek különlegesnek érezzük magunkat, és ha valami ezt megkérdőjelezi, akkor arra hevesen reagálunk. És ennek az eredménye az <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_effect" target="_blank">AI effect</a>.</p>
 
 
 
-<p>De ha minden AI rendszer alapja csak skaláris szorzat rengeteg dimenzióban és mátrix műveletek, akkor mégis, hogy lehetséges amiről a legendás Andrej Karpathy beszélt még igazából karrierje elején:</p>
+<p class="has-small-font-size">De ha minden AI rendszer alapja csak skaláris szorzat rengeteg dimenzióban és mátrix műveletek, akkor mégis, hogy lehetséges amiről Andrej Karpathy beszélt még igazából karrierje elején:</p>
 
 
 
@@ -111,14 +145,14 @@
 
 
 
-<p>Kicsit más megközelítéssel ugyanerről egy blog: <a rel="noreferrer noopener" href="https://karpathy.medium.com/software-2-0-a64152b37c35" target="_blank">Software 2.0</a></p>
+<p class="has-small-font-size">Kicsit más megközelítéssel ugyanerről egy blog: <a rel="noreferrer noopener" href="https://karpathy.medium.com/software-2-0-a64152b37c35" target="_blank">Software 2.0</a></p>
 
 
 
-<p>Következő poszt: <a href="http://rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/" data-type="post" data-id="29">It’s 2022 and you’re in the future</a></p>
+<p class="has-small-font-size">Következő poszt: <a href="https://github.com/Rettend/rettend.github.io/2022/11/29/its-2022-and-youre-in-the-future/" data-type="post" data-id="29">It’s 2022 and you’re in the future</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>http://rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
+					<wfw:commentRss>https://github.com/Rettend/rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

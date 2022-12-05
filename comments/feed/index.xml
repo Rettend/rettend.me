@@ -8,10 +8,10 @@
 <channel>
 	<title>
 	Comments for Intro to becoming an AI ninja	</title>
-	<atom:link href="http://rettend.github.io/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>http://rettend.github.io</link>
+	<atom:link href="https://github.com/Rettend/rettend.github.io/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>https://github.com/Rettend/rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Tue, 29 Nov 2022 20:44:39 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 05 Dec 2022 19:44:54 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
