@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Tue, 06 Dec 2022 09:51:39 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 06 Dec 2022 19:30:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,36 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.1.1</generator>
 	<item>
+		<title>Transformer: Meme your way to greatness</title>
+		<link>https://rettend.github.io/2022/12/06/transformer/</link>
+					<comments>https://rettend.github.io/2022/12/06/transformer/#respond</comments>
+		
+		<dc:creator><![CDATA[asd]]></dc:creator>
+		<pubDate>Tue, 06 Dec 2022 19:27:00 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://rettend.github.io/?p=110</guid>
+
+					<description><![CDATA[funny Proudly unpowered by WordPress]]></description>
+										<content:encoded><![CDATA[
+<p>funny</p>
+
+
+
+<div class="has-global-padding is-layout-constrained wp-block-group">
+<div class="is-content-justification-space-between is-layout-flex wp-container-1 wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--40)"><p class="wp-block-site-title"><a href="https://rettend.github.io" target="_self" rel="home">Intro to becoming an AI ninja</a></p>
+
+
+<p class="has-text-align-right"> Proudly unpowered by <a rel="nofollow" href="https://wordpress.org/">WordPress</a> </p>
+</div>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://rettend.github.io/2022/12/06/transformer/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>It&#8217;s 2022 and you&#8217;re in the future</title>
 		<link>https://rettend.github.io/2022/11/29/future/</link>
 					<comments>https://rettend.github.io/2022/11/29/future/#respond</comments>
@@ -29,17 +59,21 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">https://rettend.github.io/?p=29</guid>
 
-					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model.Papi szeretne valamit mondani: Okay szóval a Hugging Face a Software 2.0 GitHub, és egy nagyon [&#8230;]]]></description>
+					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtam semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model. Papi szeretne valamit mondani: Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, [&#8230;]]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/11/stick-ninja-waving-2.png" alt="" class="wp-image-16" width="256" height="256"/></figure>
 
 
 
-<p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudok semmit. 3 dolog történt ugyanis azóta:</p>
+<p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtam semmit. 3 dolog történt ugyanis azóta:</p>
 
 
 
-<p class="has-small-font-size"><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f917.png" alt="🤗" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Hugging Face, GitHub Copilot és a Transformer model.<br>Papi szeretne valamit mondani:</p>
+<p class="has-small-font-size"><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f917.png" alt="🤗" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Hugging Face, GitHub Copilot és a Transformer model.</p>
+
+
+
+<p class="has-small-font-size">Papi szeretne valamit mondani:</p>
 
 
 
@@ -49,11 +83,15 @@
 
 
 
-<p class="has-small-font-size">Okay szóval a Hugging Face a Software 2.0 GitHub, és egy nagyon hasznos hely az alkalmazás-fejlesztéshez, bár még csak kezdeti fázisban van és pl vision terén nem túl nagy segítség.</p>
+<p>Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, és nemtom, hogy vagytok vele, de szerintem jobb a tápláléklánc legtetején lenni&#8230;</p>
 
 
 
-<p class="has-small-font-size">Térjünk rá a Copilot-ra. Remember <a rel="noreferrer noopener" href="https://miro.medium.com/max/750/1*7aTCueMW8oBRiqkyobunVA.webp" target="_blank">gradient descent</a>? This is him now.<br>Ha még semmit se hallottál volna róla, akkor lényegében olyan mint az IntelliSense, csak sokkal több, egy Smart Ctrl C + Ctrl V. A következő egy nagyon hosszú 8 perc lesz Im sorry.</p>
+<p class="has-small-font-size">Okay a Hugging Face a Software 2.0 GitHub, és egy nagyon hasznos hely az alkalmazás-fejlesztéshez, bár még csak kezdeti fázisban van, van hova fejlődnie.</p>
+
+
+
+<p class="has-small-font-size">Térjünk rá a Copilot-ra. Remember <a rel="noreferrer noopener" href="https://miro.medium.com/max/750/1*7aTCueMW8oBRiqkyobunVA.webp" target="_blank">gradient descent</a>? This is him now.<br>Ha még semmit se hallottál volna róla, akkor lényegében olyan mint az IntelliSense, csak sokkal több, egy Smart Ctrl C + Ctrl V. <br>A következő egy nagyon hosszú 8 perc lesz.</p>
 
 
 
@@ -63,7 +101,7 @@
 
 
 
-<p class="has-small-font-size">&#8220;De ha ez megír helyettem mindent akkor az miért jó?&#8221;<br>Okay okay Guido van Rossum is szeretne valamit mondani:</p>
+<p class="has-small-font-size">&#8220;De ha ez megír helyettem mindent akkor az miért jó?&#8221;<br>Guido van Rossum (creator of Python):</p>
 
 
 
@@ -73,11 +111,183 @@
 
 
 
-<p class="has-small-font-size">Az utolsó amit el szeretnék mondani mielőtt rátérünk a fincsi részre, hogy ez  a Software 2.0 felé az első lépés, és körülbelül olyan mint amikor mindenki (illetve csak nagyon kevés hozzáértő ember) még low-level progi nyelveket használt. Majd mikor kezdtek megjelenni a high-level programozási nyelvek, akkor bizonyára hasonló dolog merülhetett fel sokakban, hogy &#8220;akkor most mindenki fog tudni programozni és nem lesz munkánk?&#8221; ami helyett pont az ellenkezője történt, ugyan ez az új absztrakció lehetővé, hogy rengetegen elkezdjék a programozást, még annál is több munkahely jött létre.</p>
+<p class="has-small-font-size">Az utolsó amit el szeretnék mondani mielőtt rátérünk a fincsi részre, hogy ez  a Software 2.0 felé az első lépés, és körülbelül olyan mint amikor mindenki (illetve csak nagyon kevés hozzáértő ember) még low-level progi nyelveket használt. Majd mikor kezdtek megjelenni a high-level programozási nyelvek, akkor bizonyára hasonló dolog merülhetett fel sokakban, hogy &#8220;akkor most mindenki fog tudni programozni és nem lesz munkánk?&#8221;. Ehelyett pont az ellenkezője történt: ugyan ez az új absztrakció szint lehetővé tette, hogy rengetegen elkezdjék a programozást, még annál is több munkahely jött létre.</p>
 
 
 
-<p class="has-small-font-size">És akkor telepítés</p>
+<p class="has-small-font-size">És akkor jöjjön a telepítés. A Copilot alapból fizetős, de van egy kis hack arra: diákoknak ingyenes. <a rel="noreferrer noopener" href="https://education.github.com/pack" target="_blank">Itt a link</a>, ahol egy matricás diákigazolványt vagy valamit kell befotózni és még egy csomó más cuccot is adnak (pl. GitHub Pro). Ezután a Visual Studio és/vagy a VS Code <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noreferrer noopener">extension</a>-t kell letöltenünk és használhatjuk is.<br>Egyszerű kezelni is, de rá kell jönni, hogy miért azt csinálja, amit éppen csinál, és erre a legjobb ha szimplán elkezdjük használni bármikor is programozunk. Itt most azért részletesebben is megnézzük.</p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/thanks-copilot-1.png" alt="" class="wp-image-89" width="526" height="380"/><figcaption class="wp-element-caption">GitHub Copilot being very useful</figcaption></figure>
+
+
+
+<p>Elsőnek is, amikor elkezdünk gépelni, akkor halványan megjelenik egy javaslat Copilot-tól, amit TAB-al tudjuk elfogadni. Ha rávisszük az egeret erre a szövegre, akkor további lehetőségeket is mutat. </p>
+
+
+
+<p>Itt megpróbáljuk átvenni egy AI modell gondolkodását, majd a következő<br>fejezetben méég egy lépcsőfokkal lennebb megyünk. Na de ássuk is bele magunkat, mit tud és mit nem, valamint, hogy már milyen újítások várhatók rá.</p>
+
+
+
+<p class="has-tertiary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-right:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);margin-left:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">A Copilot egy OpenAI által összerakott modellre épül, ami a <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a> (Generative Pre-trained <strong>Transformer</strong>). Ez egy hatalmas transformer modell, amit főleg az interneten traineltek (mi baj lehetne). A papírjában (<a rel="noreferrer noopener" href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>) egy csomó név fel van tűntetve, akik bemutatják, hogy egy ilyen hatalmas modellel elég ha párszor lát az egy információt, már úgy is tanulni tud belőle (few-shot learning). Ami miatt nagy dolog az az, hogy nagyon jól &#8220;megérti&#8221; az írott szövegeket és nagyon hihető válaszokat tud generálni. Ez azonban ugyanúgy csak egy language model, ezért az egyetlen dolog, ami őt érdekli, hogy ha kap egy szöveges inputot, akkor mi az ami a legvalószínűbb, hogy ezeket követi: ha van 1000 karakter, akkor mi az 1001-edik és az 1002-edik. Ennyi. Ám ezzel hihetetlenül messze el lehet jutni, valamint a mögötte rejlő transformer architektúrának köszönhetően (a Transformerről  szól a következő fejezet) képes a megfelelő szavakra nagyobb figyelmet fordítani (attention mechanics). Így nemcsak, hogy a nyelvtani szerkezetre tud rájönni és helyes szavakat generálni, hanem ezt érthetően, összefüggően és nagyon sok nyelven.<br><br>Ebből származik a <a rel="noreferrer noopener" href="https://openai.com/blog/openai-codex/" target="_blank">Codex</a>, amivel egy lépéssel tovább mentek, és a natural language mellett, GitHub-on elérhető milliárd sornyi nyilvános kódon tanult. Így azon túl, hogy megérti az emberi nyelvet, már a programozási nyelveken is tud (szintaktikailag helyes kódot tud generálni) és ezek között könnyedén fordít! És ez az amire a Copilot épül, valamint látni fogjuk, hogy a GPT-3 limitációit is magával hozza.</p>
+
+
+
+<p>De mit is érünk azzal, hogy érti a szövegeket? Egyszerű: kommentek. A legfeltűnőbb funkciója, hogy ha leírjuk, hogy mit szeretnénk csinálni, akkor ahhoz feldobja a kódot.</p>
+
+
+
+<div class="has-global-padding is-layout-constrained wp-block-group">
+<div class="is-layout-flex wp-container-6 wp-block-columns">
+<div class="is-layout-flow wp-block-column" style="flex-basis:100%">
+<figure class="is-layout-flex wp-block-gallery-3 wp-block-gallery has-nested-images columns-default is-cropped">
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="432" height="74" src="https://rettend.github.io/wp-content/uploads/2022/12/image-4.png" alt="" class="wp-image-94"/></figure>
+
+
+
+<figure class="wp-block-image size-full has-custom-border is-style-default"><img decoding="async" loading="lazy" width="691" height="138" src="https://rettend.github.io/wp-content/uploads/2022/12/image-2.png" alt="" class="wp-image-92" style="border-style:none;border-width:0px;border-radius:0px"/></figure>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/image-6.png" alt="" class="wp-image-96" width="273" height="146"/></figure>
+
+
+
+<p>A lényeg, hogy minél több contextust adjunk neki, ez lehet ugye kommenteken keresztül, de a változó és function nevek, és a kódunk maga is sokat segít. Ami egyből feltűnhet, hogy mivel csak egy listát folytat, ami szavakból és karakterekből áll, ezért figyelmen kívül hagyja azt ami az után van:</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="289" height="194" src="https://rettend.github.io/wp-content/uploads/2022/12/image-7.png" alt="" class="wp-image-97"/><figcaption class="wp-element-caption">Literálisan 2 sorral lennebb van a discord library de beimportálná még egyszer</figcaption></figure>
+
+
+
+<p>Ami miatt Smart Ctrl C + Ctrl V-nek lehet nevezi, az az, hogy a kódunkat értelmezi ami folytat, így nagyon szeret lemásolni dolgokat úgy, hogy a megfelelő változóneveket használja. De képes a már létrehozott function-k helyes felhasználására is.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1087" height="191" src="https://rettend.github.io/wp-content/uploads/2022/12/image-8.png" alt="" class="wp-image-98"/><figcaption class="wp-element-caption">Elég template kód lett, a footer szövege szó szerint &#8220;Footer text&#8221;</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/image-9.png" alt="" class="wp-image-99" width="740" height="214"/><figcaption class="wp-element-caption">wow a szoba ID-ja pontosan az hogy &#8220;channel_id&#8221;</figcaption></figure>
+
+
+
+<p>Azonban ez egy language model még mindig, így még valamit nem csinál, nem ellenőrzi, hogy a generált kód valóban lefutna-e, sőt Copilot-ot az se érdekli, hogy nincs is olyan attachment amit használni akar:</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="809" height="403" src="https://rettend.github.io/wp-content/uploads/2022/12/image-10.png" alt="" class="wp-image-100"/><figcaption class="wp-element-caption">1234567890 <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></figcaption></figure>
+
+
+
+<p>Egyszerűen az izgatja, hogy sok olyan üzenetet látott, ahol egy képet is raktak hozzá és egy kép id-ja valami ilyen formában van. Arról nem is beszélünk, hogy ez a régi módja egy discord bot írásának, azóta már újraírták az egész library-t, de ezzel van tele a GitHub és nem is voltunk túl konkrétak. Hagyom is a botos példát.</p>
+
+
+
+<p>Viszont a Copilot nem ennyire ostoba, főleg ha esetleg egy megkezdett projekthez használjuk, ugyanis képes komplex mintákat folytatni, pl. átvenni a használt coding style-unkat is (pl. camelCase-t vagy PascalCase-t használtunk egy fajta változóhoz). Sőt nem csak azt a fájlt nézi amiben dolgozunk, hanem megpróbál minél többet (ami fájlok meg vannak nyitva, akkor azokat nagyobb eséllyel figyeli).</p>
+
+
+
+<p>Az emberi és programozási nyelvek között a másik irányban is tud dolgozni: és lényegében egy kódrészletet tetszés szerint el tud magyarázni nekünk.</p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1079" height="289" src="https://rettend.github.io/wp-content/uploads/2022/12/image-11.png" alt="" class="wp-image-101"/><figcaption class="wp-element-caption">jézusom APL!?</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1058" height="271" src="https://rettend.github.io/wp-content/uploads/2022/12/image-12.png" alt="" class="wp-image-102"/></figure>
+
+
+
+<p>Oh és persze így tudunk nyelvek között is fordítani.</p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/image-14.png" alt="" class="wp-image-104" width="521" height="365"/><figcaption class="wp-element-caption">változónevek maradtak</figcaption></figure>
+
+
+
+<p>És lassan kezdünk áttérni a Copilot jövőjére, de előtte még egy érdekes videó:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Building with Codex Fireside Chat - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/nrW0O0ViipI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>Szóval Copilot képes lesz debug-olni és ha ki tudja találni, hogy mit akarunk (pl. json fájl egy class-ba írása), akkor tudja tesztelni, hogy azt kapjuk-e amit vártunk (pl. ha nem csak kötőjellel, hanem ponttal is el vannak választva a dátumok, akkor lekezelni ezt).</p>
+
+
+
+<p>És az első része ennek látható is, kijött ugyanis már egy mások vs code extension: <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-labs" target="_blank">GitHub Copilot Labs</a>, ahol ezeket tesztelhetjük. 3 fül van: explain, language translation és brushes. Az utolsóval a kód generálásán túl a meglévő kódbázisunk módosítása is lehetséges.</p>
+
+
+
+<div class="is-layout-flex wp-container-10 wp-block-columns">
+<div class="is-layout-flow wp-block-column">
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="345" height="677" src="https://rettend.github.io/wp-content/uploads/2022/12/image-16.png" alt="" class="wp-image-106"/></figure>
+</div>
+
+
+
+<div class="is-layout-flow wp-block-column">
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/image-17.png" alt="" class="wp-image-107" width="368" height="419"/></figure>
+</div>
+</div>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="493" height="187" src="https://rettend.github.io/wp-content/uploads/2022/12/image-18.png" alt="" class="wp-image-108"/></figure>
+
+
+
+<p>Egyébként ezek messze nem működnek tökéletesen, de adhatunk visszajelzést (mondjuk nem tudom mit kezdenének azzal, hogy én SQL query-ket fordíttatok le vele css-re vagy a package.json tartalmát vue-ba jahmi).</p>
+
+
+
+<p>Copilot és a Copilot Labs a két elérhető prototípus eddig, de a GitHub egy hadseregnyi Copilot-ot tervez még készíteni, amiket a <a rel="noreferrer noopener" href="https://githubnext.com/" target="_blank">GitHub Next</a> oldalon gyűjtenek. Érdemes lehet nézni ezt az oldalt, mivel rengeteg kép is van hozzájuk, és más GitHub feature-öket is tartalmaz. A legérdekesebbeket összeszedem ide:</p>
+
+
+
+<ul class="has-small-font-size">
+<li>TestPilot: képes generálni teszteket kód és leírás alapján, majd az eredmény alapján javítani azokon</li>
+
+
+
+<li>GitHub Copilot-nak az egész mappánk elérhetővé tétele: ehhez az kell, hogy ki tudja választani, hogy mit vegyen figyelembe, hogy ne vegyen igénybe több időt</li>
+
+
+
+<li>Copilot Radar: turbo go-to-definition, mivel nem mindig a definíció érdekel minket hanem kommentek, vagy hasonló előfordulások ahol ugyanazt használjuk</li>
+
+
+
+<li>Copilot CLI: parancssoros Copilot, szavakkal leírhatod amit szeretnél és parancsokká fordítja</li>
+</ul>
+
+
+
+<p>Következő poszt: <a href="https://rettend.github.io/2022/12/6/transformer/">Transformer: Meme your way to greatness</a></p>
+
+
+
+<div class="has-global-padding is-layout-constrained wp-block-group">
+<div class="is-content-justification-space-between is-layout-flex wp-container-11 wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--40)"><p class="wp-block-site-title"><a href="https://rettend.github.io" target="_self" rel="home">Intro to becoming an AI ninja</a></p>
+
+
+<p class="has-text-align-right"> Proudly unpowered by <a rel="nofollow" href="https://wordpress.org/">WordPress</a> </p>
+</div>
+</div>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/11/29/future/feed/</wfw:commentRss>
@@ -154,6 +364,16 @@
 
 
 <p class="has-small-font-size">Következő poszt: <a href="https://rettend.github.io/2022/11/29/future/" data-type="post">It’s 2022 and you’re in the future</a></p>
+
+
+
+<div class="has-global-padding is-layout-constrained wp-block-group">
+<div class="is-content-justification-space-between is-layout-flex wp-container-13 wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--40)"><p class="wp-block-site-title"><a href="https://rettend.github.io" target="_self" rel="home">Intro to becoming an AI ninja</a></p>
+
+
+<p class="has-text-align-right"> Proudly unpowered by <a rel="nofollow" href="https://wordpress.org/">WordPress</a> </p>
+</div>
+</div>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
