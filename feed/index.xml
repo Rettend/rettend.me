@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Tue, 06 Dec 2022 19:30:23 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Dec 2022 08:10:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -78,7 +78,7 @@
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="Machine learning for developers with GitHub and Hugging Face - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/qd19W227W6c?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=qd19W227W6c
 </div></figure>
 
 
@@ -96,7 +96,7 @@
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="How GitHub Copilot can impact developer happiness - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/jr38-yiTr8k?list=PL0lo9MOBetEGWpxPIXR8I46O-HHV7JbrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=jr38-yiTr8k&#038;list=PL0lo9MOBetEGWpxPIXR8I46O-HHV7JbrU&#038;index=6
 </div></figure>
 
 
@@ -106,7 +106,7 @@
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="Guido van Rossum on GitHub Copilot: It helps take care of the boring stuff | Lex Fridman" width="500" height="281" src="https://www.youtube.com/embed/_KjSkGgaJ1k?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=_KjSkGgaJ1k
 </div></figure>
 
 
@@ -119,7 +119,7 @@
 
 
 
-<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/thanks-copilot-1.png" alt="" class="wp-image-89" width="526" height="380"/><figcaption class="wp-element-caption">GitHub Copilot being very useful</figcaption></figure>
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/thanks-copilot-1.png" alt="" class="wp-image-89" width="526" height="380"/><figcaption class="wp-element-caption"><sup>GitHub Copilot being very useful</sup></figcaption></figure>
 
 
 
@@ -163,7 +163,11 @@
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="289" height="194" src="https://rettend.github.io/wp-content/uploads/2022/12/image-7.png" alt="" class="wp-image-97"/><figcaption class="wp-element-caption">Literálisan 2 sorral lennebb van a discord library de beimportálná még egyszer</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="289" height="194" src="https://rettend.github.io/wp-content/uploads/2022/12/image-7.png" alt="" class="wp-image-97"/></figure>
+
+
+
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:-8px;font-size:14px">Literálisan 2 sorral lennebb van a discord library de beimportálná még egyszer</p>
 
 
 
@@ -220,7 +224,7 @@
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="Building with Codex Fireside Chat - Universe 2022" width="500" height="281" src="https://www.youtube.com/embed/nrW0O0ViipI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=nrW0O0ViipI
 </div></figure>
 
 
@@ -278,16 +282,6 @@
 
 
 <p>Következő poszt: <a href="https://rettend.github.io/2022/12/6/transformer/">Transformer: Meme your way to greatness</a></p>
-
-
-
-<div class="has-global-padding is-layout-constrained wp-block-group">
-<div class="is-content-justification-space-between is-layout-flex wp-container-11 wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--40)"><p class="wp-block-site-title"><a href="https://rettend.github.io" target="_self" rel="home">Intro to becoming an AI ninja</a></p>
-
-
-<p class="has-text-align-right"> Proudly unpowered by <a rel="nofollow" href="https://wordpress.org/">WordPress</a> </p>
-</div>
-</div>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/11/29/future/feed/</wfw:commentRss>
@@ -364,16 +358,6 @@
 
 
 <p class="has-small-font-size">Következő poszt: <a href="https://rettend.github.io/2022/11/29/future/" data-type="post">It’s 2022 and you’re in the future</a></p>
-
-
-
-<div class="has-global-padding is-layout-constrained wp-block-group">
-<div class="is-content-justification-space-between is-layout-flex wp-container-13 wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--40)"><p class="wp-block-site-title"><a href="https://rettend.github.io" target="_self" rel="home">Intro to becoming an AI ninja</a></p>
-
-
-<p class="has-text-align-right"> Proudly unpowered by <a rel="nofollow" href="https://wordpress.org/">WordPress</a> </p>
-</div>
-</div>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/09/29/ai-winter/feed/</wfw:commentRss>
