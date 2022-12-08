@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Thu, 08 Dec 2022 22:25:36 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 22:47:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -493,13 +493,13 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">https://rettend.github.io/?p=29</guid>
 
-					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtam semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model. Papi szeretne valamit mondani: Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, [&#8230;]]]></description>
+					<description><![CDATA[Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtok semmit. 3 dolog történt ugyanis azóta: 🤗 Hugging Face, GitHub Copilot és a Transformer model. Papi szeretne valamit mondani: Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, [&#8230;]]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/11/stick-ninja-waving-2.png" alt="" class="wp-image-16" width="256" height="256"/></figure>
 
 
 
-<p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtam semmit. 3 dolog történt ugyanis azóta:</p>
+<p class="has-small-font-size">Amikor elsőnek olvastam el a Software 2.0-s blogposztot, úgy voltam vele, hogy &#8220;Aha, majd 10 év múlva visszatérhetünk rá.&#8221; Nos, hamar kiderült, hogy nem tudtok semmit. 3 dolog történt ugyanis azóta:</p>
 
 
 
@@ -517,7 +517,7 @@
 
 
 
-<p>Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, és nemtom, hogy vagytok vele, de szerintem jobb a tápláléklánc legtetején lenni&#8230;</p>
+<p>Szóval a szoftver eszi a Földet, az AI pedig a szoftvert, és nemtom, hogy vagy vele, de szerintem jobb a tápláléklánc legtetején lenni&#8230;</p>
 
 
 
@@ -801,7 +801,7 @@
 
 
 
-<p class="wp-elements-cbdef21b87671b6044a8a5facc8b4610 has-link-color has-small-font-size">Szóval, az AI elég tág fogalom: <em>&#8220;Making things smart&#8221;</em>, és egy ideje már foglalkoznak vele emberek (idősebb mint az internet). Sőt, nem is ez az első, hogy nagyon felkapott lett (<a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">AI winter</a>). Ami most más az kicsit mélyebben van:</p>
+<p class="wp-elements-91f51c6edeb2656cd1598d424bf75ff8 has-link-color has-small-font-size">Szóval, az AI elég tág fogalom: <em>&#8220;Making things smart&#8221;</em>, és egy ideje már foglalkoznak vele emberek (idősebb mint az internet). Sőt, nem is ez az első, hogy nagyon felkapott lett (<a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">AI winter</a>). Ami most más az kicsit mélyebben van:</p>
 
 
 
@@ -813,11 +813,33 @@
 
 
 
-<p class="has-small-font-size">Amikor arról beszélünk, hogy neurálus hálózatok (NN), akkor egy DL modell architektúráját értjük ezalatt. Ez neuronok hálózata, de egy neuron igazából csak egy valós szám, ami eltérő módon befolyásol más neuronak, és amik értékét egy algoritmus állítgat. Ennyi. És ami még meglepőbb, hogy mennyire kevés eszközünk van, amik a háló &#8220;tanulását&#8221; valósítják meg: gradient descent és backpropagation. Ezekről külön fejezet lesz.</p>
+<p class="has-small-font-size">Amikor arról beszélünk, hogy neurálus hálózatok (NN), akkor egy DL modell architektúráját értjük ezalatt. Ez neuronok hálózata, de egy neuron igazából csak egy valós számot ad ki magából, ami eltérő módon befolyásol más neuronak, és amik értékét egy algoritmus állítgat. Ennyi. Nagyon nagy vonalakban. És ami még meglepőbb, hogy mennyire kevés eszközünk van, amik a hálózat &#8220;tanulását&#8221; valósítják meg: gradient descent és backpropagation. Ezekről az utolsó fejezetben. Amiket ha már megemlítettem, akkor a fejezetek lényege:</p>
 
 
 
-<p class="wp-elements-e30f457348850efb337f5a803b30866c has-link-color has-small-font-size">Bármikor valami nagy dolgot elért valaki &#8211; például AlphaZero legyőzi a világbajnok sakkjátékost &#8211; az emberek első reakciója az, hogy:<em> &#8220;Ez nem igazi intelligencia, csak végig próbálgatta az összes lehetséges lépést!&#8221;</em>. Egyszóval kikerül az AI hatóköréből és akkor már érthető a fenti Larry Tesler idézet.</p>
+<ol class="has-small-font-size">
+<li>Kíváncsiság felkeltése</li>
+
+
+
+<li>Gondolkodjunk úgy mint egy modell Copilot-tal</li>
+
+
+
+<li>Transformer-rel a hálózat architektúrák működése felszínesen</li>
+
+
+
+<li>A legmélyebb szinten eggyé válunk a hálózatokkal és további anyagok</li>
+</ol>
+
+
+
+<p>Tehát mindegyikben ugyanazt fogjuk végignézni csak egy szinttel lennebb mindig. Na de visszatérve:</p>
+
+
+
+<p class="wp-elements-038a6fce738c92f38d08e62c521f698c has-link-color has-small-font-size">Bármikor valami nagy dolgot ért el valaki &#8211; például AlphaZero legyőzi a világbajnok sakkjátékost &#8211; az emberek első reakciója az, hogy:<em> &#8220;Ez nem igazi intelligencia, csak végig próbálgatta az összes lehetséges lépést!&#8221;</em>. Egyszóval kikerül az AI hatóköréből és akkor már érthető a fenti Larry Tesler idézet.</p>
 
 
 
