@@ -124,7 +124,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>A Transformer-ig vezető út egy egyszerű problémával kezdődik: sequence transduction. Ami lényegében <strong>transzformációt </strong>jelent, mégpedig olyan feladatoknál, ahol egy sorozatot egy teljesen más szerkezetű sorozattá szeretnénk átalakítani, de úgy, hogy megőrizze az információtartalmát. Egyszerű példa rá a gépi fordítás és a beszédfelismerés. </p>
+<p>A Transformer-ig vezető út egy egyszerű problémával kezdődik: sequence transduction. Ami lényegében <strong>transzformációt </strong>jelent, mégpedig olyan feladatoknál, ahol egy sorozatot egy teljesen más szerkezetű sorozattá szeretnénk átalakítani, de úgy, hogy megőrizze az információtartalmát. Egyszerű példa erre a gépi fordítás és a beszédfelismerés. </p>
 
 
 
@@ -172,7 +172,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Hogy jobban megértsük, képzeljük el, hogy &#8220;kicsomagoljuk&#8221; a hurkot. Így lényegében több FNN (Feedforward Neural Network), ami a legegyszerűbb fajta neurális hálózat, így nincs külön mit magyarázni rajta.</p>
+<p>Hogy jobban megértsük, képzeljük el, hogy &#8220;kicsomagoljuk&#8221; azt a hurkot. Így lényegében több FNN (Feedforward Neural Network), ami a legegyszerűbb neurális hálózat fajta, így nincs külön mit magyarázni rajta.</p>
 
 
 
@@ -196,19 +196,27 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="871" height="322" src="https://rettend.github.io/wp-content/uploads/2022/12/image-35.png" alt="" class="wp-image-176"><figcaption class="wp-element-caption">RNN</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="871" height="322" src="https://rettend.github.io/wp-content/uploads/2022/12/image-35.png" alt="" class="wp-image-176"></figure>
 
 
 
-<p>Az LSTM megoldása erre az, hogy megpróbálja eldönteni, hogy mennyire érdemes megjegyezni az információt. Kívülről a két hálózat majdnem megegyezik, A lentiben azonban az előző encoder állapota (hidden state) is továbbadódik (nem csak a cell state)</p>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">RNN</p>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="865" height="348" src="https://rettend.github.io/wp-content/uploads/2022/12/image-31.png" alt="" class="wp-image-172"><figcaption class="wp-element-caption">LSTM</figcaption></figure>
+<p>Az LSTM megoldása erre az, hogy megpróbálja eldönteni, hogy mennyire érdemes megjegyezni az információt. Kívülről a két hálózat majdnem megegyezik, A lentiben azonban az előző encoder állapota (hidden state) is továbbadódik (nem csak a cell state).</p>
 
 
 
-<p>A pontos jelek egyszerűbbek mint gondolnánk: a tanh() csak -1 és 1 közé helyezi az értékeket arányosan, aztán szorzások és összeadások vannak, valamint a 3 szigmoid függvény sorrendben: a felejtést, az új információ hozzáadását, és az output-ot vezérlik. A lényeg az, hogy lehetősége van a context-nek modifikáció nélkül továbbhaladnia.</p>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="865" height="348" src="https://rettend.github.io/wp-content/uploads/2022/12/image-31.png" alt="" class="wp-image-172"></figure>
+
+
+
+<p class="has-text-align-center has-contrast-color has-text-color" style="margin-top:0px">LSTM</p>
+
+
+
+<p>A pontos jelek egyszerűbbek mint gondolnánk: a tanh() csak -1 és 1 közé helyezi az értékeket arányosan, aztán szorzások és összeadások vannak, valamint a 3 szigmoid függvény sorrendben: a felejtést, az új információ hozzáadását, és az output-ot vezérlik. A lényeg az, hogy lehetősége van a context-nek modifikáció nélkül továbbhaladnia:</p>
 
 
 
@@ -216,7 +224,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Szóval a felső út a cell state, az alsó pedig az új hidden state. Ez a két vektor közül a felső ami az addigi encoder-ek modifikációit általánosabban írja le (mivel kihagyja a szigmoid függvényeket). Míg az alsó az adott encoder döntéseit tartalmazza a kapott információ alapján. Innen jön a név: <strong>long-short</strong> term memory.</p>
+<p>Szóval a felső út a cell state útja, az alsó pedig az új hidden state-é. Ez a két vektor közül a felső ami az addigi encoder-ek modifikációit általánosabban írja le (mivel kihagyja a szigmoid függvényeket). Míg az alsó az adott encoder döntéseit tartalmazza a kapott információ alapján. Innen jön a név: <strong>long-short</strong> term memory.</p>
 
 
 
@@ -232,15 +240,23 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-24efe1c6eb254fc229e85f07ed01fa44.gif" alt="" class="wp-image-171" width="600" height="265"><figcaption class="wp-element-caption">simple RNN</figcaption></figure>
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-24efe1c6eb254fc229e85f07ed01fa44.gif" alt="" class="wp-image-171" width="600" height="265"></figure>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="600" height="263" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-3dca0e695b3011a635e23d29689d5142.gif" alt="" class="wp-image-179"><figcaption class="wp-element-caption">RNN with attention decoders</figcaption></figure>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">simple RNN</p>
 
 
 
-<p>Ennek eredményeképpen, a decoder tudja az összes szóról azt, hogy mennyire van közük ahhoz az egy szóhoz amit ő generál. És ezzel többi decoder is így van. Nézzünk egy példát, amikoris a &#8220;Je suis étudiant&#8221; mondatot szeretnénk angolra lefordítani:</p>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="600" height="263" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-3dca0e695b3011a635e23d29689d5142.gif" alt="" class="wp-image-179"></figure>
+
+
+
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">RNN with attention decoders</p>
+
+
+
+<p>Ennek eredményeképpen, a decoder tudja az összes szóról azt, hogy mennyire van közük ahhoz az egy szóhoz amit ő generál. És ezzel a többi decoder is így van. Nézzünk egy példát, amikoris egy francia mondatot szeretnénk angolra lefordítani:</p>
 
 
 
@@ -256,7 +272,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>A párhuzamosságot egy másik klasszikus architektúrával oldjuk meg. CNN-eket főleg képfelismeréshez használják, de nem kizárólag.</p>
+<p>A párhuzamosságot egy másik klasszikus architektúrával oldjuk meg. A CNN-eket egyébként főleg képfelismeréshez használják, de nem kizárólag.</p>
 
 
 
@@ -300,7 +316,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Íme a teljes architektúra:<br>Input embedding csak egyszer történik a feldolgozás előtt és a szavak számokká (igazából vektorokká) való alakítását jelenti, mégpedig úgy, hogy a hasonló jelentésű szavak a training végére egymáshoz közel lesznek, további segítséget nyújtva a modellnek. A Positional Encoding egy újabb vektor hozzáadását jelenti a szavakhoz, ami a mondatbeli helyüket hivatott tárolni.<br>Az add &amp; norm az összeadást és a normalizációt jelenti, így egyesítik a rétegek outputjait egy számmá, majd 0 és 1 közötti értékre normalizálja, hogy ne szabaduljanak el a számok közben.<br>És a végén a softmax hasonlóan a kapott értékeket 0 és 1 közé teszi, de úgy, hogy az összegük 1 legyen. Így kapunk eredményül százalékokat.</p>
+<p>Íme a teljes architektúra:<br>Input embedding csak egyszer történik a feldolgozás előtt és a szavak számokká (igazából vektorokká) való alakítását jelenti, mégpedig úgy, hogy a hasonló jelentésű szavak a training végére egymáshoz közel lesznek a vektor-térben, további segítséget nyújtva a modellnek. A Positional Encoding egy újabb vektor ad hozzá a szavakhoz, ami a mondatbeli helyüket hivatott tárolni. Szintén segítség a modellnek.<br>Az add &amp; norm az összeadást és a normalizációt jelenti, így egyesíti a rétegek outputjait egy számmá, majd 0 és 1 közötti értékre normalizálja, hogy ne szabaduljanak el a számok a folyamat közben, valamint jobb teljesítményhez vezet.<br>És a végén a softmax hasonlóan a kapott értékeket 0 és 1 közé teszi, de úgy, hogy az összegük 1 legyen. Így kapunk eredményül százalékokat.</p>
 
 
 
@@ -308,7 +324,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Míg a fejlesztett RNN hálózatunknál az attention-t az erre trainelt decoder rétegek használták fel, itt minden egyes encoder-nek és decoder-nek van egy külön self-attention rétege, ami az <strong>összes </strong>szó és a jelenlegi szó kapcsolatát elemzi. A decoder ezután az encoder attention információit is megkapja. Pontosabban az encoder látja az összes szót (a még fel nem dolgozottakat is), a decoder csak az eddigieket.</p>
+<p>Míg a fejlesztett RNN hálózatunknál az attention-t az erre trainelt decoder rétegek használták fel, itt minden egyes encoder-nek és decoder-nek van egy külön self-attention rétege, ami az <strong>összes </strong>szó és a jelenlegi szó kapcsolatát elemzi. A decoder ezután az encoder attention információit is megkapja. Pontosabban az encoder látja az összes szót (a még fel nem dolgozottakat is), a decoder csak az eddigieket (Masked).</p>
 
 
 
@@ -324,7 +340,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Oh és így minden szó párhuzamosan feldolgozható. 🤭<br>Egy kis különbség van, mivel a Transformer mátrixokat használ, azaz több vektort a kapcsolat leírására. Ez a multihead-attention. Ennek következtében minden szóra különböző &#8220;típusú&#8221; figyelmet fordítunk (azon túl, hogy különböző értékű, amit a szín erőssége jelez).</p>
+<p>Oh és így minden szó párhuzamosan feldolgozható. 🤭<br>Egy kis különbség van még a valódi működésnél, mivel a Transformer mátrixokat használ, azaz több vektort a kapcsolat leírására. Ez a multihead-attention. Ennek következtében minden szóra különböző &#8220;típusú&#8221; figyelmet fordítunk (azon túl, hogy különböző értékű, amit a szín erőssége jelez).</p>
 
 
 
@@ -340,15 +356,15 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>RNN és CNN hálózatok még egy eddig nem említett hátrányuk, hogy mindig egy adott hosszúságú input vektort igényelnek, vagy úgynevezett pre-processing műveleteket kell használni, amik átformálják az adatokat. A Transformer ezzel ellentétben jól megvan a self-attention-jével bármilyen inputtal, viszont megemlítendő, hogy ez hamar teljesítményromláshoz vezet.</p>
+<p>Az RNN és CNN hálózatok még egy eddig nem említett hátránya, hogy mindig egy adott hosszúságú input vektort igényelnek, vagy úgynevezett pre-processing műveleteket kell használni, amik átformálják az adatokat. A Transformer ezzel ellentétben jól megvan a self-attention-jével bármilyen inputtal, viszont megemlítendő, hogy ez hamar teljesítményromláshoz vezet.</p>
 
 
 
-<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem, meglepően ez a megközelítés más feladatokra is alkalmazható, sőt az összesre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé. Ide kapcsolódik <a rel="noreferrer noopener" href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson</a> poszt is.</p>
+<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem. Meglepően ez a megközelítés más feladatokra is alkalmazható, sőt a legtöbbre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé. Ide kapcsolódik a <a rel="noreferrer noopener" href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson</a> poszt is.</p>
 
 
 
-<p><br>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
+<p>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
 
 
 
@@ -358,7 +374,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>a</p>
+<p>Az AI jövőjéről még:</p>
 
 
 
@@ -368,7 +384,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Már láttuk <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvényét&#8221;</a>, miszerint kb. 2 évente megduplázódik egy területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: <a rel="noreferrer noopener" href="https://moores.samaltman.com/" target="_blank">Moore&#8217;s Law for Everything</a>. 👀</p>
+<p>Már láttuk <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvényét&#8221;</a>, miszerint kb. 2 évente megduplázódik az egységnyi területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: <a rel="noreferrer noopener" href="https://moores.samaltman.com/" target="_blank">Moore&#8217;s Law for Everything</a>. 👀</p>
 
 
 
@@ -380,7 +396,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>GPT-3 lesz az alapja nagyon sok jövőbeli modellnek. Addigis használhatjuk a <a rel="noreferrer noopener" href="https://chat.openai.com/" target="_blank">ChatGPT</a>-t! Nagyon hasznos chatbot ami képes bármit elmagyarázni. Bár ez egy side project, elég híres lett egy hét alatt az 1M user-t is átlépte, ami nem véletlen. Azontúl, hogy tényleg bármit el tud magyarázni tetszésünk szerint (és mivel GPT tudjuk hogy minden nyelven tud), sok vicces dologra is képes. Pl. nagyon szereti a fa vicceket és hát, képes <em>más</em> dolgokra is.</p>
+<p>GPT-3 lesz az alapja nagyon sok jövőbeli modellnek. Addigis használhatjuk a <a rel="noreferrer noopener" href="https://chat.openai.com/" target="_blank">ChatGPT</a>-t! Nagyon hasznos chatbot ami képes bármit elmagyarázni. Bár ez egy side project, elég híres lett és egy hét alatt az 1M user-t is átlépte, ami nem véletlen. Azontúl, hogy tényleg bármit el tud magyarázni tetszésünk szerint (és mivel GPT tudjuk hogy minden nyelven tud), sok vicces dologra is képes. Pl. nagyon szereti a fa vicceket és hát, képes <em>más</em> dolgokra is.</p>
 
 
 
@@ -414,7 +430,11 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 <div class="is-layout-flow wp-block-column" style="flex-basis:66.66%">
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="432" height="435" src="https://rettend.github.io/wp-content/uploads/2022/12/image-52.png" alt="" class="wp-image-203"><figcaption class="wp-element-caption">ő mondta</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="432" height="435" src="https://rettend.github.io/wp-content/uploads/2022/12/image-52.png" alt="" class="wp-image-203"></figure>
+
+
+
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">ő mondta</p>
 </div>
 </div>
 
@@ -424,7 +444,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Éééés valaki elhitette vele, hogy egy virtuális linux gép: <a rel="noreferrer noopener" href="https://www.engraved.blog/building-a-virtual-machine-inside/" target="_blank">Building A Virtual Machine inside ChatGPT</a>.</p>
+<p>Éééés valaki azt is elhitette vele, hogy egy virtuális gép: <a rel="noreferrer noopener" href="https://www.engraved.blog/building-a-virtual-machine-inside/" target="_blank">Building A Virtual Machine inside ChatGPT</a>.</p>
 
 
 
@@ -432,7 +452,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>A ChatGPT-vel együtt kijött a GPT-3.5, de készülődik a GPT-4 is! Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
+<p>A ChatGPT-vel együtt kijött a GPT-3.5, de készülődik a GPT-4 is!<br>Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
 
 
 
@@ -465,7 +485,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 <li>
-<strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon egy bottal használható. Korlátozottabb mint a Dall-E (nem töltődnek vissza a kreditek), de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, a szerver a 2. helyen 1M user-nél van), szóval nem kis dolog.</li>
+<strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon egy bottal használható. Korlátozottabb mint a Dall-E (nem töltődnek vissza a kreditek), de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, míg a szerver a 2. helyen 1M user-nél van), szóval nem kis dolog.</li>
 </ul>
 
 
@@ -474,7 +494,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is! Ott lehet róluk tanulni tovább.</p>
+<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is! Ott lehet a diffusion modellekről tanulni tovább.</p>
 
 
 

@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Thu, 08 Dec 2022 22:47:58 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 23:54:27 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -29,7 +29,7 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">https://rettend.github.io/?p=136</guid>
 
-					<description><![CDATA[Ez a lehető legjobb tutorial amit eddig láttam, végigmegy a matekon és python példákat hoz, valamint a lehető legeslegelejéről kezd bele.(még bővülő playlist) További oldalak: Introduction &#8211; Hugging Face Course Preface — Dive into Deep Learning Machine learning education &#160;&#124;&#160; TensorFlow CS231n Convolutional Neural Networks for Visual Recognition]]></description>
+					<description><![CDATA[Ez a lehető legjobb tutorial amit eddig láttam, végigmegy a matekon és python példákat hoz, valamint a lehető legeslegelejéről kezd bele.(még bővülő playlist) További oldalak:]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/12/stick-ninja-sword.png" alt="" class="wp-image-140" width="234" height="226"/></figure>
 
@@ -49,19 +49,21 @@
 
 
 
-<p><a rel="noreferrer noopener" href="https://huggingface.co/course/chapter1/1" target="_blank">Introduction &#8211; Hugging Face Course</a></p>
+<ul class="has-small-font-size">
+<li><a rel="noreferrer noopener" href="https://huggingface.co/course/chapter1/1" target="_blank">Introduction &#8211; Hugging Face Course</a></li>
 
 
 
-<p><a rel="noreferrer noopener" href="https://d2l.ai/chapter_preface/index.html" target="_blank">Preface — Dive into Deep Learning</a></p>
+<li><a rel="noreferrer noopener" href="https://d2l.ai/chapter_preface/index.html" target="_blank">Preface — Dive into Deep Learning</a></li>
 
 
 
-<p><a href="https://www.tensorflow.org/resources/learn-ml">Machine learning education &nbsp;|&nbsp; TensorFlow</a></p>
+<li><a href="https://www.tensorflow.org/resources/learn-ml">Machine learning education &nbsp;|&nbsp; TensorFlow</a></li>
 
 
 
-<p><a href="https://cs231n.github.io/">CS231n Convolutional Neural Networks for Visual Recognition</a></p>
+<li><a href="https://cs231n.github.io/">CS231n Convolutional Neural Networks for Visual Recognition</a></li>
+</ul>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/12/07/grind/feed/</wfw:commentRss>
@@ -123,7 +125,7 @@
 
 
 
-<p>A Transformer-ig vezető út egy egyszerű problémával kezdődik: sequence transduction. Ami lényegében <strong>transzformációt </strong>jelent, mégpedig olyan feladatoknál, ahol egy sorozatot egy teljesen más szerkezetű sorozattá szeretnénk átalakítani, de úgy, hogy megőrizze az információtartalmát. Egyszerű példa rá a gépi fordítás és a beszédfelismerés. </p>
+<p>A Transformer-ig vezető út egy egyszerű problémával kezdődik: sequence transduction. Ami lényegében <strong>transzformációt </strong>jelent, mégpedig olyan feladatoknál, ahol egy sorozatot egy teljesen más szerkezetű sorozattá szeretnénk átalakítani, de úgy, hogy megőrizze az információtartalmát. Egyszerű példa erre a gépi fordítás és a beszédfelismerés. </p>
 
 
 
@@ -171,7 +173,7 @@
 
 
 
-<p>Hogy jobban megértsük, képzeljük el, hogy &#8220;kicsomagoljuk&#8221; a hurkot. Így lényegében több FNN (Feedforward Neural Network), ami a legegyszerűbb fajta neurális hálózat, így nincs külön mit magyarázni rajta.</p>
+<p>Hogy jobban megértsük, képzeljük el, hogy &#8220;kicsomagoljuk&#8221; azt a hurkot. Így lényegében több FNN (Feedforward Neural Network), ami a legegyszerűbb neurális hálózat fajta, így nincs külön mit magyarázni rajta.</p>
 
 
 
@@ -195,19 +197,27 @@
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="871" height="322" src="https://rettend.github.io/wp-content/uploads/2022/12/image-35.png" alt="" class="wp-image-176"/><figcaption class="wp-element-caption">RNN</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="871" height="322" src="https://rettend.github.io/wp-content/uploads/2022/12/image-35.png" alt="" class="wp-image-176"/></figure>
 
 
 
-<p>Az LSTM megoldása erre az, hogy megpróbálja eldönteni, hogy mennyire érdemes megjegyezni az információt. Kívülről a két hálózat majdnem megegyezik, A lentiben azonban az előző encoder állapota (hidden state) is továbbadódik (nem csak a cell state)</p>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">RNN</p>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="865" height="348" src="https://rettend.github.io/wp-content/uploads/2022/12/image-31.png" alt="" class="wp-image-172"/><figcaption class="wp-element-caption">LSTM</figcaption></figure>
+<p>Az LSTM megoldása erre az, hogy megpróbálja eldönteni, hogy mennyire érdemes megjegyezni az információt. Kívülről a két hálózat majdnem megegyezik, A lentiben azonban az előző encoder állapota (hidden state) is továbbadódik (nem csak a cell state).</p>
 
 
 
-<p>A pontos jelek egyszerűbbek mint gondolnánk: a tanh() csak -1 és 1 közé helyezi az értékeket arányosan, aztán szorzások és összeadások vannak, valamint a 3 szigmoid függvény sorrendben: a felejtést, az új információ hozzáadását, és az output-ot vezérlik. A lényeg az, hogy lehetősége van a context-nek modifikáció nélkül továbbhaladnia.</p>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="865" height="348" src="https://rettend.github.io/wp-content/uploads/2022/12/image-31.png" alt="" class="wp-image-172"/></figure>
+
+
+
+<p class="has-text-align-center has-contrast-color has-text-color" style="margin-top:0px">LSTM</p>
+
+
+
+<p>A pontos jelek egyszerűbbek mint gondolnánk: a tanh() csak -1 és 1 közé helyezi az értékeket arányosan, aztán szorzások és összeadások vannak, valamint a 3 szigmoid függvény sorrendben: a felejtést, az új információ hozzáadását, és az output-ot vezérlik. A lényeg az, hogy lehetősége van a context-nek modifikáció nélkül továbbhaladnia:</p>
 
 
 
@@ -215,7 +225,7 @@
 
 
 
-<p>Szóval a felső út a cell state, az alsó pedig az új hidden state. Ez a két vektor közül a felső ami az addigi encoder-ek modifikációit általánosabban írja le (mivel kihagyja a szigmoid függvényeket). Míg az alsó az adott encoder döntéseit tartalmazza a kapott információ alapján. Innen jön a név: <strong>long-short</strong> term memory.</p>
+<p>Szóval a felső út a cell state útja, az alsó pedig az új hidden state-é. Ez a két vektor közül a felső ami az addigi encoder-ek modifikációit általánosabban írja le (mivel kihagyja a szigmoid függvényeket). Míg az alsó az adott encoder döntéseit tartalmazza a kapott információ alapján. Innen jön a név: <strong>long-short</strong> term memory.</p>
 
 
 
@@ -231,15 +241,23 @@
 
 
 
-<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-24efe1c6eb254fc229e85f07ed01fa44.gif" alt="" class="wp-image-171" width="600" height="265"/><figcaption class="wp-element-caption">simple RNN</figcaption></figure>
+<figure class="wp-block-image size-full is-resized"><img decoding="async" loading="lazy" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-24efe1c6eb254fc229e85f07ed01fa44.gif" alt="" class="wp-image-171" width="600" height="265"/></figure>
 
 
 
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="600" height="263" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-3dca0e695b3011a635e23d29689d5142.gif" alt="" class="wp-image-179"/><figcaption class="wp-element-caption">RNN with attention decoders</figcaption></figure>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">simple RNN</p>
 
 
 
-<p>Ennek eredményeképpen, a decoder tudja az összes szóról azt, hogy mennyire van közük ahhoz az egy szóhoz amit ő generál. És ezzel többi decoder is így van. Nézzünk egy példát, amikoris a &#8220;Je suis étudiant&#8221; mondatot szeretnénk angolra lefordítani:</p>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="600" height="263" src="https://rettend.github.io/wp-content/uploads/2022/12/main-qimg-3dca0e695b3011a635e23d29689d5142.gif" alt="" class="wp-image-179"/></figure>
+
+
+
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">RNN with attention decoders</p>
+
+
+
+<p>Ennek eredményeképpen, a decoder tudja az összes szóról azt, hogy mennyire van közük ahhoz az egy szóhoz amit ő generál. És ezzel a többi decoder is így van. Nézzünk egy példát, amikoris egy francia mondatot szeretnénk angolra lefordítani:</p>
 
 
 
@@ -255,7 +273,7 @@
 
 
 
-<p>A párhuzamosságot egy másik klasszikus architektúrával oldjuk meg. CNN-eket főleg képfelismeréshez használják, de nem kizárólag.</p>
+<p>A párhuzamosságot egy másik klasszikus architektúrával oldjuk meg. A CNN-eket egyébként főleg képfelismeréshez használják, de nem kizárólag.</p>
 
 
 
@@ -299,7 +317,7 @@
 
 
 
-<p>Íme a teljes architektúra:<br>Input embedding csak egyszer történik a feldolgozás előtt és a szavak számokká (igazából vektorokká) való alakítását jelenti, mégpedig úgy, hogy a hasonló jelentésű szavak a training végére egymáshoz közel lesznek, további segítséget nyújtva a modellnek. A Positional Encoding egy újabb vektor hozzáadását jelenti a szavakhoz, ami a mondatbeli helyüket hivatott tárolni.<br>Az add &amp; norm az összeadást és a normalizációt jelenti, így egyesítik a rétegek outputjait egy számmá, majd 0 és 1 közötti értékre normalizálja, hogy ne szabaduljanak el a számok közben.<br>És a végén a softmax hasonlóan a kapott értékeket 0 és 1 közé teszi, de úgy, hogy az összegük 1 legyen. Így kapunk eredményül százalékokat.</p>
+<p>Íme a teljes architektúra:<br>Input embedding csak egyszer történik a feldolgozás előtt és a szavak számokká (igazából vektorokká) való alakítását jelenti, mégpedig úgy, hogy a hasonló jelentésű szavak a training végére egymáshoz közel lesznek a vektor-térben, további segítséget nyújtva a modellnek. A Positional Encoding egy újabb vektor ad hozzá a szavakhoz, ami a mondatbeli helyüket hivatott tárolni. Szintén segítség a modellnek.<br>Az add &amp; norm az összeadást és a normalizációt jelenti, így egyesíti a rétegek outputjait egy számmá, majd 0 és 1 közötti értékre normalizálja, hogy ne szabaduljanak el a számok a folyamat közben, valamint jobb teljesítményhez vezet.<br>És a végén a softmax hasonlóan a kapott értékeket 0 és 1 közé teszi, de úgy, hogy az összegük 1 legyen. Így kapunk eredményül százalékokat.</p>
 
 
 
@@ -307,7 +325,7 @@
 
 
 
-<p>Míg a fejlesztett RNN hálózatunknál az attention-t az erre trainelt decoder rétegek használták fel, itt minden egyes encoder-nek és decoder-nek van egy külön self-attention rétege, ami az <strong>összes </strong>szó és a jelenlegi szó kapcsolatát elemzi. A decoder ezután az encoder attention információit is megkapja. Pontosabban az encoder látja az összes szót (a még fel nem dolgozottakat is), a decoder csak az eddigieket.</p>
+<p>Míg a fejlesztett RNN hálózatunknál az attention-t az erre trainelt decoder rétegek használták fel, itt minden egyes encoder-nek és decoder-nek van egy külön self-attention rétege, ami az <strong>összes </strong>szó és a jelenlegi szó kapcsolatát elemzi. A decoder ezután az encoder attention információit is megkapja. Pontosabban az encoder látja az összes szót (a még fel nem dolgozottakat is), a decoder csak az eddigieket (Masked).</p>
 
 
 
@@ -323,7 +341,7 @@
 
 
 
-<p>Oh és így minden szó párhuzamosan feldolgozható. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f92d.png" alt="🤭" class="wp-smiley" style="height: 1em; max-height: 1em;" /><br>Egy kis különbség van, mivel a Transformer mátrixokat használ, azaz több vektort a kapcsolat leírására. Ez a multihead-attention. Ennek következtében minden szóra különböző &#8220;típusú&#8221; figyelmet fordítunk (azon túl, hogy különböző értékű, amit a szín erőssége jelez).</p>
+<p>Oh és így minden szó párhuzamosan feldolgozható. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f92d.png" alt="🤭" class="wp-smiley" style="height: 1em; max-height: 1em;" /><br>Egy kis különbség van még a valódi működésnél, mivel a Transformer mátrixokat használ, azaz több vektort a kapcsolat leírására. Ez a multihead-attention. Ennek következtében minden szóra különböző &#8220;típusú&#8221; figyelmet fordítunk (azon túl, hogy különböző értékű, amit a szín erőssége jelez).</p>
 
 
 
@@ -339,15 +357,15 @@
 
 
 
-<p>RNN és CNN hálózatok még egy eddig nem említett hátrányuk, hogy mindig egy adott hosszúságú input vektort igényelnek, vagy úgynevezett pre-processing műveleteket kell használni, amik átformálják az adatokat. A Transformer ezzel ellentétben jól megvan a self-attention-jével bármilyen inputtal, viszont megemlítendő, hogy ez hamar teljesítményromláshoz vezet.</p>
+<p>Az RNN és CNN hálózatok még egy eddig nem említett hátránya, hogy mindig egy adott hosszúságú input vektort igényelnek, vagy úgynevezett pre-processing műveleteket kell használni, amik átformálják az adatokat. A Transformer ezzel ellentétben jól megvan a self-attention-jével bármilyen inputtal, viszont megemlítendő, hogy ez hamar teljesítményromláshoz vezet.</p>
 
 
 
-<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem, meglepően ez a megközelítés más feladatokra is alkalmazható, sőt az összesre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé. Ide kapcsolódik <a rel="noreferrer noopener" href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson</a> poszt is.</p>
+<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem. Meglepően ez a megközelítés más feladatokra is alkalmazható, sőt a legtöbbre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé. Ide kapcsolódik a <a rel="noreferrer noopener" href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson</a> poszt is.</p>
 
 
 
-<p><br>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
+<p>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
 
 
 
@@ -357,7 +375,7 @@
 
 
 
-<p>a</p>
+<p>Az AI jövőjéről még:</p>
 
 
 
@@ -367,7 +385,7 @@
 
 
 
-<p>Már láttuk <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvényét&#8221;</a>, miszerint kb. 2 évente megduplázódik egy területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: <a rel="noreferrer noopener" href="https://moores.samaltman.com/" target="_blank">Moore&#8217;s Law for Everything</a>. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f440.png" alt="👀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Már láttuk <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvényét&#8221;</a>, miszerint kb. 2 évente megduplázódik az egységnyi területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: <a rel="noreferrer noopener" href="https://moores.samaltman.com/" target="_blank">Moore&#8217;s Law for Everything</a>. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f440.png" alt="👀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
 
 
 
@@ -379,7 +397,7 @@
 
 
 
-<p>GPT-3 lesz az alapja nagyon sok jövőbeli modellnek. Addigis használhatjuk a <a rel="noreferrer noopener" href="https://chat.openai.com/" target="_blank">ChatGPT</a>-t! Nagyon hasznos chatbot ami képes bármit elmagyarázni. Bár ez egy side project, elég híres lett egy hét alatt az 1M user-t is átlépte, ami nem véletlen. Azontúl, hogy tényleg bármit el tud magyarázni tetszésünk szerint (és mivel GPT tudjuk hogy minden nyelven tud), sok vicces dologra is képes. Pl. nagyon szereti a fa vicceket és hát, képes <em>más</em> dolgokra is.</p>
+<p>GPT-3 lesz az alapja nagyon sok jövőbeli modellnek. Addigis használhatjuk a <a rel="noreferrer noopener" href="https://chat.openai.com/" target="_blank">ChatGPT</a>-t! Nagyon hasznos chatbot ami képes bármit elmagyarázni. Bár ez egy side project, elég híres lett és egy hét alatt az 1M user-t is átlépte, ami nem véletlen. Azontúl, hogy tényleg bármit el tud magyarázni tetszésünk szerint (és mivel GPT tudjuk hogy minden nyelven tud), sok vicces dologra is képes. Pl. nagyon szereti a fa vicceket és hát, képes <em>más</em> dolgokra is.</p>
 
 
 
@@ -413,7 +431,11 @@
 
 
 <div class="is-layout-flow wp-block-column" style="flex-basis:66.66%">
-<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="432" height="435" src="https://rettend.github.io/wp-content/uploads/2022/12/image-52.png" alt="" class="wp-image-203"/><figcaption class="wp-element-caption">ő mondta</figcaption></figure>
+<figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="432" height="435" src="https://rettend.github.io/wp-content/uploads/2022/12/image-52.png" alt="" class="wp-image-203"/></figure>
+
+
+
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">ő mondta</p>
 </div>
 </div>
 
@@ -423,7 +445,7 @@
 
 
 
-<p>Éééés valaki elhitette vele, hogy egy virtuális linux gép: <a rel="noreferrer noopener" href="https://www.engraved.blog/building-a-virtual-machine-inside/" target="_blank">Building A Virtual Machine inside ChatGPT</a>.</p>
+<p>Éééés valaki azt is elhitette vele, hogy egy virtuális gép: <a rel="noreferrer noopener" href="https://www.engraved.blog/building-a-virtual-machine-inside/" target="_blank">Building A Virtual Machine inside ChatGPT</a>.</p>
 
 
 
@@ -431,7 +453,7 @@
 
 
 
-<p>A ChatGPT-vel együtt kijött a GPT-3.5, de készülődik a GPT-4 is! Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
+<p>A ChatGPT-vel együtt kijött a GPT-3.5, de készülődik a GPT-4 is!<br>Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
 
 
 
@@ -458,7 +480,7 @@
 
 
 
-<li><strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon egy bottal használható. Korlátozottabb mint a Dall-E (nem töltődnek vissza a kreditek), de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, a szerver a 2. helyen 1M user-nél van), szóval nem kis dolog.</li>
+<li><strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon egy bottal használható. Korlátozottabb mint a Dall-E (nem töltődnek vissza a kreditek), de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, míg a szerver a 2. helyen 1M user-nél van), szóval nem kis dolog.</li>
 </ul>
 
 
@@ -467,7 +489,7 @@
 
 
 
-<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is! Ott lehet róluk tanulni tovább.</p>
+<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is! Ott lehet a diffusion modellekről tanulni tovább.</p>
 
 
 
@@ -549,7 +571,7 @@
 
 
 
-<p class="has-small-font-size">És akkor jöjjön a ráhangolódás. A Copilot alapból fizetős, de van egy kis hack erre: diákoknak ingyenes. <a rel="noreferrer noopener" href="https://education.github.com/pack" target="_blank">Itt a link</a>, ahol egy matricás diákigazolványt vagy valamit kell befotózni és még egy csomó más cuccot is adnak (pl. GitHub Pro). Ezután a Visual Studio és/vagy a VS Code <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">extension</a>-t kell letöltenünk és használhatjuk is.<br>Egyszerű kezelni is, de rá kell jönni, hogy miért azt csinálja, amit éppen csinál, és erre a legjobb ha szimplán elkezdjük használni mindig amikor programozunk. Itt most azért részletesebben is megnézzük.</p>
+<p class="has-small-font-size">És akkor jöjjön a ráhangolódás. A Copilot alapból fizetős, de van egy kis hack erre: diákoknak ingyenes. <a rel="noreferrer noopener" href="https://education.github.com/pack" target="_blank">Itt a link</a>, ahol egy matricás diákigazolványt vagy valami hasonlót kell befotózni és még egy csomó más cuccot is adnak (pl. GitHub Pro). Ezután a Visual Studio és/vagy a VS Code <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">extension</a>-t kell letöltenünk és használhatjuk is.<br>Egyszerű kezelni is, de rá kell jönni, hogy miért azt csinálja, amit éppen csinál, és erre a legjobb ha szimplán elkezdjük használni mindig amikor programozunk. Itt most azért részletesebben is megnézzük.</p>
 
 
 
@@ -565,15 +587,15 @@
 
 
 
-<p>Itt megpróbáljuk átvenni egy AI modell gondolkodását, vagyis csak megmutatom, hogy hogy néz ki egy kész app ami AI-t használ, majd a következő fejezetben méég egy lépcsőfokkal lennebb megyünk. Na de ássuk is bele magunkat, mit tud és mit nem, valamint, hogy milyen újítások várhatók rá.</p>
+<p>Itt megpróbáljuk átvenni egy AI modell gondolkodását, vagyis csak megmutatom, hogy hogy néz ki egy kész app ami AI-t használ. Na de ássuk is bele magunkat, mit tud és mit nem, valamint, hogy milyen újítások várhatók rá.</p>
 
 
 
-<p class="has-tertiary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-right:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);margin-left:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">A Copilot egy OpenAI által összerakott modellre épül, a <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a>-ra (Generative Pre-trained <strong>Transformer</strong>). Ez egy hatalmas transformer modell, amit főleg az interneten traineltek (mi baj lehetne). A papírjában (<a rel="noreferrer noopener" href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>) egy csomó név fel van tűntetve, és a fejlesztői bemutatják, hogy egy ilyen hatalmas modellel elég ha párszor lát az egy információt, már úgy is tanulni tud belőle (few-shot learning). Ami miatt nagy dolog az az, hogy nagyon jól &#8220;megérti&#8221; az írott szövegeket és nagyon hihető válaszokat tud generálni. Ez azonban ugyanúgy csak egy language model, ezért az egyetlen dolog, ami őt érdekli, hogy ha kap egy szöveges inputot, akkor mi az ami a legvalószínűbb, hogy azt követi a tanult információk alapján: ha van 1000 karakter, akkor mi az 1001-edik és az 1002-edik. Ennyi. Ám ezzel hihetetlenül messze el lehet jutni, valamint a mögötte rejlő transformer architektúrának köszönhetően (a Transformerről külön fejezet szól) képes a megfelelő szavakra nagyobb figyelmet fordítani (attention mechanics). Így nemcsak, hogy a nyelvtani szerkezetre tud rájönni és helyes szavakat generálni, hanem azt érthetően, összefüggően és nagyon sok nyelven.<br><br>Ebből származik a <a rel="noreferrer noopener" href="https://openai.com/blog/openai-codex/" target="_blank">Codex</a>, amivel egy lépéssel tovább mentek, és a natural language mellett, GitHub-on elérhető milliárd sornyi nyilvános kódon tanították. Így azon túl, hogy megérti az emberi nyelvet, már a programozási nyelveken is tud (szintaktikailag helyes kódot tud generálni) és ezek között könnyedén fordít! És ez az amire a Copilot épül, valamint ezért látni is fogjuk, hogy a GPT-3 limitációit is magával hozza.</p>
+<p class="has-tertiary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-right:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);margin-left:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">A Copilot egy OpenAI által összerakott modellre épül, a <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a>-ra (Generative Pre-trained <strong>Transformer</strong>). Ez egy hatalmas transformer modell, amit főleg az interneten traineltek (mi baj lehetne). A papírjában (<a rel="noreferrer noopener" href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>) egy csomó név fel van tűntetve, és a fejlesztői bemutatják, hogy egy ilyen hatalmas modellel elég ha párszor lát az egy információt, már úgy is meg tudja tanulni (few-shot learning). Ami miatt nagy dolog az az, hogy nagyon jól &#8220;megérti&#8221; az írott szövegeket és nagyon hihető válaszokat tud generálni. Ez azonban ugyanúgy csak egy language model, ezért az egyetlen dolog, ami őt érdekli, hogy ha kap egy szöveges inputot, akkor mi az ami a legvalószínűbb, hogy azt követi a tanult információk alapján: ha van 1000 karakter, akkor mi az 1001-edik és az 1002-edik. Ennyi. Ám ezzel hihetetlenül messze el lehet jutni, valamint a mögötte rejlő transformer architektúrának köszönhetően (a Transformer-ről külön fejezet szól) képes a megfelelő szavakra nagyobb figyelmet fordítani (attention mechanics). Így nemcsak, hogy a nyelvtani szerkezetre tud rájönni és helyes szavakat generálni, hanem azt érthetően, összefüggően és nagyon sok nyelven. Miközben az egyszerű feladatát végzi, hogy kitalálja az egymást követő szavakat, olyan komplex problémákat tud megoldani, amik minket érdekelnek, és nemrég még kivétel nélkül az emberi kreativitás alá tartoztak.<br><br>Aztán ebből származik a <a rel="noreferrer noopener" href="https://openai.com/blog/openai-codex/" target="_blank">Codex</a>, amivel egy lépéssel továbbmentek, és a natural language mellett, GitHub-on elérhető milliárd sornyi nyilvános kódon tanították. Így azon túl, hogy megérti az emberi nyelvet, már a programozási nyelveken is tud (szintaktikailag helyes kódot tud generálni) és ezek között könnyedén fordít! És ez az amire a Copilot épül, valamint azt is fogjuk látni, hogy a GPT-3 limitációit is magával hozza.</p>
 
 
 
-<p>De mit is érünk azzal, hogy érti a szövegeket? Egyszerű: kommentek. A legfeltűnőbb funkciója, hogy ha leírjuk, hogy mit szeretnénk csinálni, akkor ahhoz feldobja a kódot.</p>
+<p>De mit is érünk az alatt, hogy érti a szövegeket? Egyszerű: kommentek. A legfeltűnőbb funkciója, hogy ha leírjuk, hogy mit szeretnénk csinálni, akkor ahhoz feldobja a kódot.</p>
 
 
 
@@ -597,7 +619,7 @@
 
 
 
-<p>Általában a sorokat csak egyesével, de ahol egy scope-ba belépünk, azt le tudja teljesen generálni. A lényeg, hogy minél több contextust adjunk neki, ez lehet ugye kommenteken keresztül, de a változó és function nevek, és a kódunk maga is sokat segít. Ami egyből feltűnhet, hogy mivel csak egy listát folytat, ami szavakból és karakterekből áll, ezért figyelmen kívül hagyja azt ami az után van (persze erre lennének megoldások, de még várnunk kell rájuk):</p>
+<p>Általában a sorokat csak egyesével, de ahol egy scope-ba belépünk, ott azt le tudja teljesen generálni. A lényeg, hogy minél több contextust adjunk neki, ez lehet ugye kommenteken keresztül, de a változó és function nevek, és a kódunk maga is sokat segít. Ami egyből feltűnhet, hogy mivel csak egy listát folytat ami szavakból és karakterekből áll, ezért figyelmen kívül hagyja azt, ami az utáni sorokban van (persze erre lennének megoldások, de még várnunk kell rájuk):</p>
 
 
 
@@ -609,7 +631,7 @@
 
 
 
-<p>Ami miatt Smart Ctrl C + Ctrl V-nek lehet nevezi, az az, hogy a kódunkat amit folytat azt értelmezi, így nagyon szeret lemásolni dolgokat úgy, hogy a megfelelő változóneveket használja. De képes a már létrehozott function-k helyes felhasználására is. Ahol egy mintát kell folytatni, ott Copilot mindig jeleskedik.</p>
+<p>Ami miatt Smart Ctrl C + Ctrl V-nek lehet nevezi, az az, hogy a kódunkat amit folytat azt közben értelmezi (ha akarja ha nem, nem tud mást csinálni), így nagyon szeret lemásolni dolgokat úgy, hogy a megfelelő változóneveket használja. De képes a már létrehozott function-ök helyes felhasználására is. Ahol egy mintát kell folytatni, ott Copilot mindig jeleskedik.</p>
 
 
 
@@ -637,7 +659,7 @@
 
 
 
-<p>Egyszerűen az izgatja, hogy sok olyan üzenetet látott, ahol egy képet is raktak hozzá és egy kép id-ja valami ilyen formában van. Arról nem is beszélünk, hogy ez a régi módja egy discord bot írásának, azóta már újraírták az egész library-t, de mivel ezzel van tele a GitHub és nem is voltunk túl konkrétak, ezt kaptuk tőle.<br>Hagyom is a botos példát.</p>
+<p>Egyszerűen az izgatja, hogy sok olyan üzenetet látott, ahol egy képet is raktak hozzá és egy kép id-ja valami ilyen formában van. Arról nem is beszélünk, hogy ez a régi módja egy discord bot írásának Pythonban, azóta már újraírták az egész library-t, de mivel ezzel van még tele a GitHub és nem is voltunk túl konkrétak, ezt kaptuk tőle. Hagyom is a botos példát.</p>
 
 
 
@@ -649,7 +671,7 @@
 
 
 
-<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">No <strong><code>this</code>, </strong>no that</p>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">&#8220;No <strong><code>this</code>, </strong>No that&#8221;</p>
 
 
 
@@ -737,11 +759,11 @@
 
 
 
-<p>Egyébként ezek messze nem működnek tökéletesen, de adhatunk visszajelzést (mondjuk nem tudom mit kezdenének azzal, hogy én SQL query-ket fordíttatok le vele css-re vagy a package.json tartalmát vue-ba jahmi).</p>
+<p class="has-cyan-bluish-gray-color has-text-color">Egyébként ezek messze nem működnek tökéletesen, de adhatunk visszajelzést (mondjuk nem tudom mit kezdenének azzal, hogy én SQL query-ket fordíttatok le vele css-re vagy a package.json tartalmát vue-ba jahmi).</p>
 
 
 
-<p>Copilot és a Copilot Labs a két elérhető prototípus eddig, de a GitHub egy hadseregnyi Copilot-ot tervez még készíteni, amiket a <a rel="noreferrer noopener" href="https://githubnext.com/" target="_blank">GitHub Next</a> oldalon gyűjtenek. Érdemes lehet nézni ezt az oldalt, mivel rengeteg kép is van hozzájuk, és más GitHub feature-öket is tartalmaz. A legérdekesebbeket összeszedem ide:</p>
+<p>Copilot és a Copilot Labs a két elérhető prototípus eddig, de a GitHub egy hadseregnyi Copilot-ot tervez még készíteni, amiket a <a rel="noreferrer noopener" href="https://githubnext.com/" target="_blank">GitHub Next</a> oldalon gyűjtenek. Érdemes megnézni ezt az oldalt, mivel rengeteg kép is van hozzájuk, és más GitHub feature-öket is tartalmaz. A legérdekesebbeket összeszedem ide:</p>
 
 
 
@@ -750,7 +772,7 @@
 
 
 
-<li>GitHub Copilot-nak az egész mappánk elérhetővé tétele: ehhez az kell, hogy ki tudja választani, hogy mit vegyen figyelembe, hogy ne vegyen igénybe több időt</li>
+<li>GitHub Copilot-nak az egész mappánk elérhetővé tétele: ehhez az kell, hogy ki tudja választani, hogy mit vegyen figyelembe, hogy ne vegyen igénybe több időt a működése, ne lassuljon be teljesen</li>
 
 
 
@@ -758,7 +780,7 @@
 
 
 
-<li>Copilot CLI: parancssoros Copilot, szavakkal leírhatod amit szeretnél és parancsokká fordítja</li>
+<li>Copilot CLI: parancssoros Copilot, szavakkal leírhatod amit szeretnél és parancsokká fordítja vagy ajánl fel</li>
 </ul>
 
 

@@ -138,7 +138,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p class="has-small-font-size">És akkor jöjjön a ráhangolódás. A Copilot alapból fizetős, de van egy kis hack erre: diákoknak ingyenes. <a rel="noreferrer noopener" href="https://education.github.com/pack" target="_blank">Itt a link</a>, ahol egy matricás diákigazolványt vagy valamit kell befotózni és még egy csomó más cuccot is adnak (pl. GitHub Pro). Ezután a Visual Studio és/vagy a VS Code <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">extension</a>-t kell letöltenünk és használhatjuk is.<br>Egyszerű kezelni is, de rá kell jönni, hogy miért azt csinálja, amit éppen csinál, és erre a legjobb ha szimplán elkezdjük használni mindig amikor programozunk. Itt most azért részletesebben is megnézzük.</p>
+<p class="has-small-font-size">És akkor jöjjön a ráhangolódás. A Copilot alapból fizetős, de van egy kis hack erre: diákoknak ingyenes. <a rel="noreferrer noopener" href="https://education.github.com/pack" target="_blank">Itt a link</a>, ahol egy matricás diákigazolványt vagy valami hasonlót kell befotózni és még egy csomó más cuccot is adnak (pl. GitHub Pro). Ezután a Visual Studio és/vagy a VS Code <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">extension</a>-t kell letöltenünk és használhatjuk is.<br>Egyszerű kezelni is, de rá kell jönni, hogy miért azt csinálja, amit éppen csinál, és erre a legjobb ha szimplán elkezdjük használni mindig amikor programozunk. Itt most azért részletesebben is megnézzük.</p>
 
 
 
@@ -154,15 +154,15 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Itt megpróbáljuk átvenni egy AI modell gondolkodását, vagyis csak megmutatom, hogy hogy néz ki egy kész app ami AI-t használ, majd a következő fejezetben méég egy lépcsőfokkal lennebb megyünk. Na de ássuk is bele magunkat, mit tud és mit nem, valamint, hogy milyen újítások várhatók rá.</p>
+<p>Itt megpróbáljuk átvenni egy AI modell gondolkodását, vagyis csak megmutatom, hogy hogy néz ki egy kész app ami AI-t használ. Na de ássuk is bele magunkat, mit tud és mit nem, valamint, hogy milyen újítások várhatók rá.</p>
 
 
 
-<p class="has-tertiary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-right:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);margin-left:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">A Copilot egy OpenAI által összerakott modellre épül, a <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a>-ra (Generative Pre-trained <strong>Transformer</strong>). Ez egy hatalmas transformer modell, amit főleg az interneten traineltek (mi baj lehetne). A papírjában (<a rel="noreferrer noopener" href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>) egy csomó név fel van tűntetve, és a fejlesztői bemutatják, hogy egy ilyen hatalmas modellel elég ha párszor lát az egy információt, már úgy is tanulni tud belőle (few-shot learning). Ami miatt nagy dolog az az, hogy nagyon jól &#8220;megérti&#8221; az írott szövegeket és nagyon hihető válaszokat tud generálni. Ez azonban ugyanúgy csak egy language model, ezért az egyetlen dolog, ami őt érdekli, hogy ha kap egy szöveges inputot, akkor mi az ami a legvalószínűbb, hogy azt követi a tanult információk alapján: ha van 1000 karakter, akkor mi az 1001-edik és az 1002-edik. Ennyi. Ám ezzel hihetetlenül messze el lehet jutni, valamint a mögötte rejlő transformer architektúrának köszönhetően (a Transformerről külön fejezet szól) képes a megfelelő szavakra nagyobb figyelmet fordítani (attention mechanics). Így nemcsak, hogy a nyelvtani szerkezetre tud rájönni és helyes szavakat generálni, hanem azt érthetően, összefüggően és nagyon sok nyelven.<br><br>Ebből származik a <a rel="noreferrer noopener" href="https://openai.com/blog/openai-codex/" target="_blank">Codex</a>, amivel egy lépéssel tovább mentek, és a natural language mellett, GitHub-on elérhető milliárd sornyi nyilvános kódon tanították. Így azon túl, hogy megérti az emberi nyelvet, már a programozási nyelveken is tud (szintaktikailag helyes kódot tud generálni) és ezek között könnyedén fordít! És ez az amire a Copilot épül, valamint ezért látni is fogjuk, hogy a GPT-3 limitációit is magával hozza.</p>
+<p class="has-tertiary-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-right:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);margin-left:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">A Copilot egy OpenAI által összerakott modellre épül, a <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a>-ra (Generative Pre-trained <strong>Transformer</strong>). Ez egy hatalmas transformer modell, amit főleg az interneten traineltek (mi baj lehetne). A papírjában (<a rel="noreferrer noopener" href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a>) egy csomó név fel van tűntetve, és a fejlesztői bemutatják, hogy egy ilyen hatalmas modellel elég ha párszor lát az egy információt, már úgy is meg tudja tanulni (few-shot learning). Ami miatt nagy dolog az az, hogy nagyon jól &#8220;megérti&#8221; az írott szövegeket és nagyon hihető válaszokat tud generálni. Ez azonban ugyanúgy csak egy language model, ezért az egyetlen dolog, ami őt érdekli, hogy ha kap egy szöveges inputot, akkor mi az ami a legvalószínűbb, hogy azt követi a tanult információk alapján: ha van 1000 karakter, akkor mi az 1001-edik és az 1002-edik. Ennyi. Ám ezzel hihetetlenül messze el lehet jutni, valamint a mögötte rejlő transformer architektúrának köszönhetően (a Transformer-ről külön fejezet szól) képes a megfelelő szavakra nagyobb figyelmet fordítani (attention mechanics). Így nemcsak, hogy a nyelvtani szerkezetre tud rájönni és helyes szavakat generálni, hanem azt érthetően, összefüggően és nagyon sok nyelven. Miközben az egyszerű feladatát végzi, hogy kitalálja az egymást követő szavakat, olyan komplex problémákat tud megoldani, amik minket érdekelnek, és nemrég még kivétel nélkül az emberi kreativitás alá tartoztak.<br><br>Aztán ebből származik a <a rel="noreferrer noopener" href="https://openai.com/blog/openai-codex/" target="_blank">Codex</a>, amivel egy lépéssel továbbmentek, és a natural language mellett, GitHub-on elérhető milliárd sornyi nyilvános kódon tanították. Így azon túl, hogy megérti az emberi nyelvet, már a programozási nyelveken is tud (szintaktikailag helyes kódot tud generálni) és ezek között könnyedén fordít! És ez az amire a Copilot épül, valamint azt is fogjuk látni, hogy a GPT-3 limitációit is magával hozza.</p>
 
 
 
-<p>De mit is érünk azzal, hogy érti a szövegeket? Egyszerű: kommentek. A legfeltűnőbb funkciója, hogy ha leírjuk, hogy mit szeretnénk csinálni, akkor ahhoz feldobja a kódot.</p>
+<p>De mit is érünk az alatt, hogy érti a szövegeket? Egyszerű: kommentek. A legfeltűnőbb funkciója, hogy ha leírjuk, hogy mit szeretnénk csinálni, akkor ahhoz feldobja a kódot.</p>
 
 
 
@@ -186,7 +186,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Általában a sorokat csak egyesével, de ahol egy scope-ba belépünk, azt le tudja teljesen generálni. A lényeg, hogy minél több contextust adjunk neki, ez lehet ugye kommenteken keresztül, de a változó és function nevek, és a kódunk maga is sokat segít. Ami egyből feltűnhet, hogy mivel csak egy listát folytat, ami szavakból és karakterekből áll, ezért figyelmen kívül hagyja azt ami az után van (persze erre lennének megoldások, de még várnunk kell rájuk):</p>
+<p>Általában a sorokat csak egyesével, de ahol egy scope-ba belépünk, ott azt le tudja teljesen generálni. A lényeg, hogy minél több contextust adjunk neki, ez lehet ugye kommenteken keresztül, de a változó és function nevek, és a kódunk maga is sokat segít. Ami egyből feltűnhet, hogy mivel csak egy listát folytat ami szavakból és karakterekből áll, ezért figyelmen kívül hagyja azt, ami az utáni sorokban van (persze erre lennének megoldások, de még várnunk kell rájuk):</p>
 
 
 
@@ -198,7 +198,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Ami miatt Smart Ctrl C + Ctrl V-nek lehet nevezi, az az, hogy a kódunkat amit folytat azt értelmezi, így nagyon szeret lemásolni dolgokat úgy, hogy a megfelelő változóneveket használja. De képes a már létrehozott function-k helyes felhasználására is. Ahol egy mintát kell folytatni, ott Copilot mindig jeleskedik.</p>
+<p>Ami miatt Smart Ctrl C + Ctrl V-nek lehet nevezi, az az, hogy a kódunkat amit folytat azt közben értelmezi (ha akarja ha nem, nem tud mást csinálni), így nagyon szeret lemásolni dolgokat úgy, hogy a megfelelő változóneveket használja. De képes a már létrehozott function-ök helyes felhasználására is. Ahol egy mintát kell folytatni, ott Copilot mindig jeleskedik.</p>
 
 
 
@@ -226,7 +226,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Egyszerűen az izgatja, hogy sok olyan üzenetet látott, ahol egy képet is raktak hozzá és egy kép id-ja valami ilyen formában van. Arról nem is beszélünk, hogy ez a régi módja egy discord bot írásának, azóta már újraírták az egész library-t, de mivel ezzel van tele a GitHub és nem is voltunk túl konkrétak, ezt kaptuk tőle.<br>Hagyom is a botos példát.</p>
+<p>Egyszerűen az izgatja, hogy sok olyan üzenetet látott, ahol egy képet is raktak hozzá és egy kép id-ja valami ilyen formában van. Arról nem is beszélünk, hogy ez a régi módja egy discord bot írásának Pythonban, azóta már újraírták az egész library-t, de mivel ezzel van még tele a GitHub és nem is voltunk túl konkrétak, ezt kaptuk tőle. Hagyom is a botos példát.</p>
 
 
 
@@ -238,7 +238,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">No <strong><code>this</code>, </strong>no that</p>
+<p class="has-text-align-center has-cyan-bluish-gray-color has-text-color" style="margin-top:0px">&#8220;No <strong><code>this</code>, </strong>No that&#8221;</p>
 
 
 
@@ -326,11 +326,11 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>Egyébként ezek messze nem működnek tökéletesen, de adhatunk visszajelzést (mondjuk nem tudom mit kezdenének azzal, hogy én SQL query-ket fordíttatok le vele css-re vagy a package.json tartalmát vue-ba jahmi).</p>
+<p class="has-cyan-bluish-gray-color has-text-color">Egyébként ezek messze nem működnek tökéletesen, de adhatunk visszajelzést (mondjuk nem tudom mit kezdenének azzal, hogy én SQL query-ket fordíttatok le vele css-re vagy a package.json tartalmát vue-ba jahmi).</p>
 
 
 
-<p>Copilot és a Copilot Labs a két elérhető prototípus eddig, de a GitHub egy hadseregnyi Copilot-ot tervez még készíteni, amiket a <a rel="noreferrer noopener" href="https://githubnext.com/" target="_blank">GitHub Next</a> oldalon gyűjtenek. Érdemes lehet nézni ezt az oldalt, mivel rengeteg kép is van hozzájuk, és más GitHub feature-öket is tartalmaz. A legérdekesebbeket összeszedem ide:</p>
+<p>Copilot és a Copilot Labs a két elérhető prototípus eddig, de a GitHub egy hadseregnyi Copilot-ot tervez még készíteni, amiket a <a rel="noreferrer noopener" href="https://githubnext.com/" target="_blank">GitHub Next</a> oldalon gyűjtenek. Érdemes megnézni ezt az oldalt, mivel rengeteg kép is van hozzájuk, és más GitHub feature-öket is tartalmaz. A legérdekesebbeket összeszedem ide:</p>
 
 
 
@@ -339,7 +339,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<li>GitHub Copilot-nak az egész mappánk elérhetővé tétele: ehhez az kell, hogy ki tudja választani, hogy mit vegyen figyelembe, hogy ne vegyen igénybe több időt</li>
+<li>GitHub Copilot-nak az egész mappánk elérhetővé tétele: ehhez az kell, hogy ki tudja választani, hogy mit vegyen figyelembe, hogy ne vegyen igénybe több időt a működése, ne lassuljon be teljesen</li>
 
 
 
@@ -347,7 +347,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<li>Copilot CLI: parancssoros Copilot, szavakkal leírhatod amit szeretnél és parancsokká fordítja</li>
+<li>Copilot CLI: parancssoros Copilot, szavakkal leírhatod amit szeretnél és parancsokká fordítja vagy ajánl fel</li>
 </ul>
 
 
