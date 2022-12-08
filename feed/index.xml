@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Thu, 08 Dec 2022 21:44:37 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 22:25:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -29,13 +29,13 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">https://rettend.github.io/?p=136</guid>
 
-					<description><![CDATA[Ezennel el is kezdjük utunkat a Transformer felé, és mint mindennél itt is a nagyon messziről kell kezdenünk. asd]]></description>
+					<description><![CDATA[Ez a lehető legjobb tutorial amit eddig láttam, végigmegy a matekon és python példákat hoz, valamint a lehető legeslegelejéről kezd bele.(még bővülő playlist) További oldalak: Introduction &#8211; Hugging Face Course Preface — Dive into Deep Learning Machine learning education &#160;&#124;&#160; TensorFlow CS231n Convolutional Neural Networks for Visual Recognition]]></description>
 										<content:encoded><![CDATA[
 <figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/12/stick-ninja-sword.png" alt="" class="wp-image-140" width="234" height="226"/></figure>
 
 
 
-<p>Ezennel el is kezdjük utunkat a Transformer felé, és mint mindennél itt is a nagyon messziről kell kezdenünk.</p>
+<p>Ez a lehető legjobb tutorial amit eddig láttam, végigmegy a matekon és python példákat hoz, valamint a lehető legeslegelejéről kezd bele.<br>(még bővülő playlist)</p>
 
 
 
@@ -45,7 +45,23 @@
 
 
 
-<p>asd</p>
+<p class="has-medium-font-size">További oldalak:</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://huggingface.co/course/chapter1/1" target="_blank">Introduction &#8211; Hugging Face Course</a></p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://d2l.ai/chapter_preface/index.html" target="_blank">Preface — Dive into Deep Learning</a></p>
+
+
+
+<p><a href="https://www.tensorflow.org/resources/learn-ml">Machine learning education &nbsp;|&nbsp; TensorFlow</a></p>
+
+
+
+<p><a href="https://cs231n.github.io/">CS231n Convolutional Neural Networks for Visual Recognition</a></p>
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://rettend.github.io/2022/12/07/grind/feed/</wfw:commentRss>
@@ -63,7 +79,7 @@
 				<category><![CDATA[Uncategorized]]></category>
 		<guid isPermaLink="false">https://rettend.github.io/?p=110</guid>
 
-					<description><![CDATA[4 skill kell az AI-hoz: Coding: a programozás része, sok nyelv közül választhatunk szerencsére. Ez a Python a Tensorflow és a PyTorch-on keresztül. Webes projektekhez Javascript, de létezik ML.NET is. Math: deriválás és kalkulus az alapja a neurális hálózatok működésének. A következő fejezetben ezt azonnal orvosolni fogjuk. ML theory: a fogalmak és mechanikák jelentésével tisztában [&#8230;]]]></description>
+					<description><![CDATA[4 skill kell az AI-hoz: Coding: a programozás rész, és sok nyelv közül választhatunk szerencsére. Ez a Python-nál a Tensorflow-n és a PyTorch-on keresztül, webes projektekhez JavaScript, de létezik ML.NET is. Math: deriválás és kalkulus az alapja a neurális hálózatok működésének. A következő fejezetben ezt azonnal orvosolni fogjuk. ML theory: a fogalmak és mechanikák jelentésével [&#8230;]]]></description>
 										<content:encoded><![CDATA[
 <p>4 skill kell az AI-hoz:</p>
 
@@ -77,7 +93,7 @@
 
 
 <div class="is-layout-flow wp-block-column" style="padding-top:0px;padding-right:0;padding-bottom:0;padding-left:0">
-<p class="has-background" style="background-color:#1b1b1b;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><strong>Coding</strong>: a programozás része, sok nyelv közül választhatunk szerencsére. Ez a Python a Tensorflow és a PyTorch-on keresztül. Webes projektekhez Javascript, de létezik ML.NET is.</p>
+<p class="has-background" style="background-color:#1b1b1b;margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><strong>Coding</strong>: a programozás rész, és sok nyelv közül választhatunk szerencsére. Ez a Python-nál a Tensorflow-n és a PyTorch-on keresztül, webes projektekhez JavaScript, de létezik ML.NET is.</p>
 
 
 
@@ -95,7 +111,7 @@
 
 
 
-<p>Szóval itt kicsit megismerkedünk a menő Transformer modellel, majd a következő fejezetben nekilátunk a 4 skill-nek. Ennek most a lényege, hogy átlássuk nagyvonalakban a modellhez vezető utat, valamint a végén az AI jövőjét.</p>
+<p>Szóval itt kicsit megismerkedünk a menő Transformer modellel, majd a következő fejezetben nekilátunk a 4 skill-nek. Ennek most a lényege, hogy átlássuk nagyvonalakban a modellhez vezető utat, valamint a végén az AI jövőjét mert elég hype.</p>
 
 
 
@@ -327,7 +343,11 @@
 
 
 
-<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem, meglepően ez a megközelítés más feladatokra is alkalmazható, sőt az összesre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé.<br>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
+<p>Ez hát a Transformer, de tényleg csak ennyire lenne képes? Nem, meglepően ez a megközelítés más feladatokra is alkalmazható, sőt az összesre. A Transformer egy általános modell lett, amit nagyon különböző problémákra használnak. Ez azért nagy dolog, mivel ezzel most elsőnek egy olyan modell hozható létre ami képes az információ értelmezésére minden médiumban: szöveg, hang, kép, videó. Ez nagy lépés az AGI felé. Ide kapcsolódik <a rel="noreferrer noopener" href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson</a> poszt is.</p>
+
+
+
+<p><br>És most egy rövid recap: 2022-es Karpathy (opcionálisan megnézhető az egész videó de elég 33:34-47:21-ig).</p>
 
 
 
@@ -337,11 +357,25 @@
 
 
 
-<p>Nézzünk pár érdekes, és már elérhető menő dolgokat.</p>
+<p>a</p>
 
 
 
-<p class="has-medium-font-size">GPT-3</p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="OpenAI CEO Sam Altman |  AI for the Next Era" width="500" height="281" src="https://www.youtube.com/embed/WHoWGNQRXb0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>Már láttuk <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvényét&#8221;</a>, miszerint kb. 2 évente megduplázódik egy területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: <a rel="noreferrer noopener" href="https://moores.samaltman.com/" target="_blank">Moore&#8217;s Law for Everything</a>. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f440.png" alt="👀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>A végén nézzünk meg pár érdekes, és már elérhető menő dolgot.</p>
+
+
+
+<p class="has-medium-font-size">ChatGPT</p>
 
 
 
@@ -393,7 +427,11 @@
 
 
 
-<p>Ezzel együtt kijött a GPT-3.5, de készülődik a GPT-4 is! Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
+<p>Hasonló oldal: <a rel="noreferrer noopener" href="https://beta.character.ai/" target="_blank">Character.AI</a>.</p>
+
+
+
+<p>A ChatGPT-vel együtt kijött a GPT-3.5, de készülődik a GPT-4 is! Úgy néz ki a Turing teszt már nem tart ki sokáig.</p>
 
 
 
@@ -403,12 +441,16 @@
 
 
 
-<p>Egy másik nagy része az AI-nak amiről még nem esett szó, az a diffusion modellek. A Stable Diffusion modell a Stability AI eredménye, ami képes képeket generálni. Ennek is érdemes utánanézni mert hatalmas. Erre épült már pár elérhető app is:</p>
+<p class="has-medium-font-size">Image generation</p>
+
+
+
+<p>Egy másik nagy része az AI-nak amiről még nem esett szó itt, az a diffusion modell. A Stable Diffusion modell a Stability AI eredménye, ami képes képeket generálni szöveges inputból. Ennek is érdemes utánanézni mert hatalmas. Erre épült már pár elérhető app is:</p>
 
 
 
 <ul class="has-small-font-size">
-<li><a rel="noreferrer noopener" href="https://openai.com/dall-e-2/" target="_blank">Dall-E 2</a> (OpenAI): bejelentkezés után használható is, de csak korlátozottan. az Outpainting a legjobb feature-je</li>
+<li><a rel="noreferrer noopener" href="https://openai.com/dall-e-2/" target="_blank">Dall-E 2</a> (OpenAI): bejelentkezés után használható is, de csak korlátozottan (havi kreditek). az Outpainting a legjobb feature-je.</li>
 
 
 
@@ -416,26 +458,20 @@
 
 
 
-<li><strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon működő bottal használható. Korlátozottabb mint a Dall-E, de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, a 2. helyen 1M user-nél van), szóval nem kis dolog</li>
+<li><strong>Midjourney</strong>: 2022 júliusában jelent meg és Discordon egy bottal használható. Korlátozottabb mint a Dall-E (nem töltődnek vissza a kreditek), de az új verzióval (V4) nagyon kreatív képeket generál. Pár hónap alatt ez lett a legnagyobb Discord szerver (5M user-rel, a szerver a 2. helyen 1M user-nél van), szóval nem kis dolog.</li>
 </ul>
 
 
 
-<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is!</p>
+<p>Még egy jó demo, havi kreditekkel: <a href="https://stableboost.ai/home">Stableboost</a>.</p>
 
 
 
-<p>De itt nem állunk meg, mi az AI jövője? Nem kell sok idő amire a valósághű képgenerálástól eljutunk a videók, filmek és 3d-s modellek generálásáig.</p>
+<p>Újabban a Stable Diffusion 2 is elérhető lett ami szintén király újításokat hozott.<br>És elérhető Hugging Face-n is! Ott lehet róluk tanulni tovább.</p>
 
 
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="OpenAI CEO Sam Altman |  AI for the Next Era" width="500" height="281" src="https://www.youtube.com/embed/WHoWGNQRXb0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div></figure>
-
-
-
-<p>Talán ismerős <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Moore's_law" target="_blank">Moore &#8220;törvénye&#8221;</a>, miszerint kb. 2 évente megduplázódik egy területre jutó tranzisztorok száma. Nem kis dolog, ilyen exponenciális növekedés kevés helyen figyelhető meg. Hogy megértsük mekkora hatása lesz az AI-nak képzeljük el a következőt: Moore&#8217;s Law for Everything. </p>
+<p>Nem kell sok idő amire a valósághű képgenerálástól eljutunk a videók, filmek és 3d-s modellek generálásáig.</p>
 
 
 
