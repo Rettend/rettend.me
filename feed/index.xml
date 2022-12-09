@@ -12,7 +12,7 @@
 	<atom:link href="https://rettend.github.io/feed/" rel="self" type="application/rss+xml" />
 	<link>https://rettend.github.io</link>
 	<description></description>
-	<lastBuildDate>Thu, 08 Dec 2022 23:54:27 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 09 Dec 2022 08:21:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -494,6 +494,26 @@
 
 
 <p>Nem kell sok idő amire a valósághű képgenerálástól eljutunk a videók, filmek és 3d-s modellek generálásáig.</p>
+
+
+
+<p>Kicsit a veszélyeiről is. A paperclip maximizer. </p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="AI&#039;s Deadly Paperclips" width="500" height="281" src="https://www.youtube.com/embed/rgrCG8PT6og?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<p>És nem hittem, hogy egy Ted videót is be fogok tenni:</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="What happens when our computers get smarter than we are? | Nick Bostrom" width="500" height="281" src="https://www.youtube.com/embed/MnT1xgZgkpk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
 
 
 
