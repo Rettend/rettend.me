@@ -228,7 +228,7 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 
 
-<p>A problémánk továbbra is jelen van azonban: egy idő után elveszik a fontos szavak információja is. Ezenkívül, az ilyen hálózatokat egyáltalán nem lehet párhuzamosan futtatni, minden szó feldolgozása előtt tudnunk kell az addigiak információit, hogy mennyire befolyásolják az encoder döntését. Nagy problem!</p>
+<p>A problémánk továbbra is jelen van azonban: egy idő után itt is elveszik a fontos szavak információja. Ezenkívül, az ilyen hálózatokat egyáltalán nem lehet párhuzamosan futtatni, minden szó feldolgozása előtt tudnunk kell az addigiak információit, hogy mennyire befolyásolják az encoder döntését. Nagy problem!</p>
 
 
 
@@ -314,13 +314,14 @@ p{font-size: var(--wp--preset--font-size--small);margin-top: 0;margin-right: 0;m
 
 <figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/12/image-37.png" alt="" class="wp-image-182" width="400"></figure>
 
+		
+<p>De ez is encoder-ből és decoder-ből áll.</p>
+		
+
+<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/12/image-39.png" alt="" class="wp-image-184" width="400"></figure>
 
 
 <p>Íme a teljes architektúra:<br>Input embedding csak egyszer történik a feldolgozás előtt és a szavak számokká (igazából vektorokká) való alakítását jelenti, mégpedig úgy, hogy a hasonló jelentésű szavak a training végére egymáshoz közel lesznek a vektor-térben, további segítséget nyújtva a modellnek. A Positional Encoding egy újabb vektor ad hozzá a szavakhoz, ami a mondatbeli helyüket hivatott tárolni. Szintén segítség a modellnek.<br>Az add &amp; norm az összeadást és a normalizációt jelenti, így egyesíti a rétegek outputjait egy számmá, majd 0 és 1 közötti értékre normalizálja, hogy ne szabaduljanak el a számok a folyamat közben, valamint jobb teljesítményhez vezet.<br>És a végén a softmax hasonlóan a kapott értékeket 0 és 1 közé teszi, de úgy, hogy az összegük 1 legyen. Így kapunk eredményül százalékokat.</p>
-
-
-
-<figure class="wp-block-image aligncenter size-full is-resized"><img decoding="async" src="https://rettend.github.io/wp-content/uploads/2022/12/image-39.png" alt="" class="wp-image-184" width="400"></figure>
 
 
 
