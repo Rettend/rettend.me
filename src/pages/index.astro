@@ -3,6 +3,7 @@ import Layout from '~/layouts/Layout.astro'
 import { Button } from '~/components/ui/button'
 import pp from '~/assets/pp.png'
 import { Image } from 'astro:assets'
+import { TextShuffle } from '~/components/TextShuffle'
 ---
 
 <Layout>
@@ -15,9 +16,15 @@ import { Image } from 'astro:assets'
         alt="Rettend's profile picture"
         class="mx-auto mb-8 size-48 rounded-full grayscale contrast-200 mix-blend-lighten transition-transform duration-300 hover:scale-105"
       />
-      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">Hi</h1>
+      <TextShuffle
+        client:visible
+        as="h1"
+        text="Rettend"
+        hoverText="Hegyi Áron Ferenc"
+        class="text-4xl font-bold tracking-tight sm:text-6xl"
+      />
       <p class="mt-6 text-lg leading-8 text-muted-foreground">
-        {'{'} insert profound shit here {'}'}
+        {'{'} insert profound stuff here {'}'}
       </p>
     </div>
 
