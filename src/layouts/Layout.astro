@@ -1,3 +1,8 @@
+---
+import Navbar from '../components/Navbar.astro'
+import '@fontsource-variable/inter'
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +12,19 @@
     <meta name="generator" content={Astro.generator} />
     <title>Rettend</title>
   </head>
-  <body>
+  <body class="dark">
+    <Navbar />
     <slot />
   </body>
 </html>
+
+<style is:global>
+  body {
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'InterVariable', sans-serif;
+    color: white;
+  }
+</style>

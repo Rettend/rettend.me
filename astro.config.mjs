@@ -1,4 +1,6 @@
 // @ts-check
+
+import SolidJS from '@astrojs/solid-js'
 import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
@@ -8,5 +10,6 @@ export default defineConfig({
     UnoCSS({
       injectReset: true,
     }),
+    SolidJS(),
   ],
 })

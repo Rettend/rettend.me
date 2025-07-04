@@ -1,0 +1,25 @@
+---
+const links = [
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' }
+]
+---
+
+<header class="fixed top-0 left-0 right-0 z-50">
+  <nav class="container mx-auto px-4 py-2">
+    <ul class="flex items-center justify-end space-x-4">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-lg font-semibold text-white/80 hover:text-white transition-colors"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
