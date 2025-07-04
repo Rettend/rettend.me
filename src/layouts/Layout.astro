@@ -1,6 +1,15 @@
 ---
+import { getImage } from 'astro:assets'
 import Navbar from '~/components/Navbar.astro'
+import Footer from '~/components/Footer.astro'
 import '@fontsource-variable/inter'
+import bg from '~/assets/bg.png'
+
+const optimizedBg = await getImage({
+  src: bg,
+  format: 'webp',
+  width: 1920,
+})
 ---
 
 <!doctype html>
@@ -12,19 +21,30 @@ import '@fontsource-variable/inter'
     <meta name="generator" content={Astro.generator} />
     <title>Rettend</title>
   </head>
-  <body class="dark">
-    <Navbar />
-    <slot />
+  <body class="dark font-sans flex flex-col h-dvh">
+    <svg style="display: none;">
+      <filter id="pixelate">
+        <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"
+        ></feColorMatrix>
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="g"
+        ></feColorMatrix>
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="b"
+        ></feColorMatrix>
+        <feOffset in="r" dx="5" dy="0" result="r-offset"></feOffset>
+        <feOffset in="b" dx="-5" dy="0" result="b-offset"></feOffset>
+        <feBlend in="r-offset" in2="g" mode="screen" result="rg"></feBlend>
+        <feBlend in="rg" in2="b-offset" mode="screen"></feBlend>
+      </filter>
+    </svg>
+    <div class="fixed inset-0 -z-20 bg-black"></div>
+    <div class="fixed inset-0 -z-10 bg-cover bg-center opacity-30" style={`background-image: url(${optimizedBg.src})`}>
+    </div>
+    <div class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col pt-10 md:pt-0">
+      <Navbar />
+      <div class="flex-grow">
+        <slot />
+      </div>
+      <Footer />
+    </div>
   </body>
 </html>
-
-<style is:global>
-  body {
-    background-image: url('../assets/bg.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'InterVariable', sans-serif;
-    color: white;
-  }
-</style>

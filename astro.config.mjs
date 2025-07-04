@@ -12,4 +12,7 @@ export default defineConfig({
     }),
     SolidJS(),
   ],
+  prefetch: {
+    defaultStrategy: 'viewport',
+  },
 })

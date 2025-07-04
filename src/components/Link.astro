@@ -1,0 +1,24 @@
+---
+import { Button } from '~/components/ui/button'
+import type { ButtonProps } from '~/components/ui/button'
+
+interface Props extends Omit<ButtonProps<'a'>, 'href'> {
+  href: string
+  external?: boolean
+  class?: string
+}
+
+const { href, external, class: className, ...rest } = Astro.props
+---
+
+<Button
+  as="a"
+  href={href}
+  variant="link"
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+  class={['p-0 h-auto text-base', className].filter(Boolean).join(' ')}
+  {...rest}
+>
+  <slot />
+</Button>

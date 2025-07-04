@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.16.2",
+    "@iconify-json/ph": "^1.2.2",
     "@iconify-json/solar": "^1.2.2",
     "@unocss/eslint-plugin": "^66.3.2",
     "@unocss/reset": "^66.3.2",
