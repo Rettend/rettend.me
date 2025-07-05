@@ -36,8 +36,7 @@ const optimizedBg = await getImage({
         <feBlend in="rg" in2="b-offset" mode="screen"></feBlend>
       </filter>
     </svg>
-    <div class="fixed inset-0 -z-20 bg-black"></div>
-    <div class="fixed inset-0 -z-10 bg-cover bg-center opacity-30" style={`background-image: url(${optimizedBg.src})`}>
+    <div class="fixed inset-0 -z-10 bg-cover bg-top opacity-20" style={`background-image: url(${optimizedBg.src})`}>
     </div>
     <div class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col pt-10 md:pt-0">
       <Navbar />

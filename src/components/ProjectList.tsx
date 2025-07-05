@@ -1,14 +1,15 @@
 import type { Project } from '~/lib/projects'
-import { createSignal, For } from 'solid-js'
+import { createMemo, createSignal, For, Show } from 'solid-js'
 import { ProjectCard } from '~/components/ProjectCard'
 import { Button } from '~/components/ui/button'
+import { categoryOrder } from '~/lib/projects'
 
 interface ProjectListProps {
   projects: Project[]
 }
 
 export function ProjectList(props: ProjectListProps) {
-  const allTags = [...new Set(props.projects.flatMap(p => p.tags))]
+  const allTags = [...new Set(props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])]))]
   const [selectedTags, setSelectedTags] = createSignal<string[]>([])
 
   const toggleTag = (tag: string) => {
@@ -17,34 +18,33 @@ export function ProjectList(props: ProjectListProps) {
     )
   }
 
-  const filteredProjects = () => {
+  const filteredProjects = createMemo(() => {
     if (selectedTags().length === 0)
       return props.projects
 
+    const tags = new Set(selectedTags())
     return props.projects.filter(p =>
-      selectedTags().every(tag => p.tags.includes(tag)),
+      [...p.tags, ...(p.hiddenTags ?? [])].some(tag => tags.has(tag)),
     )
-  }
+  })
 
-  const groupedProjects = () => {
+  const groupedProjects = createMemo(() => {
     return filteredProjects().reduce((acc, project) => {
       if (!acc[project.category])
         acc[project.category] = []
-
       acc[project.category].push(project)
       return acc
     }, {} as Record<Project['category'], Project[]>)
-  }
-
-  const categoryOrder: Project['category'][] = ['Current Focus', 'Apps', 'Sites', 'CLI Tools', 'Starter Templates']
+  })
 
   return (
     <div>
-      <div class="mb-12 flex flex-wrap justify-center gap-2">
+      <div class="mb-12 flex flex-wrap gap-2">
         <For each={allTags}>
           {tag => (
             <Button
               variant={selectedTags().includes(tag) ? 'default' : 'outline'}
+              class="border-1"
               onClick={() => toggleTag(tag)}
             >
               {tag}
@@ -61,19 +61,21 @@ export function ProjectList(props: ProjectListProps) {
       <div class="space-y-16">
         <For each={categoryOrder}>
           {(category) => {
-            const projects = groupedProjects()[category]
-            if (!projects || projects.length === 0)
-              return null
+            const projects = () => groupedProjects()[category]
 
             return (
-              <section>
-                <h2 class="mb-8 text-2xl font-bold tracking-tight">{category}</h2>
-                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
-                  <For each={projects}>
-                    {project => <ProjectCard project={project} />}
-                  </For>
-                </div>
-              </section>
+              <Show when={projects() && projects()!.length > 0}>
+                <section>
+                  <h2 class="mb-8 text-2xl font-bold tracking-tight">
+                    {category}
+                  </h2>
+                  <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
+                    <For each={projects()}>
+                      {project => <ProjectCard project={project} />}
+                    </For>
+                  </div>
+                </section>
+              </Show>
             )
           }}
         </For>
