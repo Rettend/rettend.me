@@ -1,24 +1,26 @@
 import type { Project } from '~/lib/projects'
 import { For, Show } from 'solid-js'
-
 import { Button } from '~/components/ui/button'
+
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip'
+import { cn } from '~/lib/utils'
 
 interface ProjectCardProps {
   project: Project
+  class?: string
 }
 
 export function ProjectCard(props: ProjectCardProps) {
   const { project } = props
 
   return (
-    <div class="group flex flex-col border rounded-lg bg-card text-card-foreground shadow-sm">
+    <div class={cn('group flex flex-col border rounded-lg bg-card text-card-foreground shadow-sm', props.class)}>
       <div class="flex flex-grow flex-col p-6">
         <div class="flex items-start justify-between">
           <div class="flex flex-row gap-1">
             <h3 class="pr-4 text-lg font-semibold leading-none tracking-tight">{project.name}</h3>
             <Show when={project.team && project.team > 1}>
-              <div class="flex items-center gap-1 border rounded-full px-2.5 py-0.5 text-xs font-semibold">
+              <div class="h-fit flex items-center gap-1 border rounded-full px-2.5 py-0.5 text-xs font-semibold">
                 <span class="i-ph:users-duotone size-4" />
                 <span>{project.team}</span>
               </div>

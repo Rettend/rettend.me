@@ -16,6 +16,15 @@ export default defineConfig({
     },
   ],
   rules: [
+    [/^no-scrollbar$/, () => `
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `],
     [
       'backdrop-pixelate',
       {
@@ -87,6 +96,11 @@ export default defineConfig({
       },
     ),
     presetIcons({
+      collections: {
+        logo: {
+          yuo: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">  <path fill="currentColor" d="M46.1 187l324.6 411.4c11.5 14.6 12.1 35 1.5 50.3L239.5 839.9c-19.5 28.1.6 66.5 34.7 66.5h223.7c14.5 0 27.9-7.4 35.6-19.6l446.9-704.1c17.8-28.1-2.4-64.9-35.8-64.9h-84.4L698 118c-11.5 0-26.4 7.4-33.4 16.5L553.9 278.1c-18 23.4-47.9 23.7-66.5.8l-117-145.3c-6.9-8.6-21.7-15.7-32.9-15.7H185.5l-106.5.8C43.9 118.7 24.4 159.4 46.1 187z"/></svg>',
+        },
+      },
       extraProperties: {
         'display': 'inline-block',
         'vertical-align': 'middle',

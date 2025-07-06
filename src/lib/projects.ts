@@ -17,7 +17,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: 'rettend.github.io',
-    description: 'My personal site, this site you are on',
+    description: 'Personal site, this site you are on',
     url: 'https://rettend.github.io',
     githubUrl: 'https://github.com/Rettend/rettend.github.io',
     tags: ['Astro', 'SolidJS', 'UnoCSS', 'Shadcn'],
@@ -110,14 +110,14 @@ export const projects: Project[] = [
   },
   {
     name: 'idb-orm',
-    description: 'lightweight, type-safe ORM for IndexedDB that closely matches the supabase-js API',
+    description: 'Lightweight, type-safe ORM for IndexedDB that closely matches the supabase-js API',
     githubUrl: 'https://github.com/yuo-app/idb-orm',
     tags: ['TypeScript'],
     category: 'Past',
   },
   {
     name: 'Gump',
-    description: 'high school final project, modular recipe sharing app',
+    description: 'High school final project, modular recipe sharing app',
     githubUrl: 'https://github.com/Vitorlas-Devs/Gump',
     designUrl: 'https://www.figma.com/file/fuqFbwU64lUy7Dcime5fMZ/GUMP?type=design&node-id=51595%253A4712&mode=design&t=NqZlwfTlwczm2nif-1',
     tags: ['Nuxt', 'Ionic Capacitor', 'ASP.NET', 'Docker'],
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     name: 'DiaryAI',
-    description: 'project for HSUP 2023/24, diary generator with LLMs',
+    description: 'Project for HSUP 2023/24, diary generator with LLMs',
     url: 'https://diaryai.pages.dev',
     designUrl: 'https://www.figma.com/design/0UEW6E6iCF91FUTix2MaTZ/APP?node-id=2-287&t=C5bILwsXYQT4OLIO-1',
     tags: ['SvelteKit', 'TailwindCSS', 'Supabase', 'AI SDK'],
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   },
   {
     name: 'untitled-inventory-app',
-    description: 'a text-based inventory app for your fridge',
+    description: 'Text-based inventory app for your fridge',
     url: 'https://ashlsun.github.io/untitled-inventory-app',
     githubUrl: 'https://github.com/ashlsun/untitled-inventory-app',
     tags: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
@@ -147,7 +147,7 @@ export const projects: Project[] = [
   },
   {
     name: 'tiszatohaus.hu',
-    description: 'personal booking site for an apartment owner',
+    description: 'Personal booking site for an apartment owner',
     url: 'https://tiszatohaus.hu',
     tags: ['Astro', 'Vue', 'UnoCSS', 'Shadcn', 'Astro DB'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Iconify'],
@@ -155,8 +155,8 @@ export const projects: Project[] = [
     team: 2,
   },
   {
-    name: 'safari game',
-    description: 'they made me create a game in libgdx....',
+    name: 'Safari Game',
+    description: 'They made me create a game in libgdx....',
     githubUrl: 'https://github.com/Rettend/safari',
     tags: ['Java'],
     category: 'Past',
