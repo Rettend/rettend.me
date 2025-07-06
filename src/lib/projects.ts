@@ -1,4 +1,4 @@
-export const categoryOrder = ['Current Focus', 'Apps', 'Sites', 'CLI', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Contributions', 'Past'] as const
+export const categoryOrder = ['Current Focus', 'Apps', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Major Contributions', 'Forks', 'Past'] as const
 export type Category = typeof categoryOrder[number]
 
 export interface Project {
@@ -6,10 +6,12 @@ export interface Project {
   description: string
   url?: string
   githubUrl?: string
+  designUrl?: string
   tags: string[]
   hiddenTags?: string[]
   category: Category
   image?: string
+  team?: number
 }
 
 export const projects: Project[] = [
@@ -38,16 +40,32 @@ export const projects: Project[] = [
     category: 'Current Focus',
   },
   {
+    name: 'Oneday',
+    description: 'Extreme productivity app, a watch and not a calendar',
+    githubUrl: 'https://github.com/Rettend/oneday',
+    tags: ['SolidStart', 'Tauri', 'Turso', 'AI SDK'],
+    hiddenTags: ['SolidJS', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AuthJS'],
+    category: 'Current Focus',
+  },
+  {
     name: 'the-stack',
     description: 'Web and Tauri app starter with Drizzle and SQLite WASM',
-    url: 'https://yuo.app',
+    githubUrl: 'https://github.com/yuo-app/the-stack',
     tags: ['SolidStart', 'SQLite WASM', 'Turso', 'Tauri'],
     hiddenTags: ['SolidJS', 'TypeScript', 'Drizzle', 'UnoCSS', 'Iconify', 'AuthJS'],
     category: 'Starter Templates',
   },
   {
+    name: 'svelte-stack',
+    description: 'Web app starter with Svelte',
+    githubUrl: 'https://github.com/Rettend/svelte-stack',
+    tags: ['SvelteKit', 'Drizzle', 'Turso', 'tRPC'],
+    hiddenTags: ['Svelte', 'TypeScript', 'UnoCSS', 'Iconify', 'AuthJS'],
+    category: 'Starter Templates',
+  },
+  {
     name: 'github-material-icon-theme',
-    description: 'vscode-material-icon-theme for GitHub',
+    description: 'vscode-material-icon-theme for GitHub, uses Pure CSS icons inspired by Iconify',
     url: 'https://chromewebstore.google.com/detail/github-material-icon-them/hlgcfologjgpkkkokemkclndckfbbphb',
     githubUrl: 'https://github.com/Rettend/github-material-icon-theme',
     tags: ['TypeScript'],
@@ -61,12 +79,26 @@ export const projects: Project[] = [
     category: 'CLI',
   },
   {
-    name: 'Github Projects Milestone Progress',
+    name: 'github-projects-milestone-progress',
     description: 'Progress bar for milestones in GitHub Projects',
     url: 'https://chromewebstore.google.com/detail/github-projects-milestone/midibmobbnmmbneompmcdkpjilddkjmd',
     githubUrl: 'https://github.com/Rettend/github-projects-milestone-progress',
     tags: ['TypeScript'],
     category: 'Web Extensions',
+  },
+  {
+    name: 'vscode-copy-open-files',
+    description: 'Copy open files and directory structure in VSCode',
+    githubUrl: 'https://github.com/Rettend/vscode-copy-open-files',
+    tags: ['TypeScript'],
+    category: 'VSCode Extensions',
+  },
+  {
+    name: 'GitHub Desktop Fork',
+    description: 'I added a Secondary Editor option',
+    githubUrl: 'https://github.com/Rettend/desktop',
+    tags: ['TypeScript'],
+    category: 'Forks',
   },
   {
     name: 'Pinia Generic',
@@ -87,25 +119,46 @@ export const projects: Project[] = [
     name: 'Gump',
     description: 'high school final project, modular recipe sharing app',
     githubUrl: 'https://github.com/Vitorlas-Devs/Gump',
+    designUrl: 'https://www.figma.com/file/fuqFbwU64lUy7Dcime5fMZ/GUMP?type=design&node-id=51595%253A4712&mode=design&t=NqZlwfTlwczm2nif-1',
     tags: ['Nuxt', 'Ionic Capacitor', 'ASP.NET', 'Docker'],
     hiddenTags: ['TypeScript', 'Vue', 'UnoCSS'],
     category: 'Past',
+    team: 3,
   },
   {
     name: 'DiaryAI',
     description: 'project for HSUP 2023/24, diary generator with LLMs',
-    url:'https://diaryai.pages.dev',
+    url: 'https://diaryai.pages.dev',
+    designUrl: 'https://www.figma.com/design/0UEW6E6iCF91FUTix2MaTZ/APP?node-id=2-287&t=C5bILwsXYQT4OLIO-1',
     tags: ['SvelteKit', 'TailwindCSS', 'Supabase', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Svelte'],
     category: 'Past',
+    team: 3,
   },
   {
     name: 'untitled-inventory-app',
     description: 'a text-based inventory app for your fridge',
-    url:'https://ashlsun.github.io/untitled-inventory-app',
+    url: 'https://ashlsun.github.io/untitled-inventory-app',
     githubUrl: 'https://github.com/ashlsun/untitled-inventory-app',
     tags: ['SvelteKit', 'TypeScript', 'TailwindCSS'],
     hiddenTags: ['Svelte', 'Iconify'],
-    category: 'Contributions',
+    category: 'Major Contributions',
+    team: 2,
+  },
+  {
+    name: 'tiszatohaus.hu',
+    description: 'personal booking site for an apartment owner',
+    url: 'https://tiszatohaus.hu',
+    tags: ['Astro', 'Vue', 'UnoCSS', 'Shadcn', 'Astro DB'],
+    hiddenTags: ['TypeScript', 'Drizzle', 'Iconify'],
+    category: 'Sites',
+    team: 2,
+  },
+  {
+    name: 'safari game',
+    description: 'they made me create a game in libgdx....',
+    githubUrl: 'https://github.com/Rettend/safari',
+    tags: ['Java'],
+    category: 'Past',
   },
 ]

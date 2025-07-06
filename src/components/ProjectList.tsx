@@ -9,7 +9,13 @@ interface ProjectListProps {
 }
 
 export function ProjectList(props: ProjectListProps) {
-  const allTags = [...new Set(props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])]))]
+  const allProjectTags = props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])])
+  const tagCounts = allProjectTags.reduce((acc, tag) => {
+    acc[tag] = (acc[tag] || 0) + 1
+    return acc
+  }, {} as Record<string, number>)
+
+  const allTags = [...new Set(allProjectTags)].sort((a, b) => tagCounts[b] - tagCounts[a])
   const [selectedTags, setSelectedTags] = createSignal<string[]>([])
 
   const toggleTag = (tag: string) => {
