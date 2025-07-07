@@ -8,7 +8,8 @@ import bg from '~/assets/bg.png'
 const optimizedBg = await getImage({
   src: bg,
   format: 'webp',
-  width: 1920,
+  width: 1080,
+  quality: 50,
 })
 ---
 
@@ -36,7 +37,7 @@ const optimizedBg = await getImage({
         <feBlend in="rg" in2="b-offset" mode="screen"></feBlend>
       </filter>
     </svg>
-    <div class="fixed inset-0 -z-10 bg-cover bg-top opacity-20" style={`background-image: url(${optimizedBg.src})`}>
+    <div class="fixed inset-0 -z-10 bg-cover bg-top opacity-15" style={`background-image: url(${optimizedBg.src})`}>
     </div>
     <div class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col pt-10 md:pt-0">
       <Navbar />
