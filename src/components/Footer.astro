@@ -1,8 +1,18 @@
 ---
 import Link from '~/components/Link.astro'
+import pkg from '../../package.json'
+
+const lastUpdated = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+})
+
+const astroVersion = pkg.dependencies.astro.replace('^', '')
+const solidVersion = pkg.dependencies['solid-js'].replace('^', '')
 ---
 
-<footer class="py-8 text-sm text-muted-foreground text-center">
+<footer class="py-8 text-sm text-muted-foreground text-center space-y-2">
   <p>
     <Link
       href="https://creativecommons.org/licenses/by-sa/4.0/"
@@ -12,4 +22,13 @@ import Link from '~/components/Link.astro'
       CC BY-SA 4.0
     </Link> 2025-PRESENT © Hegyi Áron Ferenc
   </p>
+  <p>
+    Powered by <Link href="https://astro.build/" external>Astro</Link> v{
+      astroVersion
+    }
+    and <Link href="https://www.solidjs.com/" external>SolidJS</Link> v{
+      solidVersion
+    }
+  </p>
+  <p>Last updated on {lastUpdated}</p>
 </footer>
