@@ -28,7 +28,7 @@ export default defineConfig({
     [
       'backdrop-pixelate',
       {
-        'backdrop-filter': 'url(#pixelate)',
+        'backdrop-filter': 'url(#pixelate) blur(1px)',
       },
     ],
     [

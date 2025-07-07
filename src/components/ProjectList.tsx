@@ -49,29 +49,6 @@ export function ProjectList(props: ProjectListProps) {
   const [scrollLeft, setScrollLeft] = createSignal(0)
   const [hasDragged, setHasDragged] = createSignal(false)
 
-  // Detect row count based on screen size (3 on mobile, 2 on desktop)
-  const [rowCount, setRowCount] = createSignal(3)
-  const [isMounted, setIsMounted] = createSignal(false)
-
-  onMount(() => {
-    const mq = window.matchMedia('(min-width: 768px)') // md breakpoint
-    const updateRowCount = () => setRowCount(mq.matches ? 2 : 3)
-    updateRowCount()
-    mq.addEventListener('change', updateRowCount)
-
-    // Mark the component as mounted so we can reveal the content without a flash
-    setIsMounted(true)
-  })
-
-  // Split tags into rows
-  const tagRows = createMemo(() => {
-    const rows: string[][] = Array.from({ length: rowCount() }, () => [])
-    allTags.forEach((tag, index) => {
-      rows[index % rowCount()].push(tag)
-    })
-    return rows
-  })
-
   let smoothScrollRAF: number | undefined
   let targetScrollLeft = 0
 
@@ -154,7 +131,7 @@ export function ProjectList(props: ProjectListProps) {
   })
 
   return (
-    <div class={isMounted() ? undefined : 'invisible'}>
+    <div>
       <div class="relative -mx-4 lg:-mx-8 sm:-mx-6">
         <Show when={selectedTags().length > 0}>
           <Button
@@ -174,27 +151,21 @@ export function ProjectList(props: ProjectListProps) {
           onMouseUp={onMouseUp}
           onMouseLeave={onMouseLeave}
           onMouseMove={onMouseMove}
-          class="no-scrollbar overflow-x-auto px-4 py-1 lg:px-8 sm:px-6"
+          class="overflow-x-auto py-1 no-scrollbar"
         >
-          <div class="w-fit flex flex-col gap-2">
-            <For each={tagRows()}>
-              {row => (
-                <div class="flex gap-2">
-                  <For each={row}>
-                    {tag => (
-                      <Button
-                        variant={selectedTags().includes(tag) ? 'default' : 'outline'}
-                        class="border-1"
-                        onClick={() => {
-                          if (!hasDragged())
-                            toggleTag(tag)
-                        }}
-                      >
-                        {tag}
-                      </Button>
-                    )}
-                  </For>
-                </div>
+          <div class="grid grid-flow-col rows-3 h-8.5rem w-max gap-2 px-4 md:rows-2 md:h-5.5rem lg:px-8 sm:px-6">
+            <For each={allTags}>
+              {tag => (
+                <Button
+                  variant={selectedTags().includes(tag) ? 'default' : 'outline'}
+                  class="border-1"
+                  onClick={() => {
+                    if (!hasDragged())
+                      toggleTag(tag)
+                  }}
+                >
+                  {tag}
+                </Button>
               )}
             </For>
           </div>

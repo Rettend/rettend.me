@@ -12,8 +12,18 @@ const astroVersion = pkg.dependencies.astro.replace('^', '')
 const solidVersion = pkg.dependencies['solid-js'].replace('^', '')
 ---
 
-<footer class="py-8 text-sm text-muted-foreground text-center space-y-2">
-  <p>
+<footer
+  class="py-8 text-sm text-muted-foreground gap-1 mx-auto text-center flex flex-col justify-center lg:justify-around lg:flex-row w-full lg:max-w-7xl lg:items-center lg:px-8"
+>
+  <p class="order-1 lg:order-0">
+    Powered by <Link href="https://astro.build/" external>Astro</Link> v{
+      astroVersion
+    }
+    and <Link href="https://www.solidjs.com/" external>SolidJS</Link> v{
+      solidVersion
+    }
+  </p>
+  <p class="order-0 lg:order-1">
     <Link
       href="https://creativecommons.org/licenses/by-sa/4.0/"
       external
@@ -22,13 +32,5 @@ const solidVersion = pkg.dependencies['solid-js'].replace('^', '')
       CC BY-SA 4.0
     </Link> 2025-PRESENT © Hegyi Áron Ferenc
   </p>
-  <p>
-    Powered by <Link href="https://astro.build/" external>Astro</Link> v{
-      astroVersion
-    }
-    and <Link href="https://www.solidjs.com/" external>SolidJS</Link> v{
-      solidVersion
-    }
-  </p>
-  <p>Last updated on {lastUpdated}</p>
+  <p class="order-2 lg:order-2">Last updated on {lastUpdated}</p>
 </footer>
