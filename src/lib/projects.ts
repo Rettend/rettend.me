@@ -1,4 +1,4 @@
-export const categoryOrder = ['Current Focus', 'Apps', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Major Contributions', 'Forks', 'Past'] as const
+export const categoryOrder = ['Current Focus', 'Apps', 'Packages', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Major Contributions', 'Forks', 'Past'] as const
 export type Category = typeof categoryOrder[number]
 
 export interface Project {
@@ -30,6 +30,13 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/yuo-app/lin',
     tags: ['TypeScript', 'AI SDK'],
     category: 'CLI',
+  },
+  {
+    name: 'gau',
+    description: 'A good authentication library with first-class Tauri support',
+    githubUrl: 'https://github.com/yuo-app/gau',
+    tags: ['TypeScript', 'Tauri'],
+    category: 'Packages',
   },
   {
     name: 'Yuo',
