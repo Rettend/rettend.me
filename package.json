@@ -1,9 +1,9 @@
 {
-  "name": "rettend.github.io",
+  "name": "rettend.me",
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "bun@1.2.18",
+  "packageManager": "bun@1.2.19",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -15,7 +15,7 @@
     "@astrojs/solid-js": "^5.1.0",
     "@fontsource-variable/inter": "^5.2.6",
     "@kobalte/core": "^0.13.10",
-    "astro": "^5.11.1",
+    "astro": "^5.12.0",
     "class-variance-authority": "^0.7.1",
     "solid-js": "^1.9.7",
     "tailwind-merge": "^3.3.1",

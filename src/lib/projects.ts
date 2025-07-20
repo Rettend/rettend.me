@@ -16,10 +16,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'rettend.github.io',
+    name: 'rettend.me',
     description: 'Personal site, this site you are on',
-    url: 'https://rettend.github.io',
-    githubUrl: 'https://github.com/Rettend/rettend.github.io',
+    url: 'https://rettend.me',
+    githubUrl: 'https://github.com/Rettend/rettend.me',
     tags: ['Astro', 'SolidJS', 'UnoCSS', 'Shadcn'],
     hiddenTags: ['Iconify', 'TypeScript'],
     category: 'Sites',
@@ -27,14 +27,16 @@ export const projects: Project[] = [
   {
     name: 'lin',
     description: 'CLI tool that translates locale JSONs using LLMs',
-    githubUrl: 'https://github.com/yuo-app/lin',
+    githubUrl: 'https://github.com/Rettend/lin',
+    url: 'https://lin.rettend.me',
     tags: ['TypeScript', 'AI SDK'],
     category: 'CLI',
   },
   {
     name: 'gau',
     description: 'A good authentication library with first-class Tauri support',
-    githubUrl: 'https://github.com/yuo-app/gau',
+    githubUrl: 'https://github.com/Rettend/gau',
+    url: 'https://gau.rettend.me',
     tags: ['TypeScript', 'Tauri'],
     category: 'Packages',
   },

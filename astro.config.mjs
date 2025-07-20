@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config'
 import UnoCSS from 'unocss/astro'
 
 export default defineConfig({
-  site: 'https://rettend.github.io',
+  site: 'https://rettend.me',
   integrations: [
     UnoCSS({
       injectReset: true,
