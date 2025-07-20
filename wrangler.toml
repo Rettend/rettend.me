@@ -1,4 +1,4 @@
-name = "rettend.me"
+name = "rettend-me"
 compatibility_date = "2025-04-01"
 routes = [ { pattern = "rettend.me", custom_domain = true } ]
 
