@@ -34,10 +34,10 @@ export const projects: Project[] = [
   },
   {
     name: 'gau',
-    description: 'A good authentication library with first-class Tauri support',
+    description: 'Good OAuth library with first-class Tauri support',
     githubUrl: 'https://github.com/Rettend/gau',
     url: 'https://gau.rettend.me',
-    tags: ['TypeScript', 'Tauri'],
+    tags: ['TypeScript', 'Tauri', 'SvelteKit', 'SolidStart'],
     category: 'Packages',
   },
   {
@@ -165,8 +165,9 @@ export const projects: Project[] = [
   },
   {
     name: 'Safari Game',
-    description: 'They made me create a game in libgdx....',
+    description: 'They made me create a game in java....',
     githubUrl: 'https://github.com/Rettend/safari',
+    designUrl: 'https://www.figma.com/design/Td12XunHN8YH7W6ikDxayk/SAFARI?node-id=0-1&t=RSIC7BmbIgxvwD79-1',
     tags: ['Java'],
     category: 'Past',
   },
