@@ -16,6 +16,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'starlight-plugin-icons',
+    description: 'Plugin that adds icons to Astro Starlight: sidebar, codeblocks, file tree',
+    url: 'https://docs.rettend.me/starlight-plugin-icons',
+    githubUrl: 'https://github.com/Rettend/starlight-plugin-icons',
+    tags: ['Astro', 'Starlight', 'UnoCSS', 'TypeScript'],
+    hiddenTags: ['Iconify'],
+    category: 'Packages',
+  },
+  {
     name: 'rettend.me',
     description: 'Personal site, this site you are on',
     url: 'https://rettend.me',
