@@ -3,6 +3,7 @@ import Layout from '~/layouts/Layout.astro'
 import { Button } from '~/components/ui/button'
 import pp from '~/assets/pp.png'
 import { getImage, Image } from 'astro:assets'
+import pkg from '../../package.json'
 
 const optimizedPP = await getImage({
   src: pp,
@@ -10,10 +11,11 @@ const optimizedPP = await getImage({
   width: 512,
   quality: 50,
 })
+const buildId = pkg.version
 ---
 
 <Layout>
-  <main class="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
+  <main class="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8" data-build-id={buildId}>
     <div class="text-center">
       <Image
         src={optimizedPP.src}
@@ -61,15 +63,99 @@ const optimizedPP = await getImage({
           Humanity only has one project, building better magic users than humans.
         </p>
       </div>
-      <div class="flex flex-col gap-4 mx-a text-muted-foreground">
-        <p>
+      <div class="flex sm:flex-row flex-col gap-1 mx-a text-muted-foreground">
+        <span>
           This site is
-          <span class="text-primary font-bold">28.2kB</span>
-          compressed, and
-          <span class="text-primary font-bold">1.4kB</span>
-          after caching.
-        </p>
+          <span
+            id="size-compressed"
+            class="text-primary font-bold"
+            title="Estimated uncached compressed size (this build); persists after first full load"
+          >
+            …
+          </span>
+          compressed…
+        </span>
+        <span>
+          <span id="cached-wrap">
+            and
+            <span
+              id="size-cached"
+              class="text-primary font-bold"
+              title="Transferred bytes this view (lower on repeat views via cache)"
+            >
+              …
+            </span>
+            after caching.
+          </span>
+        </span>
       </div>
     </div>
   </main>
 </Layout>
+
+<script is:inline>
+  ;(function () {
+    function formatBytes(bytes) {
+      if (!bytes || bytes < 1024) return `${bytes | 0}B`
+      const kb = bytes / 1024
+      if (kb < 1024) return `${kb.toFixed(1)}kB`
+      const mb = kb / 1024
+      return `${mb.toFixed(2)}MB`
+    }
+
+    function isSameOrigin(url) {
+      try {
+        const u = new URL(url, location.href)
+        return u.origin === location.origin && (u.protocol === 'http:' || u.protocol === 'https:')
+      } catch {
+        return false
+      }
+    }
+
+    function computeSizes() {
+      const navEntries = performance.getEntriesByType('navigation')
+      const resourceEntries = performance.getEntriesByType('resource')
+
+      let encoded = 0
+      let transferred = 0
+
+      if (navEntries && navEntries.length) {
+        const nav = navEntries[0]
+        encoded += nav.encodedBodySize || 0
+        transferred += nav.transferSize || 0
+      }
+
+      for (const e of resourceEntries) {
+        if (!isSameOrigin(e.name)) continue
+        encoded += e.encodedBodySize || 0
+        transferred += e.transferSize || 0
+      }
+      const compressedEl = document.getElementById('size-compressed')
+      const cachedEl = document.getElementById('size-cached')
+      const cachedWrap = document.getElementById('cached-wrap')
+      const buildId = document.querySelector('main')?.dataset.buildId || 'dev'
+      const storageKey = `size:${buildId}`
+      try {
+        const existing = localStorage.getItem(storageKey)
+        const parsed = existing ? JSON.parse(existing) : null
+        const isFirstViewOfBuild = !existing
+        let baseline = parsed && typeof parsed.encoded === 'number' ? parsed.encoded : 0
+        if (encoded > baseline) {
+          baseline = encoded
+          localStorage.setItem(storageKey, JSON.stringify({ encoded: baseline }))
+        }
+        if (compressedEl) compressedEl.textContent = formatBytes(baseline || encoded)
+        if (isFirstViewOfBuild) {
+          if (cachedWrap) cachedWrap.style.display = 'none'
+        } else if (cachedEl) {
+          cachedEl.textContent = formatBytes(transferred)
+        }
+      } catch {
+        if (compressedEl) compressedEl.textContent = formatBytes(encoded)
+        if (cachedEl) cachedEl.textContent = formatBytes(transferred)
+      }
+    }
+    if (document.readyState === 'complete') computeSizes()
+    else window.addEventListener('load', computeSizes, { once: true })
+  })()
+</script>

@@ -6,5 +6,7 @@ export default antfu({
   astro: true,
   rules: {
     'no-console': 'warn',
+    'antfu/if-newline': 'off',
+    'style/brace-style': 'off',
   },
 })

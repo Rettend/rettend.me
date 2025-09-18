@@ -3,48 +3,32 @@ import { Button } from '~/components/ui/button'
 
 const links = [
   { name: 'Home', href: '/', icon: 'i-ph:house-duotone' },
-  { name: 'Projects', href: '/projects', icon: 'i-ph:desktop-duotone' }
+  { name: 'Projects', href: '/projects', icon: 'i-ph:desktop-duotone' },
 ]
 
 const socialLinks = [
   {
     href: 'https://github.com/rettend',
     icon: 'i-ph:github-logo-duotone',
-    label: 'GitHub'
+    label: 'GitHub',
   },
   {
     href: 'https://x.com/rettend1',
     icon: 'i-ph:x-logo-duotone',
-    label: 'Twitter'
-  }
+    label: 'Twitter',
+  },
 ]
 ---
 
-<header
-  class="fixed top-0 left-0 right-0 z-50 backdrop-pixelate bg-gradient-to-b from-background/80 to-transparent"
->
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-pixelate bg-gradient-to-b from-background/80 to-transparent">
   <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
-    <Button
-      client:load
-      variant="glow"
-      as="a"
-      href="/"
-      class="text-xl hidden sm:inline-flex"
-    >
-      Rettend
-    </Button>
+    <Button client:load variant="glow" as="a" href="/" class="text-xl hidden sm:inline-flex"> Rettend </Button>
     <div class="flex items-center gap-8">
       <ul class="hidden sm:flex items-center gap-4">
         {
           links.map((link) => (
             <li>
-              <Button
-                client:load
-                as="a"
-                href={link.href}
-                variant="split"
-                class="px-2 text-lg font-medium"
-              >
+              <Button client:load as="a" href={link.href} variant="split" class="px-2 text-lg font-medium">
                 {link.name}
               </Button>
             </li>
