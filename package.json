@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "lint": "eslint . --fix",
-    "update:deps": "taze -wr latest",
+    "update": "taze -wr latest",
     "astro": "astro"
   },
   "dependencies": {

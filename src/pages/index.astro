@@ -2,16 +2,24 @@
 import Layout from '~/layouts/Layout.astro'
 import { Button } from '~/components/ui/button'
 import pp from '~/assets/pp.png'
-import { Image } from 'astro:assets'
+import { getImage, Image } from 'astro:assets'
+
+const optimizedPP = await getImage({
+  src: pp,
+  format: 'avif',
+  width: 512,
+  quality: 50,
+})
 ---
 
 <Layout>
   <main class="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
     <div class="text-center">
       <Image
-        src={pp}
+        src={optimizedPP.src}
         width={512}
         height={512}
+        loading={'eager'}
         alt="Rettend's profile picture"
         class="mx-auto mb-8 size-48 rounded-full grayscale contrast-200 mix-blend-lighten transition-transform duration-300 hover:scale-105"
       />
@@ -21,21 +29,11 @@ import { Image } from 'astro:assets'
         Rettend
       </h1>
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <Button
-          variant="outline"
-          as="a"
-          href="https://github.com/rettend"
-          target="_blank"
-        >
+        <Button variant="outline" as="a" href="https://github.com/rettend" target="_blank">
           <span class="i-ph:github-logo-duotone size-5"></span>
           Rettend
         </Button>
-        <Button
-          variant="outline"
-          as="a"
-          href="https://x.com/rettend1"
-          target="_blank"
-        >
+        <Button variant="outline" as="a" href="https://x.com/rettend1" target="_blank">
           <span class="i-ph:x-logo-duotone size-5"></span>
           Rettend1
         </Button>
@@ -49,22 +47,27 @@ import { Image } from 'astro:assets'
     <div class="mt-24 flex flex-col gap-18 w-fit max-w-xl mx-auto">
       <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-semibold">Interests</h2>
+        <p class="text-muted-foreground">SolidJS, Svelte, Astro, TypeScript, Mojo, Rust</p>
         <p class="text-muted-foreground">
-          SolidJS, Svelte, Astro, TypeScript, Mojo, Rust
-        </p>
-        <p class="text-muted-foreground">
-          SpaceX and Starbase ringwatching, Twitter, learning
-          English/Korean/Japanese, LLMs and AI, startups, UI design, anime, ZZZ,
-          reading books/docs/blogs
+          SpaceX and Starbase ringwatching, Twitter, learning English/Korean/Japanese, LLMs and AI, startups, UI design,
+          anime, ZZZ, reading books/docs/blogs
         </p>
       </div>
       <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-semibold">Reality has a magic system</h2>
         <p class="text-muted-foreground">
           Your intelligence and knowledge are your mana pool.<br />
-          Coding is the most powerful spell, you type words and control the world.<br
-          />
+          Coding is the most powerful spell, you type words and control the world.<br />
           Humanity only has one project, building better magic users than humans.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 mx-a text-muted-foreground">
+        <p>
+          This site is
+          <span class="text-primary font-bold">28.2kB</span>
+          compressed, and
+          <span class="text-primary font-bold">1.4kB</span>
+          after caching.
         </p>
       </div>
     </div>

@@ -37,6 +37,29 @@ export default defineConfig({
         'scrollbar-gutter': 'stable',
       },
     ],
+    [/^bg-speckles$/, ([,]) => `
+      .bg-speckles {
+        background-color: hsl(var(--background));
+        background-image:
+          radial-gradient(hsl(var(--foreground) / 0.16) 1px, transparent 1px),
+          radial-gradient(hsl(var(--foreground) / 0.13) 1px, transparent 1px),
+          radial-gradient(hsl(var(--foreground) / 0.12) 1px, transparent 1px),
+          radial-gradient(hsl(var(--foreground) / 0.115) 1px, transparent 1px),
+          radial-gradient(hsl(var(--foreground) / 0.11) 1px, transparent 1px);
+        background-size:
+          48px 48px,
+          48px 48px,
+          64px 64px,
+          64px 64px,
+          80px 80px;
+        background-position:
+          0 0,
+          24px 24px,
+          12px 36px,
+          36px 12px,
+          40px 0;
+      }
+    `],
     [/^split-text-inner$/, ([,]) => `
       .split-text-inner {
         display: inline-flex;

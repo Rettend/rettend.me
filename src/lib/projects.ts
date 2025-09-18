@@ -16,6 +16,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'Yuo',
+    description: 'Language learning app that lets you create your own lessons using LLMs',
+    url: 'https://yuo.app',
+    tags: ['SolidJS', 'SQLite WASM', 'Turso', 'AI SDK'],
+    hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AuthJS'],
+    category: 'Current Focus',
+  },
+  {
+    name: 'marko-stack',
+    description: 'Marko 6 exploration',
+    githubUrl: 'https://github.com/Rettend/marko-stack',
+    tags: ['Marko 6', 'Gau', 'Turso', 'Elysia'],
+    hiddenTags: ['TypeScript', 'UnoCSS', 'Iconify', 'Drizzle'],
+    category: 'Current Focus',
+  },
+  {
     name: 'starlight-plugin-icons',
     description: 'Plugin that adds icons to Astro Starlight: sidebar, codeblocks, file tree',
     url: 'https://docs.rettend.me/starlight-plugin-icons',
@@ -50,14 +66,6 @@ export const projects: Project[] = [
     category: 'Packages',
   },
   {
-    name: 'Yuo',
-    description: 'Language learning app that lets you create your own lessons using LLMs',
-    url: 'https://yuo.app',
-    tags: ['SolidJS', 'SQLite WASM', 'Turso', 'AI SDK'],
-    hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AuthJS'],
-    category: 'Current Focus',
-  },
-  {
     name: 'Formate',
     description: 'LLM-powered form builder for designing and running conversational, interview-style surveys',
     url: 'https://formate.app',
@@ -65,14 +73,6 @@ export const projects: Project[] = [
     tags: ['SolidJS', 'Gau', 'Turso', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Apps',
-  },
-  {
-    name: 'Oneday',
-    description: 'Extreme productivity app, a watch and not a calendar',
-    githubUrl: 'https://github.com/Rettend/oneday',
-    tags: ['SolidJS', 'Tauri', 'Turso', 'Gau'],
-    hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
-    category: 'Current Focus',
   },
   {
     name: 'the-stack',
