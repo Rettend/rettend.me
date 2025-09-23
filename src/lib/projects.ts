@@ -24,6 +24,14 @@ export const projects: Project[] = [
     category: 'Current Focus',
   },
   {
+    name: 'ARCO',
+    description: 'ORCA app with Web Audio API and Tauri',
+    url: 'https://arco.hegyi-aron101.workers.dev',
+    tags: ['SolidJS', 'SQLite WASM', 'Turso', 'Tauri'],
+    hiddenTags: ['TypeScript', 'Drizzle', 'UnoCSS'],
+    category: 'Current Focus',
+  },
+  {
     name: 'marko-stack',
     description: 'Marko 6 exploration',
     githubUrl: 'https://github.com/Rettend/marko-stack',
