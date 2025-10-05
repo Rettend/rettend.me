@@ -19,8 +19,16 @@ export const projects: Project[] = [
     name: 'Yuo',
     description: 'Language learning app that lets you create your own lessons using LLMs',
     url: 'https://yuo.app',
+    tags: ['SolidJS', 'Gau', 'Turso', 'AI SDK'],
+    hiddenTags: ['TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
+    category: 'Current Focus',
+  },
+  {
+    name: 'Oneday',
+    description: 'LLM-powered daily planner',
+    githubUrl: 'https://github.com/Rettend/oneday',
     tags: ['SolidJS', 'SQLite WASM', 'Turso', 'AI SDK'],
-    hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AuthJS'],
+    hiddenTags: ['TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Current Focus',
   },
   {
@@ -37,7 +45,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/marko-stack',
     tags: ['Marko 6', 'Gau', 'Turso', 'Elysia'],
     hiddenTags: ['TypeScript', 'UnoCSS', 'Iconify', 'Drizzle'],
-    category: 'Current Focus',
+    category: 'Starter Templates',
   },
   {
     name: 'starlight-plugin-icons',
@@ -88,14 +96,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/yuo-app/the-stack',
     tags: ['SolidJS', 'SQLite WASM', 'Turso', 'Tauri'],
     hiddenTags: ['TypeScript', 'Drizzle', 'UnoCSS', 'Iconify', 'AuthJS'],
-    category: 'Starter Templates',
-  },
-  {
-    name: 'svelte-stack',
-    description: 'Web app starter with Svelte',
-    githubUrl: 'https://github.com/Rettend/svelte-stack',
-    tags: ['Svelte', 'Drizzle', 'Turso', 'tRPC'],
-    hiddenTags: ['TypeScript', 'UnoCSS', 'Iconify', 'AuthJS'],
     category: 'Starter Templates',
   },
   {
