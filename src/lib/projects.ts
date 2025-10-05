@@ -27,8 +27,8 @@ export const projects: Project[] = [
     name: 'Oneday',
     description: 'LLM-powered daily planner',
     githubUrl: 'https://github.com/Rettend/oneday',
-    tags: ['SolidJS', 'SQLite WASM', 'Turso', 'AI SDK'],
-    hiddenTags: ['TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
+    tags: ['SolidJS', 'SQLite WASM', 'Tauri', 'AI SDK'],
+    hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Current Focus',
   },
   {
