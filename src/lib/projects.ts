@@ -1,4 +1,4 @@
-export const categoryOrder = ['Current Focus', 'Apps', 'Packages', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Major Contributions', 'Forks', 'Past'] as const
+export const categoryOrder = ['Current Focus', 'Apps', 'Packages', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Contributions', 'Forks', 'Past'] as const
 export type Category = typeof categoryOrder[number]
 
 export interface Project {
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Oneday',
-    description: 'LLM-powered daily planner',
+    description: 'Activity tracker with achievements',
     githubUrl: 'https://github.com/Rettend/oneday',
     tags: ['SolidJS', 'SQLite WASM', 'Tauri', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
@@ -177,7 +177,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/ashlsun/untitled-inventory-app',
     tags: ['Svelte', 'TypeScript', 'TailwindCSS'],
     hiddenTags: ['Iconify'],
-    category: 'Major Contributions',
+    category: 'Contributions',
     team: 2,
   },
   {
