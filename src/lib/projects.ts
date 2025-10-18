@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     name: 'ARCO',
     description: 'ORCA app with Web Audio API and Tauri',
-    url: 'https://arco.hegyi-aron101.workers.dev',
+    url: 'https://arco.rettend.workers.dev',
     tags: ['SolidJS', 'SQLite WASM', 'Turso', 'Tauri'],
     hiddenTags: ['TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Current Focus',
@@ -95,6 +95,14 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/formate',
     tags: ['SolidJS', 'Gau', 'Turso', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
+    category: 'Apps',
+  },
+  {
+    name: 'ZZZ Pull Planner',
+    description: 'Tool to help with planning your pulls in Zenless Zone Zero',
+    url: 'https://zzz-pull-planner.rettend.workers.dev',
+    githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
+    tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
     category: 'Apps',
   },
   {
