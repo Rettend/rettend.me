@@ -48,15 +48,6 @@ export const projects: Project[] = [
     category: 'Starter Templates',
   },
   {
-    name: 'starlight-plugin-icons',
-    description: 'Plugin that adds icons to Astro Starlight: sidebar, codeblocks, file tree',
-    url: 'https://docs.rettend.me/starlight-plugin-icons',
-    githubUrl: 'https://github.com/Rettend/starlight-plugin-icons',
-    tags: ['Astro', 'Starlight', 'UnoCSS', 'TypeScript'],
-    hiddenTags: ['Iconify'],
-    category: 'Packages',
-  },
-  {
     name: 'rettend.me',
     description: 'Personal site, this site you are on',
     url: 'https://rettend.me',
@@ -79,6 +70,22 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/gau',
     url: 'https://gau.rettend.me',
     tags: ['TypeScript', 'Tauri', 'Svelte', 'SolidJS'],
+    category: 'Packages',
+  },
+  {
+    name: 'starlight-plugin-icons',
+    description: 'Plugin that adds icons to Astro Starlight: sidebar, codeblocks, file tree',
+    url: 'https://docs.rettend.me/starlight-plugin-icons',
+    githubUrl: 'https://github.com/Rettend/starlight-plugin-icons',
+    tags: ['Astro', 'Starlight', 'UnoCSS', 'TypeScript'],
+    hiddenTags: ['Iconify'],
+    category: 'Packages',
+  },
+  {
+    name: 'start-typed-routes',
+    description: 'Add strong types to SolidStart routes',
+    githubUrl: 'https://github.com/Rettend/start-typed-routes',
+    tags: ['TypeScript', 'SolidJS'],
     category: 'Packages',
   },
   {
