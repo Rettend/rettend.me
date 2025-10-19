@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description: 'CLI tool that translates locale JSONs using LLMs',
     githubUrl: 'https://github.com/Rettend/lin',
     url: 'https://lin.rettend.me',
-    tags: ['TypeScript', 'AI SDK'],
+    tags: ['TypeScript', 'AI SDK', 'Astro', 'Starlight'],
     category: 'CLI',
   },
   {
@@ -70,6 +70,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/gau',
     url: 'https://gau.rettend.me',
     tags: ['TypeScript', 'Tauri', 'Svelte', 'SolidJS'],
+    hiddenTags: ['Astro', 'Starlight'],
     category: 'Packages',
   },
   {
@@ -99,7 +100,7 @@ export const projects: Project[] = [
   },
   {
     name: 'ZZZ Pull Planner',
-    description: 'Tool to help with planning your pulls in Zenless Zone Zero',
+    description: 'Tool to calculate your pull strategy in Zenless Zone Zero',
     url: 'https://zzz-pull-planner.rettend.workers.dev',
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
     tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
@@ -155,7 +156,7 @@ export const projects: Project[] = [
     description: 'Split stores and create Generic stores in Pinia',
     url: 'https://rettend.github.io/pinia-generic',
     githubUrl: 'https://github.com/Rettend/pinia-generic',
-    tags: ['TypeScript'],
+    tags: ['TypeScript', 'VitePress'],
     category: 'Past',
   },
   {
