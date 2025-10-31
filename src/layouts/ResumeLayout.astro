@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Resume | Rettend</title>
+    <style is:global>
+      @media print {
+        @page {
+          size: A4;
+          margin: 12mm;
+        }
+        html,
+        body {
+          height: auto !important;
+          overflow: visible !important;
+          background: #fff !important;
+          color: #111 !important;
+        }
+        .dark {
+          color-scheme: light;
+        }
+
+        .text-card-foreground {
+          color: #111 !important;
+        }
+
+        [class~='text-muted-foreground'],
+        [class*='text-muted-foreground'],
+        [class~='text-foreground'],
+        [class*='text-foreground/'] {
+          color: #111 !important;
+        }
+        .bg-card {
+          background: #fff !important;
+        }
+        .border {
+          border-color: #00000022 !important;
+        }
+        .op-50,
+        .op-60,
+        .op-70 {
+          opacity: 1 !important;
+        }
+        a {
+          color: #222 !important;
+          text-decoration: underline !important;
+        }
+
+        .no-print {
+          display: none !important;
+        }
+        .bg-speckles {
+          display: none !important;
+        }
+        .avoid-break {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+        .section-title {
+          break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body class="dark font-sans flex flex-col h-dvh">
+    <div class="fixed inset-0 -z-10 bg-speckles"></div>
+    <div class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col">
+      <slot />
+    </div>
+  </body>
+</html>

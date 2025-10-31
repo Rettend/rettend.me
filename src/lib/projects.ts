@@ -12,6 +12,7 @@ export interface Project {
   category: Category
   image?: string
   team?: number
+  resume?: boolean
 }
 
 export const projects: Project[] = [
@@ -46,10 +47,11 @@ export const projects: Project[] = [
     tags: ['Marko 6', 'Gau', 'Turso', 'Elysia'],
     hiddenTags: ['TypeScript', 'UnoCSS', 'Iconify', 'Drizzle'],
     category: 'Starter Templates',
+    resume: false,
   },
   {
     name: 'rettend.me',
-    description: 'Personal site, this site you are on',
+    description: 'Personal site and resume',
     url: 'https://rettend.me',
     githubUrl: 'https://github.com/Rettend/rettend.me',
     tags: ['Astro', 'SolidJS', 'UnoCSS', 'Shadcn'],
@@ -113,6 +115,7 @@ export const projects: Project[] = [
     tags: ['SolidJS', 'SQLite WASM', 'Turso', 'Tauri'],
     hiddenTags: ['TypeScript', 'Drizzle', 'UnoCSS', 'Iconify', 'AuthJS'],
     category: 'Starter Templates',
+    resume: false,
   },
   {
     name: 'github-material-icon-theme',
@@ -136,6 +139,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/github-projects-milestone-progress',
     tags: ['TypeScript'],
     category: 'Web Extensions',
+    resume: false,
   },
   {
     name: 'vscode-copy-open-files',
@@ -143,6 +147,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/vscode-copy-open-files',
     tags: ['TypeScript'],
     category: 'VSCode Extensions',
+    resume: false,
   },
   {
     name: 'GitHub Desktop Fork',
@@ -150,6 +155,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/desktop',
     tags: ['TypeScript'],
     category: 'Forks',
+    resume: false,
   },
   {
     name: 'Pinia Generic',

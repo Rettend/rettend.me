@@ -28,19 +28,19 @@ export function ProjectCard(props: ProjectCardProps) {
           </div>
           <div class="flex gap-1 -mr-2 -mt-2">
             <Show when={project.url}>
-              <Button as="a" href={project.url} target="_blank" variant="glow" size="icon" title="Website">
+              <Button as="a" href={project.url} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="Website">
                 <span class="i-ph:link-duotone size-5" />
                 <span class="sr-only">Website</span>
               </Button>
             </Show>
             <Show when={project.githubUrl}>
-              <Button as="a" href={project.githubUrl} target="_blank" variant="glow" size="icon" title="GitHub">
+              <Button as="a" href={project.githubUrl} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="GitHub">
                 <span class="i-ph:github-logo-duotone size-5" />
                 <span class="sr-only">GitHub</span>
               </Button>
             </Show>
             <Show when={project.designUrl}>
-              <Button as="a" href={project.designUrl} target="_blank" variant="glow" size="icon" title="Design">
+              <Button as="a" href={project.designUrl} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="Design">
                 <span class="i-ph:palette-duotone size-5" />
                 <span class="sr-only">Design</span>
               </Button>

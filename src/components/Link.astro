@@ -4,17 +4,20 @@ import type { ButtonProps } from '~/components/ui/button'
 
 interface Props extends Omit<ButtonProps<'a'>, 'href'> {
   href: string
+  title?: string
   external?: boolean
   class?: string
+  variant?: ButtonProps<'a'>['variant']
 }
 
-const { href, external, class: className, ...rest } = Astro.props
+const { href, title, external, class: className, variant, ...rest } = Astro.props
 ---
 
 <Button
   as="a"
   href={href}
-  variant="link"
+  title={title}
+  variant={variant || "link"}
   target={external ? '_blank' : undefined}
   rel={external ? 'noopener noreferrer' : undefined}
   class={['p-0 h-auto text-base', className].filter(Boolean).join(' ')}

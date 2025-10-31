@@ -1,5 +1,6 @@
 ---
 import { Button } from '~/components/ui/button'
+import Link from './Link.astro'
 
 const links = [
   { name: 'Home', href: '/', icon: 'i-ph:house-duotone' },
@@ -7,6 +8,11 @@ const links = [
 ]
 
 const socialLinks = [
+  {
+    href: '/resume',
+    icon: 'i-ph:identification-card-duotone',
+    label: 'Resume',
+  },
   {
     href: 'https://github.com/rettend',
     icon: 'i-ph:github-logo-duotone',
@@ -22,7 +28,7 @@ const socialLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 backdrop-pixelate bg-gradient-to-b from-background/80 to-transparent">
   <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
-    <Button client:load variant="glow" as="a" href="/" class="text-xl hidden sm:inline-flex"> Rettend </Button>
+    <Button client:load variant="glow" as="a" href="/" class="text-xl hidden sm:inline-flex">Rettend</Button>
     <div class="flex items-center gap-8">
       <ul class="hidden sm:flex items-center gap-4">
         {
@@ -38,19 +44,16 @@ const socialLinks = [
       <div class="flex items-center gap-2">
         {
           socialLinks.map((social) => (
-            <Button
-              client:load
-              as="a"
+            <Link
               href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
               variant="glow"
               size="icon"
               title={social.label}
+              external={social.href.startsWith('http')}
             >
               <span class={`${social.icon} size-5`} />
               <span class="sr-only">{social.label}</span>
-            </Button>
+            </Link>
           ))
         }
       </div>

@@ -1,0 +1,146 @@
+---
+import ResumeLayout from '../layouts/ResumeLayout.astro'
+import { projects, categoryOrder, type Project } from '../lib/projects'
+import { education } from '../lib/education'
+import { Button } from '~/components/ui/button'
+
+const included = projects.filter((p) => p.resume !== false)
+
+const grouped = categoryOrder.reduce(
+  (acc, cat) => {
+    const list = included.filter((p) => p.category === cat)
+    if (list.length) acc.push({ category: cat, items: list })
+    return acc
+  },
+  [] as { category: (typeof categoryOrder)[number]; items: Project[] }[],
+)
+
+const contactLinks = [
+  { title: 'rettend.me', href: 'https://rettend.me' },
+  { title: 'GitHub', href: 'https://github.com/rettend' },
+  { title: 'Twitter', href: 'https://x.com/rettend1' },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/rettend' },
+  { title: 'hi@rettend.me', href: 'mailto:hi@rettend.me' },
+]
+
+const languages = [
+  { name: 'Hungarian', level: 'Native' },
+  { name: 'English', level: 'C1' },
+  { name: 'Korean', level: 'A2' },
+]
+---
+
+<ResumeLayout>
+  <main class="mx-auto max-w-4xl w-full px-4 py-10 sm:px-6 lg:px-8">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Áron Ferenc Hegyi</h1>
+        <p class="mt-2 text-muted-foreground max-w-prose">
+          Frontend performance enthusiast building apps, web apps, and libraries
+        </p>
+      </div>
+      <div class="flex gap-3">
+        <Button as="a" href="/" variant="outline" size="icon" class="no-print">
+          <span class="i-ph:arrow-left-bold size-5"></span>
+        </Button>
+        <Button id="print-button" variant="outline" class="no-print">
+          <span class="i-ph:printer-duotone size-5"></span>
+          Print
+        </Button>
+      </div>
+    </div>
+
+    <div class="mt-3 text-sm flex flex-wrap items-center gap-x-4 gap-y-1 text-foreground/80">
+      {
+        contactLinks.map((link, i) => (
+          <>
+            <a href={link.href} target="_blank" rel="noopener noreferrer" class="hover:underline">
+              {link.title}
+            </a>
+            {i < contactLinks.length - 1 && <span class="op-50">•</span>}
+          </>
+        ))
+      }
+    </div>
+
+    <section class="mt-8">
+      <h2 class="section-title text-xl font-semibold">Languages</h2>
+      <ul class="mt-2 text-sm text-foreground/80 flex flex-wrap gap-x-4 gap-y-1">
+        {
+          languages.map((lang) => (
+            <li>
+              {lang.name} ({lang.level})
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      {
+        education.length > 0 && (
+          <section class="mt-10">
+            <h2 class="section-title text-xl font-semibold">Education</h2>
+            <ul class="mt-5 space-y-2">
+              {education.map((e) => (
+                <li class="avoid-break">
+                  <div class="flex items-baseline justify-between gap-3">
+                    <div class="font-medium">
+                      {e.school} — {e.program}
+                    </div>
+                    <div class="text-xs text-foreground/60 whitespace-nowrap">{e.period}</div>
+                  </div>
+                  {e.note && <div class="text-sm text-muted-foreground">{e.note}</div>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      <h2 class="section-title text-xl font-semibold mt-10">Projects</h2>
+      {
+        grouped.map(({ category, items }) => (
+          <section class="mt-6">
+            <h3 class="text-sm tracking-wide uppercase op-70">{category}</h3>
+            <ul class="mt-5 space-y-3">
+              {items.map((p) => (
+                <li class="avoid-break border rounded-md p-3 bg-card text-card-foreground">
+                  <div class="flex items-baseline justify-between gap-3">
+                    <div class="font-medium">
+                      <span>{p.name}</span>
+                    </div>
+                    <div class="text-xs text-foreground/60 whitespace-nowrap flex items-center gap-2">
+                      {p.url && (
+                        <a href={p.url} target="_blank" rel="noopener noreferrer" class="underline">
+                          View
+                        </a>
+                      )}
+                      {p.githubUrl && (
+                        <a href={p.githubUrl} target="_blank" rel="noopener noreferrer" class="underline">
+                          Source
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <p class="mt-1 text-sm text-muted-foreground">{p.description}</p>
+                  <div class="mt-2 text-xs text-foreground/70 flex flex-wrap gap-1.5">
+                    {(p.tags || []).slice(0, 6).map((tag) => (
+                      <span class="border rounded-full px-2 py-0.5">{tag}</span>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </section>
+  </main>
+</ResumeLayout>
+
+<script>
+  document.getElementById('print-button')?.addEventListener('click', () => {
+    window.print()
+  })
+</script>
