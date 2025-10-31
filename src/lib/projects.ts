@@ -31,6 +31,7 @@ export const projects: Project[] = [
     tags: ['SolidJS', 'SQLite WASM', 'Tauri', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Current Focus',
+    resume: false,
   },
   {
     name: 'ARCO',
@@ -76,6 +77,13 @@ export const projects: Project[] = [
     category: 'Packages',
   },
   {
+    name: 'llm',
+    description: 'LLM registry for the AI SDK that auto-updates from Artificial Analysis',
+    githubUrl: 'https://github.com/Rettend/llm',
+    tags: ['TypeScript', 'Elysia', 'AI SDK', 'Cloudflare'],
+    category: 'Current Focus',
+  },
+  {
     name: 'starlight-plugin-icons',
     description: 'Plugin that adds icons to Astro Starlight: sidebar, codeblocks, file tree',
     url: 'https://docs.rettend.me/starlight-plugin-icons',
@@ -107,6 +115,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
     tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
     category: 'Apps',
+    resume: false,
   },
   {
     name: 'the-stack',
