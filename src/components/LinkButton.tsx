@@ -25,7 +25,6 @@ export default function LinkButton(props: LinkButtonProps) {
 
   const rel = local.external ? (local.rel ?? 'noopener noreferrer') : local.rel
   const target = local.external ? (local.target ?? '_blank') : local.target
-  const variant = local.variant ?? 'link'
 
   return (
     <Button
@@ -33,8 +32,8 @@ export default function LinkButton(props: LinkButtonProps) {
       href={local.href}
       rel={rel}
       target={target}
-      class={cn('h-auto text-base', variant === 'link' && 'p-0', local.class)}
-      variant={variant}
+      class={cn('h-auto text-base', local.class)}
+      variant={local.variant}
       size={local.size}
       {...rest}
     >

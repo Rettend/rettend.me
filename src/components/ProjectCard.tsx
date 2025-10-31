@@ -1,6 +1,6 @@
 import type { Project } from '~/lib/projects'
 import { For, Show } from 'solid-js'
-import LinkButton from '~/components/LinkButton'
+import Link from '~/components/Link'
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip'
 import { cn } from '~/lib/utils'
@@ -28,22 +28,22 @@ export function ProjectCard(props: ProjectCardProps) {
           </div>
           <div class="flex gap-1 -mr-2 -mt-2">
             <Show when={project.url}>
-              <LinkButton href={project.url!} external variant="glow" size="icon" title="Website">
+              <Link href={project.url!} external variant="glow" size="icon" title="Website">
                 <span class="i-ph:link-duotone size-5" />
                 <span class="sr-only">Website</span>
-              </LinkButton>
+              </Link>
             </Show>
             <Show when={project.githubUrl}>
-              <LinkButton href={project.githubUrl!} external variant="glow" size="icon" title="GitHub">
+              <Link href={project.githubUrl!} external variant="glow" size="icon" title="GitHub">
                 <span class="i-ph:github-logo-duotone size-5" />
                 <span class="sr-only">GitHub</span>
-              </LinkButton>
+              </Link>
             </Show>
             <Show when={project.designUrl}>
-              <LinkButton href={project.designUrl!} external variant="glow" size="icon" title="Design">
+              <Link href={project.designUrl!} external variant="glow" size="icon" title="Design">
                 <span class="i-ph:palette-duotone size-5" />
                 <span class="sr-only">Design</span>
-              </LinkButton>
+              </Link>
             </Show>
           </div>
         </div>
