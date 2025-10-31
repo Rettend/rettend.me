@@ -31,7 +31,6 @@ export const projects: Project[] = [
     tags: ['SolidJS', 'SQLite WASM', 'Tauri', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Current Focus',
-    resume: false,
   },
   {
     name: 'ARCO',
@@ -115,7 +114,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
     tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
     category: 'Apps',
-    resume: false,
   },
   {
     name: 'the-stack',

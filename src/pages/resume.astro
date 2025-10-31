@@ -29,6 +29,19 @@ const languages = [
   { name: 'English', level: 'C1' },
   { name: 'Korean', level: 'A2' },
 ]
+
+const allTags = included.flatMap((p) => [...p.tags, ...(p.hiddenTags ?? [])])
+const tagCounts = allTags.reduce(
+  (acc, tag) => {
+    acc[tag] = (acc[tag] || 0) + 1
+    return acc
+  },
+  {} as Record<string, number>,
+)
+const sortedTags = Object.entries(tagCounts)
+  .sort(([, a], [, b]) => b - a)
+  .map(([tag, count]) => ({ tag, count }))
+  .filter(({ count }) => count >= 2)
 ---
 
 <ResumeLayout>
@@ -98,6 +111,20 @@ const languages = [
           </section>
         )
       }
+
+      <section class="mt-10 resume-skills">
+        <h2 class="section-title text-xl font-semibold">Experience</h2>
+        <div class="skills-list mt-3 flex flex-wrap gap-2 text-sm">
+          {
+            sortedTags.map(({ tag, count }) => (
+              <span class="border rounded-full px-2.5 py-0.5 font-semibold">
+                {tag}
+                <span class="op-60 text-xs">×{count}</span>
+              </span>
+            ))
+          }
+        </div>
+      </section>
 
       <section class="mt-10 resume-projects">
         <h2 class="section-title text-xl font-semibold">Projects</h2>

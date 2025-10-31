@@ -165,6 +165,10 @@ export function ProjectList(props: ProjectListProps) {
                   }}
                 >
                   {tag}
+                  <span class="ml-1 text-xs op-60">
+                    ×
+                    {tagCounts[tag]}
+                  </span>
                 </Button>
               )}
             </For>
