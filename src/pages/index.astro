@@ -5,6 +5,8 @@ import LinkButton from '~/components/LinkButton'
 import pp from '~/assets/pp.png'
 import { getImage, Image } from 'astro:assets'
 import pkg from '../../package.json'
+import { person, socials, interests, handles } from '~/lib/constants'
+import { getEntry } from 'astro:content'
 
 const optimizedPP = await getImage({
   src: pp,
@@ -13,6 +15,8 @@ const optimizedPP = await getImage({
   quality: 50,
 })
 const buildId = pkg.version
+const magicEntry = await getEntry('sections', 'intro')
+const { Content: Intro } = await magicEntry.render()
 ---
 
 <Layout>
@@ -23,30 +27,30 @@ const buildId = pkg.version
         width={512}
         height={512}
         loading={'eager'}
-        alt="Rettend's profile picture"
+        alt={`${person.handle}'s profile picture`}
         class="mx-auto mb-8 size-48 rounded-full grayscale contrast-200 mix-blend-lighten transition-transform duration-300 hover:scale-105"
       />
       <h1
         class="my-8 text-4xl font-bold tracking-tight sm:text-8xl text-transparent bg-gradient-to-b from-primary to-primary/10 bg-clip-text"
       >
-        Rettend
+        {person.handle}
       </h1>
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <LinkButton variant="outline" href="https://github.com/rettend" external>
+        <LinkButton variant="outline" href={socials.github} external>
           <span class="i-ph:github-logo-duotone size-5"></span>
-          Rettend
+          {handles.github}
         </LinkButton>
-        <LinkButton variant="outline" href="https://x.com/rettend1" external>
+        <LinkButton variant="outline" href={socials.twitter} external>
           <span class="i-ph:x-logo-duotone size-5"></span>
-          Rettend1
+          {handles.twitter}
         </LinkButton>
         <Button variant="outline" class="cursor-default hover:bg-transparent">
           <span class="i-ph:discord-logo-duotone size-5"></span>
-          rettend
+          {handles.discord}
         </Button>
-        <LinkButton variant="outline" href="mailto:hi@rettend.me">
+        <LinkButton variant="outline" href={`mailto:${person.email}`}>
           <span class="i-ph:envelope-duotone size-5"></span>
-          hi@rettend.me
+          {person.email}
         </LinkButton>
       </div>
     </div>
@@ -54,28 +58,16 @@ const buildId = pkg.version
     <div class="mt-24 flex flex-col gap-18 w-fit max-w-xl mx-auto">
       <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-semibold">Interests</h2>
-        <p class="text-muted-foreground">SolidJS, Svelte, Astro, TypeScript, Mojo, Rust</p>
-        <p class="text-muted-foreground">
-          SpaceX and Starbase ringwatching, Twitter, learning English/Korean/Japanese, LLMs and AI, startups, UI design,
-          anime, ZZZ, reading books/docs/blogs
-        </p>
+        <p class="text-muted-foreground">{interests.coding}</p>
+        <p class="text-muted-foreground">{interests.other}</p>
       </div>
-      <div class="flex flex-col gap-4">
-        <h2 class="text-2xl font-semibold">Reality has a magic system</h2>
-        <p class="text-muted-foreground">
-          Your intelligence and knowledge are your mana pool.<br />
-          Coding is the most powerful spell, you type words and control the world.<br />
-          Humanity only has one project, building better magic users than humans.
-        </p>
+      <div class="flex flex-col gap-4 [&_h2]:text-2xl [&_h2]:font-semibold [&_p]:text-muted-foreground">
+        <Intro />
       </div>
       <div class="flex sm:flex-row flex-col gap-1 mx-a text-muted-foreground">
         <span>
           This site is
-          <span
-            id="size-compressed"
-            class="text-primary font-bold"
-            title="Estimated uncached compressed size (this build); persists after first full load"
-          >
+          <span id="size-compressed" class="text-primary font-bold" title="Estimated uncached compressed size">
             …
           </span>
           compressed…
@@ -83,13 +75,7 @@ const buildId = pkg.version
         <span>
           <span id="cached-wrap">
             and
-            <span
-              id="size-cached"
-              class="text-primary font-bold"
-              title="Transferred bytes this view (lower on repeat views via cache)"
-            >
-              …
-            </span>
+            <span id="size-cached" class="text-primary font-bold" title="Transferred bytes this view"> … </span>
             after caching.
           </span>
         </span>

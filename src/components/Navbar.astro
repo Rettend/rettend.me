@@ -1,28 +1,11 @@
 ---
 import LinkButton from '~/components/LinkButton'
 import Link from '~/components/Link'
+import { navbarSocialLinks } from '~/lib/constants'
 
 const links = [
   { name: 'Home', href: '/', icon: 'i-ph:house-duotone' },
   { name: 'Projects', href: '/projects', icon: 'i-ph:desktop-duotone' },
-]
-
-const socialLinks = [
-  {
-    href: '/resume',
-    icon: 'i-ph:file-pdf-duotone',
-    label: 'Resume',
-  },
-  {
-    href: 'https://github.com/rettend',
-    icon: 'i-ph:github-logo-duotone',
-    label: 'GitHub',
-  },
-  {
-    href: 'https://x.com/rettend1',
-    icon: 'i-ph:x-logo-duotone',
-    label: 'Twitter',
-  },
 ]
 ---
 
@@ -43,7 +26,7 @@ const socialLinks = [
       </ul>
       <div class="flex items-center gap-2">
         {
-          socialLinks.map((social) => (
+          navbarSocialLinks.map((social) => (
             <Link
               href={social.href}
               external={social.href.startsWith('http')}
@@ -62,12 +45,7 @@ const socialLinks = [
       {
         links.map((link) => (
           <li>
-            <Link
-              href={link.href}
-              variant="glow"
-              size="icon"
-              title={link.name}
-            >
+            <Link href={link.href} variant="glow" size="icon" title={link.name}>
               <span class={`${link.icon} size-5`} />
               <span class="sr-only">{link.name}</span>
             </Link>

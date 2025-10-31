@@ -4,6 +4,7 @@ import { projects, categoryOrder, type Project } from '../lib/projects'
 import { education } from '../lib/education'
 import { Button } from '~/components/ui/button'
 import Link from '~/components/Link'
+import { person, contactLinks, languages, tagline } from '~/lib/constants'
 
 const included = projects.filter((p) => p.resume !== false)
 
@@ -15,20 +16,6 @@ const grouped = categoryOrder.reduce(
   },
   [] as { category: (typeof categoryOrder)[number]; items: Project[] }[],
 )
-
-const contactLinks = [
-  { title: 'rettend.me', href: 'https://rettend.me' },
-  { title: 'GitHub', href: 'https://github.com/rettend' },
-  { title: 'Twitter', href: 'https://x.com/rettend1' },
-  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/rettend' },
-  { title: 'hi@rettend.me', href: 'mailto:hi@rettend.me' },
-]
-
-const languages = [
-  { name: 'Hungarian', level: 'Native' },
-  { name: 'English', level: 'C1' },
-  { name: 'Korean', level: 'A2' },
-]
 
 const allTags = included.flatMap((p) => [...p.tags, ...(p.hiddenTags ?? [])])
 const tagCounts = allTags.reduce(
@@ -48,10 +35,8 @@ const sortedTags = Object.entries(tagCounts)
   <main class="mx-auto max-w-4xl w-full px-4 py-10 sm:px-6 lg:px-8">
     <div class="flex items-start justify-between gap-4">
       <div>
-        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Hegyi Áron Ferenc</h1>
-        <p class="mt-3 text-muted-foreground max-w-prose">
-          Frontend performance enthusiast building apps, web apps, and libraries
-        </p>
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{person.name}</h1>
+        <p class="mt-3 text-muted-foreground max-w-prose">{tagline}</p>
       </div>
       <div class="flex gap-3">
         <Button id="back-button" variant="outline" size="icon" class="no-print">
