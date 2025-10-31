@@ -114,6 +114,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
     tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
     category: 'Apps',
+    resume: false,
   },
   {
     name: 'the-stack',
@@ -225,5 +226,6 @@ export const projects: Project[] = [
     designUrl: 'https://www.figma.com/design/Td12XunHN8YH7W6ikDxayk/SAFARI?node-id=0-1&t=RSIC7BmbIgxvwD79-1',
     tags: ['Java'],
     category: 'Past',
+    resume: false,
   },
 ]
