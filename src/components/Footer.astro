@@ -1,5 +1,5 @@
 ---
-import Link from '~/components/Link.astro'
+import LinkButton from '~/components/LinkButton'
 import pkg from '../../package.json'
 
 const lastUpdated = new Date().toLocaleDateString('en-US', {
@@ -16,13 +16,13 @@ const solidVersion = pkg.dependencies['solid-js'].replace('^', '')
   class="py-8 text-sm text-muted-foreground gap-1 mx-auto text-center flex flex-col justify-center lg:justify-around lg:flex-row w-full lg:max-w-7xl lg:items-center lg:px-8"
 >
   <p class="order-1 lg:order-0">
-    Powered by <Link href="https://astro.build/" external>Astro</Link> v{astroVersion}
-    and <Link href="https://www.solidjs.com/" external>SolidJS</Link> v{solidVersion}
+    Powered by <LinkButton href="https://astro.build/" external variant="link">Astro</LinkButton> v{astroVersion}
+    and <LinkButton href="https://www.solidjs.com/" external variant="link">SolidJS</LinkButton> v{solidVersion}
   </p>
   <p class="order-0 lg:order-1">
-    <Link href="https://creativecommons.org/licenses/by-sa/4.0/" external class="font-light text-foreground/80">
+    <LinkButton href="https://creativecommons.org/licenses/by-sa/4.0/" external variant="link" class="text-foreground/70 font-normal">
       CC BY-SA 4.0
-    </Link> 2025-PRESENT © Hegyi Áron Ferenc
+    </LinkButton> 2025-PRESENT © Hegyi Áron Ferenc
   </p>
   <p class="order-2 lg:order-2">Last updated on {lastUpdated}</p>
 </footer>

@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro'
 import { Button } from '~/components/ui/button'
+import LinkButton from '~/components/LinkButton'
 import pp from '~/assets/pp.png'
 import { getImage, Image } from 'astro:assets'
 import pkg from '../../package.json'
@@ -31,22 +32,22 @@ const buildId = pkg.version
         Rettend
       </h1>
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <Button variant="outline" as="a" href="https://github.com/rettend" target="_blank">
+        <LinkButton variant="outline" href="https://github.com/rettend" external>
           <span class="i-ph:github-logo-duotone size-5"></span>
           Rettend
-        </Button>
-        <Button variant="outline" as="a" href="https://x.com/rettend1" target="_blank">
+        </LinkButton>
+        <LinkButton variant="outline" href="https://x.com/rettend1" external>
           <span class="i-ph:x-logo-duotone size-5"></span>
           Rettend1
-        </Button>
+        </LinkButton>
         <Button variant="outline" class="cursor-default hover:bg-transparent">
           <span class="i-ph:discord-logo-duotone size-5"></span>
           rettend
         </Button>
-        <Button variant="outline" as="a" href="mailto:hi@rettend.me">
+        <LinkButton variant="outline" href="mailto:hi@rettend.me">
           <span class="i-ph:envelope-duotone size-5"></span>
           hi@rettend.me
-        </Button>
+        </LinkButton>
       </div>
     </div>
 

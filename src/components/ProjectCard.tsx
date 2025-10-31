@@ -1,6 +1,6 @@
 import type { Project } from '~/lib/projects'
 import { For, Show } from 'solid-js'
-import { Button } from '~/components/ui/button'
+import LinkButton from '~/components/LinkButton'
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip'
 import { cn } from '~/lib/utils'
@@ -28,22 +28,22 @@ export function ProjectCard(props: ProjectCardProps) {
           </div>
           <div class="flex gap-1 -mr-2 -mt-2">
             <Show when={project.url}>
-              <Button as="a" href={project.url} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="Website">
+              <LinkButton href={project.url!} external variant="glow" size="icon" title="Website">
                 <span class="i-ph:link-duotone size-5" />
                 <span class="sr-only">Website</span>
-              </Button>
+              </LinkButton>
             </Show>
             <Show when={project.githubUrl}>
-              <Button as="a" href={project.githubUrl} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="GitHub">
+              <LinkButton href={project.githubUrl!} external variant="glow" size="icon" title="GitHub">
                 <span class="i-ph:github-logo-duotone size-5" />
                 <span class="sr-only">GitHub</span>
-              </Button>
+              </LinkButton>
             </Show>
             <Show when={project.designUrl}>
-              <Button as="a" href={project.designUrl} target="_blank" rel='noopener noreferrer' variant="glow" size="icon" title="Design">
+              <LinkButton href={project.designUrl!} external variant="glow" size="icon" title="Design">
                 <span class="i-ph:palette-duotone size-5" />
                 <span class="sr-only">Design</span>
-              </Button>
+              </LinkButton>
             </Show>
           </div>
         </div>

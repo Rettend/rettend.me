@@ -3,6 +3,8 @@ import ResumeLayout from '../layouts/ResumeLayout.astro'
 import { projects, categoryOrder, type Project } from '../lib/projects'
 import { education } from '../lib/education'
 import { Button } from '~/components/ui/button'
+import LinkButton from '~/components/LinkButton'
+import Link from '~/components/Link'
 
 const included = projects.filter((p) => p.resume !== false)
 
@@ -40,7 +42,7 @@ const languages = [
         </p>
       </div>
       <div class="flex gap-3">
-        <Button as="a" href="/" variant="outline" size="icon" class="no-print">
+        <Button id="back-button" variant="outline" size="icon" class="no-print">
           <span class="i-ph:arrow-left-bold size-5"></span>
         </Button>
         <Button id="print-button" variant="outline" class="no-print">
@@ -54,9 +56,9 @@ const languages = [
       {
         contactLinks.map((link, i) => (
           <>
-            <a href={link.href} target="_blank" rel="noopener noreferrer" class="hover:underline">
+            <Link href={link.href} external class="hover:underline">
               {link.title}
-            </a>
+            </Link>
             {i < contactLinks.length - 1 && <span class="op-50">•</span>}
           </>
         ))
@@ -146,6 +148,9 @@ const languages = [
 </ResumeLayout>
 
 <script>
+  document.getElementById('back-button')?.addEventListener('click', () => {
+    window.history.back()
+  })
   document.getElementById('print-button')?.addEventListener('click', () => {
     window.print()
   })

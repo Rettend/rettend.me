@@ -1,6 +1,5 @@
 ---
-import { Button } from '~/components/ui/button'
-import Link from './Link.astro'
+import LinkButton from '~/components/LinkButton'
 
 const links = [
   { name: 'Home', href: '/', icon: 'i-ph:house-duotone' },
@@ -10,7 +9,7 @@ const links = [
 const socialLinks = [
   {
     href: '/resume',
-    icon: 'i-ph:identification-card-duotone',
+    icon: 'i-ph:file-pdf-duotone',
     label: 'Resume',
   },
   {
@@ -28,15 +27,15 @@ const socialLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 backdrop-pixelate bg-gradient-to-b from-background/80 to-transparent">
   <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
-    <Button client:load variant="glow" as="a" href="/" class="text-xl hidden sm:inline-flex">Rettend</Button>
+    <LinkButton variant="glow" href="/" class="text-xl hidden sm:inline-flex">Rettend</LinkButton>
     <div class="flex items-center gap-8">
       <ul class="hidden sm:flex items-center gap-4">
         {
           links.map((link) => (
             <li>
-              <Button client:load as="a" href={link.href} variant="split" class="px-2 text-lg font-medium">
+              <LinkButton client:load href={link.href} variant="split" class="px-2 text-lg font-medium">
                 {link.name}
-              </Button>
+              </LinkButton>
             </li>
           ))
         }
@@ -44,16 +43,16 @@ const socialLinks = [
       <div class="flex items-center gap-2">
         {
           socialLinks.map((social) => (
-            <Link
+            <LinkButton
               href={social.href}
+              external={social.href.startsWith('http')}
               variant="glow"
               size="icon"
               title={social.label}
-              external={social.href.startsWith('http')}
             >
               <span class={`${social.icon} size-5`} />
               <span class="sr-only">{social.label}</span>
-            </Link>
+            </LinkButton>
           ))
         }
       </div>
@@ -62,18 +61,10 @@ const socialLinks = [
       {
         links.map((link) => (
           <li>
-            <Button
-              client:load
-              as="a"
-              href={link.href}
-              variant="glow"
-              size="icon"
-              class="op-80 hover:op-100"
-              title={link.name}
-            >
+            <LinkButton href={link.href} variant="glow" size="icon" class="op-80 hover:op-100" title={link.name}>
               <span class={`${link.icon} size-5`} />
               <span class="sr-only">{link.name}</span>
-            </Button>
+            </LinkButton>
           </li>
         ))
       }
