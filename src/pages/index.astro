@@ -15,8 +15,9 @@ const optimizedPP = await getImage({
   quality: 50,
 })
 const buildId = pkg.version
-const magicEntry = await getEntry('sections', 'intro')
-const { Content: Intro } = await magicEntry.render()
+const entry = await getEntry('sections', 'intro')
+if (!entry) throw new Error('Intro section not found')
+const { Content: Intro } = await entry.render()
 ---
 
 <Layout>
