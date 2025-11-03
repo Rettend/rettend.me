@@ -2,6 +2,7 @@
 import ResumeLayout from '../layouts/ResumeLayout.astro'
 import { projects, categoryOrder, type Project } from '../lib/projects'
 import { education } from '../lib/education'
+import { experience } from '../lib/experience'
 import { Button } from '~/components/ui/button'
 import Link from '~/components/Link'
 import { person, contactLinks, languages, tagline } from '~/lib/constants'
@@ -87,7 +88,11 @@ const sortedTags = Object.entries(tagCounts)
                     <div class="font-medium">
                       {e.school} — {e.program}
                     </div>
-                    <div class="text-xs text-foreground/60 whitespace-nowrap">{e.period}</div>
+                    <div class="text-xs text-foreground/60 whitespace-nowrap font-mono tabular-nums w-fit grid grid-cols-[4ch_3ch_4ch]">
+                      <span class="text-left">{e.start}</span>
+                      <span class="flex-1 text-center">-</span>
+                      <span class="text-right">{e.end ?? ''}</span>
+                    </div>
                   </div>
                   {e.note && <div class="text-sm text-muted-foreground">{e.note}</div>}
                 </li>
@@ -96,6 +101,26 @@ const sortedTags = Object.entries(tagCounts)
           </section>
         )
       }
+      <section class="mt-10">
+        <h2 class="section-title text-xl font-semibold">Experience</h2>
+        <ul class="mt-5 space-y-2">
+          {
+            experience.map((exp) => (
+              <li class="avoid-break">
+                <div class="flex items-baseline justify-between gap-3">
+                  <div class="font-medium">{exp.title}</div>
+                  <div class="text-xs text-foreground/60 whitespace-nowrap font-mono tabular-nums w-fit grid grid-cols-[4ch_3ch_4ch]">
+                    <span class="text-left">{exp.start}</span>
+                    <span class="flex-1 text-center">-</span>
+                    <span class="text-right">{exp.end ?? ''}</span>
+                  </div>
+                </div>
+                <div class="text-sm text-muted-foreground">{exp.description}</div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
 
       <section class="mt-10 resume-skills">
         <h2 class="section-title text-xl font-semibold">Technologies</h2>
