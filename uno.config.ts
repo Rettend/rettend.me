@@ -62,7 +62,8 @@ export default defineConfig({
     `],
     [/^split-text-inner$/, ([,]) => `
       .split-text-inner {
-        display: inline-flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         position: relative;
         color: hsl(var(--foreground) / 0.8);
         transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
@@ -71,8 +72,14 @@ export default defineConfig({
         color: hsl(var(--foreground));
         text-shadow: 0 0 3px hsl(var(--primary));
       }
-      .split-text-inner > span {
+      .split-text-inner > span:not(.split-text-dash) {
         transition: transform 0.2s ease-in-out;
+      }
+      .split-text-inner > span:first-child {
+        text-align: right;
+      }
+      .split-text-inner > span:last-child {
+        text-align: left;
       }
       .group:hover .split-text-inner > span:first-child {
         transform: translateX(-8px);
@@ -96,7 +103,7 @@ export default defineConfig({
         font-weight: bold;
         opacity: 0;
         transform: translate(-50%, -50%) scale(0);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.2s ease-in-out;
         text-shadow: 0 0 5px hsl(var(--primary));
       }
       .group:hover .split-text-dash {
