@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description: 'LLM registry for the AI SDK that auto-updates from Artificial Analysis',
     githubUrl: 'https://github.com/Rettend/llm',
     tags: ['TypeScript', 'Elysia', 'AI SDK', 'Cloudflare'],
-    category: 'Current Focus',
+    category: 'Packages',
   },
   {
     name: 'starlight-plugin-icons',

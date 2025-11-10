@@ -1,6 +1,7 @@
 import type { Project } from '~/lib/projects'
-import { createMemo, createSignal, For, onMount, Show } from 'solid-js'
+import { createMemo, createSignal, For, onMount, Show, untrack } from 'solid-js'
 import { ProjectCard } from '~/components/ProjectCard'
+import { SectionHeading } from '~/components/SectionHeading'
 import { Button } from '~/components/ui/button'
 import { categoryOrder } from '~/lib/projects'
 
@@ -9,7 +10,8 @@ interface ProjectListProps {
 }
 
 export function ProjectList(props: ProjectListProps) {
-  const allProjectTags = props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])])
+  const allProjectTags = untrack(() => props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])]))
+
   const tagCounts = allProjectTags.reduce((acc, tag) => {
     acc[tag] = (acc[tag] || 0) + 1
     return acc
@@ -184,9 +186,7 @@ export function ProjectList(props: ProjectListProps) {
             return (
               <Show when={projects() && projects()!.length > 0}>
                 <section class="relative pt-4">
-                  <h2 class="pointer-events-none absolute inset-x-4 z-0 select-none text-right text-6xl text-foreground/7 font-black -top-6 sm:text-8xl lg:-top-4">
-                    {category}
-                  </h2>
+                  <SectionHeading title={category} class="absolute inset-x-4 z-0 -top-6 lg:-top-4" />
                   <div class="flex flex-wrap items-start justify-center gap-6 lg:justify-start">
                     <For each={projects()}>
                       {project => <ProjectCard project={project} class="max-w-25rem w-full" />}

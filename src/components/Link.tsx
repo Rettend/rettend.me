@@ -1,7 +1,7 @@
 import type { VariantProps } from 'class-variance-authority'
 import type { JSX } from 'solid-js'
 import { cva } from 'class-variance-authority'
-import { splitProps } from 'solid-js'
+import { createMemo, splitProps } from 'solid-js'
 import { cn } from '~/lib/utils'
 
 const linkVariants = cva('', {
@@ -40,14 +40,14 @@ export default function Link(props: LinkProps) {
     'size',
   ])
 
-  const rel = local.external ? (local.rel ?? 'noopener noreferrer') : local.rel
-  const target = local.external ? (local.target ?? '_blank') : local.target
+  const rel = createMemo(() => local.external ? (local.rel ?? 'noopener noreferrer') : local.rel)
+  const target = createMemo(() => local.external ? (local.target ?? '_blank') : local.target)
 
   return (
     <a
       href={local.href}
-      rel={rel}
-      target={target}
+      rel={rel()}
+      target={target()}
       class={cn(linkVariants({ variant: local.variant, size: local.size }), local.class)}
       {...rest}
     >

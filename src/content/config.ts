@@ -7,4 +7,13 @@ const sections = defineCollection({
   }),
 })
 
-export const collections = { sections }
+const posts = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    publishDate: z.date(),
+    draft: z.boolean().optional().default(false),
+  }),
+})
+
+export const collections = { sections, posts }

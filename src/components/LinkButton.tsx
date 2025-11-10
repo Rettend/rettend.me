@@ -1,7 +1,6 @@
 import type { JSX } from 'solid-js'
 import type { ButtonProps } from '~/components/ui/button'
-
-import { splitProps } from 'solid-js'
+import { createMemo, splitProps } from 'solid-js'
 import { Button } from '~/components/ui/button'
 import { cn } from '~/lib/utils'
 
@@ -23,15 +22,15 @@ export default function LinkButton(props: LinkButtonProps) {
     'size',
   ])
 
-  const rel = local.external ? (local.rel ?? 'noopener noreferrer') : local.rel
-  const target = local.external ? (local.target ?? '_blank') : local.target
+  const rel = createMemo(() => local.external ? (local.rel ?? 'noopener noreferrer') : local.rel)
+  const target = createMemo(() => local.external ? (local.target ?? '_blank') : local.target)
 
   return (
     <Button
       as="a"
       href={local.href}
-      rel={rel}
-      target={target}
+      rel={rel()}
+      target={target()}
       class={cn('h-auto text-base', local.class)}
       variant={local.variant}
       size={local.size}

@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "eslint . --fix",
+    "lint": "bun --bun eslint . --fix",
     "update": "taze -wr latest",
     "astro": "astro"
   },
@@ -30,6 +30,7 @@
     "eslint": "^9.38.0",
     "eslint-plugin-astro": "^1.4.0",
     "eslint-plugin-format": "^1.0.2",
+    "eslint-plugin-solid": "^0.14.5",
     "prettier-plugin-astro": "^0.14.1",
     "taze": "^19.9.0",
     "unocss": "^66.5.4",

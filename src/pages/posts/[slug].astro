@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import { calculateReadingTime } from '~/lib/utils'
+import LinkButton from '~/components/LinkButton'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft)
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }))
+}
+
+interface Props {
+  post: CollectionEntry<'posts'>
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+const readingTime = calculateReadingTime(post.body)
+
+const formattedDate = post.data.publishDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+
+<Layout>
+  <main class="mx-auto max-w-3xl px-4 py-24 lg:px-6 lg:px-8">
+    <article>
+      <header class="mb-8">
+        <div class="lg:relative">
+          <LinkButton href="/posts" variant="ghost" class="px-2 mb-4 lg:mb-0 lg:left--15 lg:top-2.5 lg:absolute">
+            <span class="i-ph:arrow-left-bold size-5"></span>
+          </LinkButton>
+          <h1 class="text-3xl font-bold tracking-tight lg:text-4xl">{post.data.title}</h1>
+        </div>
+        <div class="mt-5 flex items-center gap-4 text-sm text-muted-foreground">
+          <span class="flex items-center gap-1">
+            <span class="i-ph:calendar-duotone size-5"></span>
+            {formattedDate}
+          </span>
+          <span class="flex items-center gap-1">
+            <span class="i-ph:clock-duotone size-5"></span>
+            {readingTime} min read
+          </span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert max-w-none">
+        <Content />
+      </div>
+    </article>
+
+    <div class="mt-8 lg:relative">
+      <LinkButton href="/posts" variant="ghost" class="px-2 lg:left--15 lg:top-2.5 lg:absolute">
+        <span class="i-ph:arrow-left-bold size-5"></span>
+      </LinkButton>
+    </div>
+  </main>
+</Layout>

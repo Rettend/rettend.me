@@ -15,4 +15,9 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: 'viewport',
   },
+  markdown: {
+    shikiConfig: {
+      theme: 'vitesse-dark',
+    },
+  },
 })

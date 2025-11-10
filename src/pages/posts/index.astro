@@ -1,0 +1,74 @@
+---
+import Layout from '~/layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import { PostCard } from '~/components/PostCard'
+import { SectionHeading } from '~/components/SectionHeading'
+import { calculateReadingTime } from '~/lib/utils'
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft)
+const postsWithMetadata = await Promise.all(
+  allPosts.map(async (post) => {
+    const { Content } = await post.render()
+    const readingTime = calculateReadingTime(post.body)
+    return {
+      slug: post.slug,
+      data: post.data,
+      readingTime,
+    }
+  }),
+)
+
+const sortedPosts = postsWithMetadata.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+const postsByYear = sortedPosts.reduce(
+  (acc, post) => {
+    const year = post.data.publishDate.getFullYear()
+    if (!acc[year]) {
+      acc[year] = []
+    }
+    acc[year].push(post)
+    return acc
+  },
+  {} as Record<number, typeof sortedPosts>,
+)
+
+const years = Object.keys(postsByYear)
+  .map(Number)
+  .sort((a, b) => b - a)
+---
+
+<Layout>
+  <main class="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Blog</h1>
+      <p class="mt-4 text-lg text-muted-foreground">New post every sometimes.</p>
+    </div>
+
+    <div class="mt-16 space-y-12">
+      {
+        years.map((year) => (
+          <section class="relative pt-4">
+            <SectionHeading title={year.toString()} class="absolute inset-x-4 z-0 -top-6 lg:-top-4" />
+            <div class="space-y-2 relative z-10">
+              {postsByYear[year].map((post) => (
+                <PostCard
+                  slug={post.slug}
+                  title={post.data.title}
+                  publishDate={post.data.publishDate}
+                  readingTime={post.readingTime}
+                />
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+
+    {
+      sortedPosts.length === 0 && (
+        <div class="mt-16 text-center text-muted-foreground">
+          <p>No posts yet</p>
+        </div>
+      )
+    }
+  </main>
+</Layout>
