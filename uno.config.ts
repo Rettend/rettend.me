@@ -60,57 +60,6 @@ export default defineConfig({
           40px 0;
       }
     `],
-    [/^split-text-inner$/, ([,]) => `
-      .split-text-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: relative;
-        color: hsl(var(--foreground) / 0.8);
-        transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-      }
-      .group:hover .split-text-inner {
-        color: hsl(var(--foreground));
-        text-shadow: 0 0 3px hsl(var(--primary));
-      }
-      .split-text-inner > span:not(.split-text-dash) {
-        transition: transform 0.2s ease-in-out;
-      }
-      .split-text-inner > span:first-child {
-        text-align: right;
-      }
-      .split-text-inner > span:last-child {
-        text-align: left;
-      }
-      .group:hover .split-text-inner > span:first-child {
-        transform: translateX(-8px);
-      }
-      .group:hover .split-text-inner > span:last-child {
-        transform: translateX(8px);
-      }
-    `],
-    [/^split-text$/, ([,]) => `
-      .split-text {
-        position: relative;
-        display: inline-block;
-      }
-    `],
-    [/^split-text-dash$/, ([,]) => `
-      .split-text-dash {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        color: hsl(var(--primary));
-        font-weight: bold;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
-        transition: all 0.2s ease-in-out;
-        text-shadow: 0 0 5px hsl(var(--primary));
-      }
-      .group:hover .split-text-dash {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
-      }
-    `],
   ],
   transformers: [
     transformerDirectives(),

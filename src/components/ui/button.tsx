@@ -4,7 +4,7 @@ import type { VariantProps } from 'class-variance-authority'
 import type { JSX, ValidComponent } from 'solid-js'
 import * as ButtonPrimitive from '@kobalte/core/button'
 import { cva } from 'class-variance-authority'
-import { createMemo, createSignal, onMount, Show, splitProps } from 'solid-js'
+import { splitProps } from 'solid-js'
 
 import { cn } from '~/lib/utils'
 
@@ -19,7 +19,6 @@ const buttonVariants = cva(
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         glow: 'bg-transparent text-foreground/80 hover:text-foreground hover:[text-shadow:0_0_3px_hsl(var(--primary))]',
-        split: 'bg-transparent',
       },
       size: {
         default: 'h-10 px-4 py-2',
@@ -40,46 +39,16 @@ type ButtonProps<T extends ValidComponent = 'button'> = ButtonPrimitive.ButtonRo
 
 function Button<T extends ValidComponent = 'button'>(props: PolymorphicProps<T, ButtonProps<T>>) {
   const [local, others] = splitProps(props as ButtonProps, ['variant', 'size', 'class', 'children'])
-  const split = createMemo(() => local.variant === 'split')
-
-  const [isSplit, setIsSplit] = createSignal(false)
-  const [leftText, setLeftText] = createSignal('')
-  const [rightText, setRightText] = createSignal('')
-  let splitInnerRef: HTMLSpanElement | undefined
-
-  onMount(() => {
-    if (split() && splitInnerRef) {
-      const text = splitInnerRef.textContent ?? ''
-      const mid = Math.floor(text.length / 2)
-      setLeftText(text.substring(0, mid))
-      setRightText(text.substring(mid))
-      setIsSplit(true)
-    }
-  })
 
   return (
     <ButtonPrimitive.Root
       class={cn(
         buttonVariants({ variant: local.variant, size: local.size }),
-        split() && 'group',
         local.class,
       )}
       {...others}
     >
-      <Show
-        when={split()}
-        fallback={local.children}
-      >
-        <span class="split-text">
-          <span class="split-text-inner" ref={splitInnerRef}>
-            <Show when={isSplit()} fallback={local.children}>
-              <span>{leftText()}</span>
-              <span class="split-text-dash">-</span>
-              <span>{rightText()}</span>
-            </Show>
-          </span>
-        </span>
-      </Show>
+      {local.children}
     </ButtonPrimitive.Root>
   )
 }

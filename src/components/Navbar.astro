@@ -1,5 +1,4 @@
 ---
-import LinkButton from '~/components/LinkButton'
 import Link from '~/components/Link'
 import { navbarSocialLinks } from '~/lib/constants'
 
@@ -18,9 +17,12 @@ const links = [
         {
           links.map((link) => (
             <li>
-              <LinkButton client:load href={link.href} variant="split" class="px-2 text-lg font-medium">
+              <Link
+                href={link.href}
+                class="px-2 text-lg font-medium text-foreground/80 hover:text-foreground transition-colors"
+              >
                 {link.name}
-              </LinkButton>
+              </Link>
             </li>
           ))
         }
