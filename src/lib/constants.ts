@@ -42,7 +42,7 @@ export const languages = [
 ]
 
 export const interests = {
-  coding: 'SolidJS, Svelte, Astro, TypeScript, Mojo, Rust',
+  coding: 'SolidJS, Svelte, Astro, TypeScript, Marko, Mojo, Rust',
   other: 'SpaceX and Starbase ringwatching, Twitter, learning English/Korean/Japanese, LLMs and AI, startups, UI design, anime, ZZZ, reading books/docs/blogs',
 }
 

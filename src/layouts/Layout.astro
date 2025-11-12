@@ -29,12 +29,17 @@ import { site } from '~/lib/constants'
       </filter>
     </svg>
     <div class="fixed inset-0 -z-10 bg-speckles"></div>
-    <div class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col pt-10 md:pt-0">
+    <div
+      id="scroll-container"
+      class="flex-grow scroll-smooth scrollbar-gutter-stable overflow-y-auto flex flex-col pt-10 md:pt-0"
+      style={import.meta.env.DEV ? 'visibility:hidden' : undefined}
+    >
       <Navbar />
       <div class="flex-grow">
         <slot />
       </div>
       <Footer />
     </div>
+    <script src="~/lib/utils/hmr.ts"></script>
   </body>
 </html>

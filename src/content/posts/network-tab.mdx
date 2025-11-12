@@ -1,0 +1,74 @@
+---
+title: Check the Network Tab
+publishDate: 2025-11-12
+---
+
+import Link from '~/components/Link'
+import InlineNote from '~/components/InlineNote'
+
+You find yourself needing to create a website, but you quickly
+start to hate the web world.
+
+You see shadcn everywhere and you are sick of it.
+You see dozens of JS frameworks on top of JS frameworks.
+Why can't they just make up their minds? Why are they chasing trends?
+Look at all this hype.
+
+You look for No JS, No Build, good old PHP, and find a <Link href="https://github.com/riggraz/no-style-please" external variant="underline">minimal template</Link>,
+it's just 1kB of CSS!
+You fork it, change the colors, and slap your profile picture at the top.
+
+And that's where I come in, and see this:
+
+![99% img, 1% html assets pie chart](../../assets/posts/all_image_pie_chart.webp)
+
+Well, you just img src'd a 2MB image, with 5Mbps your site took 4s to load,
+and if you deployed it on GitHub Pages, it will only be <Link href="https://github.com/orgs/community/discussions/11884" external variant="underline">cached for 10 minutes</Link>.
+I opened your site on the train, you should be paying for my mobile network this month.
+
+This is one end of the spectrum, here is the other end:
+
+Your company needs a documentation site,
+and you decide to go with what works because you don't have time.
+You choose a docs framework that uses Nextjs, RSCs and deploy it on Vercel.
+
+And I see this for a page that's just a sidebar and barely has any content:
+
+![mintlify assets pie chart](../../assets/posts/mintlify_pie_chart.webp)
+
+That is 1.8MB of JS which is at least cached, but then there is 1.1MB of RSC payload JSON,
+and these are not cached for some unbeknownst reason. 1.1MB on every page load. For a static site.
+Congrats, you also have a 1 second INP.
+
+I check every site I visit with WebPageTest, and I will find yours.
+
+![you are sheltering enemies of the state meme](../../assets/posts/you_are_sheltering_enemies_of_the_state_meme.webp)
+
+---
+
+Good news is that it's not impossible to understand the web world, it's a skill issue.
+
+I agree that pages should load instantly, even if it's a web app, and especially if it's static,
+but you don't have to work with 10 year old tech for that <InlineNote client:load label="1">btw, Svelte is 9 years old</InlineNote> and no React is not great.
+
+Believe it or not, there are people who know what they are doing.
+So don't settle for stagnation, look for better tools and master them.
+Most of the time they're better in every way: smaller, faster, and usually also have the superior DX.
+
+The JS ecosystem is massive, TypeScript and Javascript <Link href="https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/#what-changed-in-2025" external variant="underline">combined usage is 2x</Link>
+of Python on GitHub.
+I find it funny that people get overwhelmed by 20+ frameworks.
+You just need to look at them all, the best ones are usually easy to spot.
+No one is forcing you to use all of them.
+
+And if a new and better tool comes out, you can just... learn that too.
+There are no trends, there are only better or worse tools,
+making one your identity is not a good idea.
+
+From <Link href="https://paulgraham.com/before.html#:~:text=If%20you%20think%20of%20technology%20as%20something%20that%27s%20spreading%20like%20a%20sort%20of%20fractal%20stain%2C%20every%20moving%20point%20on%20the%20edge%20represents%20an%20interesting%20problem.%20So%20one%20guaranteed%20way%20to%20turn%20your%20mind%20into%20the%20type%20that%20has%20good%20startup%20ideas%20is%20to%20get%20yourself%20to%20the%20leading%20edge%20of%20some%20technology" external variant="underline">Paul Graham</Link>:
+
+> If you think of technology as something that's spreading like a sort of fractal stain,
+> every moving point on the edge represents an interesting problem.
+> Get yourself to the leading edge of some technology.
+
+The web world is full of unsolved problems, we *need* and will have better tools.

@@ -2,7 +2,7 @@ import type { Project } from '~/lib/projects'
 import { For, Show } from 'solid-js'
 import Link from '~/components/Link'
 
-import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip'
+import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover'
 import { cn } from '~/lib/utils'
 
 interface ProjectCardProps {
@@ -52,18 +52,18 @@ export function ProjectCard(props: ProjectCardProps) {
             {tag => <div class="border rounded-full px-2.5 py-0.5 text-xs font-semibold">{tag}</div>}
           </For>
           <Show when={props.project.hiddenTags && props.project.hiddenTags.length > 0}>
-            <Tooltip>
-              <TooltipTrigger class="flex">
+            <Popover>
+              <PopoverTrigger class="flex">
                 <span class="i-ph:dots-three-outline-fill size-5" />
-              </TooltipTrigger>
-              <TooltipContent>
+              </PopoverTrigger>
+              <PopoverContent>
                 <div class="max-w-60 w-fit flex flex-wrap justify-center gap-2">
                   <For each={props.project.hiddenTags}>
                     {tag => <div class="border rounded-full px-2.5 py-0.5 text-xs font-semibold">{tag}</div>}
                   </For>
                 </div>
-              </TooltipContent>
-            </Tooltip>
+              </PopoverContent>
+            </Popover>
           </Show>
         </div>
       </div>
