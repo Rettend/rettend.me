@@ -8,6 +8,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "check": "tsgo --noEmit",
+    "sync": "astro sync",
     "lint": "bun --bun eslint . --fix",
     "update": "taze -wr latest",
     "astro": "astro"
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
     "@iconify-json/ph": "^1.2.2",
+    "@typescript/native-preview": "^7.0.0-dev.20251112.1",
     "@unocss/eslint-plugin": "^66.5.6",
     "@unocss/reset": "^66.5.6",
     "astro-eslint-parser": "^1.2.2",
