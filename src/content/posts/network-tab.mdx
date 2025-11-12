@@ -3,8 +3,12 @@ title: Check the Network Tab
 publishDate: 2025-11-12
 ---
 
+import ImageMD from '~/components/ImageMD.astro'
 import Link from '~/components/Link'
 import InlineNote from '~/components/InlineNote'
+import allImagePieChart from '../../assets/posts/all_image_pie_chart.webp'
+import mintlifyPieChart from '../../assets/posts/mintlify_pie_chart.webp'
+import enemiesOfStateMeme from '../../assets/posts/you_are_sheltering_enemies_of_the_state_meme.webp'
 
 You find yourself needing to create a website, but you quickly
 start to hate the web world.
@@ -20,7 +24,7 @@ You fork it, change the colors, and slap your profile picture at the top.
 
 And that's where I come in, and see this:
 
-![99% img, 1% html assets pie chart](../../assets/posts/all_image_pie_chart.webp)
+<ImageMD src={allImagePieChart} alt="99% img, 1% html assets pie chart" width={400} />
 
 Well, you just img src'd a 2MB image, with 5Mbps your site took 4s to load,
 and if you deployed it on GitHub Pages, it will only be <Link href="https://github.com/orgs/community/discussions/11884" external variant="underline">cached for 10 minutes</Link>.
@@ -34,7 +38,7 @@ You choose a docs framework that uses Nextjs, RSCs and deploy it on Vercel.
 
 And I see this for a page that's just a sidebar and barely has any content:
 
-![mintlify assets pie chart](../../assets/posts/mintlify_pie_chart.webp)
+<ImageMD src={mintlifyPieChart} alt="mintlify assets pie chart" width={400} />
 
 That is 1.8MB of JS which is at least cached, but then there is 1.1MB of RSC payload JSON,
 and these are not cached for some unbeknownst reason. 1.1MB on every page load. For a static site.
@@ -42,7 +46,7 @@ Congrats, you also have a 1 second INP.
 
 I check every site I visit with WebPageTest, and I will find yours.
 
-![you are sheltering enemies of the state meme](../../assets/posts/you_are_sheltering_enemies_of_the_state_meme.webp)
+<ImageMD src={enemiesOfStateMeme} alt="you are sheltering enemies of the state meme" width={500} />
 
 ---
 

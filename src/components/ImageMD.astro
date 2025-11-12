@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+
+export interface Props {
+  src: ImageMetadata
+  alt?: string
+  width?: number
+  height?: number
+  class?: string
+  wrapperClass?: string
+}
+
+const { src, alt = '', width, height, class: className, wrapperClass } = Astro.props
+---
+
+<div class={`flex justify-center ${wrapperClass ?? ''}`}>
+  <Image {src} {alt} {width} {height} class={`rounded-lg ${className}`} inferSize />
+</div>
