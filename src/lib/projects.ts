@@ -28,7 +28,7 @@ export const projects: Project[] = [
     name: 'Oneday',
     description: 'Activity tracker with achievements',
     githubUrl: 'https://github.com/Rettend/oneday',
-    tags: ['SolidJS', 'SQLite WASM', 'Tauri', 'AI SDK'],
+    tags: ['SolidJS', 'Turso', 'Tauri', 'AI SDK'],
     hiddenTags: ['TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Current Focus',
   },
@@ -160,7 +160,7 @@ export const projects: Project[] = [
   },
   {
     name: 'GitHub Desktop Fork',
-    description: 'I added a Secondary Editor option',
+    description: 'I added Secondary and Third Editor options',
     githubUrl: 'https://github.com/Rettend/desktop',
     tags: ['TypeScript'],
     category: 'Forks',
