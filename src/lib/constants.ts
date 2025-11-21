@@ -13,6 +13,7 @@ export const socials = {
   github: 'https://github.com/rettend',
   twitter: 'https://x.com/rettend1',
   linkedin: 'https://www.linkedin.com/in/rettend',
+  discord: 'https://discord.gg/FvVaUPhj3t',
 }
 
 export const handles = {
@@ -25,6 +26,7 @@ export const navbarSocialLinks = [
   { href: '/resume', icon: 'i-ph:file-pdf-duotone', label: 'Resume' },
   { href: socials.github, icon: 'i-ph:github-logo-duotone', label: 'GitHub' },
   { href: socials.twitter, icon: 'i-ph:x-logo-duotone', label: 'Twitter' },
+  { href: socials.discord, icon: 'i-ph:discord-logo-duotone', label: 'Discord' },
 ]
 
 export const contactLinks = [
@@ -32,6 +34,7 @@ export const contactLinks = [
   { title: 'GitHub', href: socials.github },
   { title: 'Twitter', href: socials.twitter },
   { title: 'LinkedIn', href: socials.linkedin },
+  { title: 'Discord', href: socials.discord },
   { title: 'hi@rettend.me', href: `mailto:${person.email}` },
 ]
 
