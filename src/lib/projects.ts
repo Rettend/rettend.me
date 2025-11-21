@@ -79,7 +79,8 @@ export const projects: Project[] = [
     name: 'llm',
     description: 'LLM registry for the AI SDK that auto-updates from Artificial Analysis',
     githubUrl: 'https://github.com/Rettend/llm',
-    tags: ['TypeScript', 'Elysia', 'AI SDK', 'Cloudflare'],
+    tags: ['Elysia', 'AI SDK', 'Cloudflare Cron', 'Cloudflare KV'],
+    hiddenTags: ['TypeScript'],
     category: 'Packages',
   },
   {
@@ -110,11 +111,11 @@ export const projects: Project[] = [
   {
     name: 'ZZZ Pull Planner',
     description: 'Tool to calculate your pull strategy in Zenless Zone Zero',
-    url: 'https://zzz-pull-planner.rettend.workers.dev',
+    url: 'https://zzz.rettend.me',
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
-    tags: ['SolidJS', 'TypeScript', 'UnoCSS', 'Iconify'],
+    tags: ['SolidJS', 'Cloudflare R2', 'Cloudflare D1', 'Cloudflare Cron'],
+    hiddenTags: ['TypeScript', 'UnoCSS', 'Iconify'],
     category: 'Apps',
-    resume: false,
   },
   {
     name: 'the-stack',
