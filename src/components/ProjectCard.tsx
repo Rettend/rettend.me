@@ -16,7 +16,7 @@ export function ProjectCard(props: ProjectCardProps) {
       <div class="flex flex-grow flex-col p-6">
         <div class="flex items-start justify-between">
           <div class="flex flex-row gap-1">
-            <h3 class="pr-4 text-lg font-semibold leading-none tracking-tight">{props.project.name}</h3>
+            <h3 class="h-8 pr-4 text-lg font-semibold leading-none tracking-tight">{props.project.name}</h3>
             <Show when={props.project.team && props.project.team > 1}>
               <div class="h-fit flex items-center gap-1 border rounded-full px-2.5 py-0.5 text-xs font-semibold">
                 <span class="i-ph:users-duotone size-4" />
@@ -45,7 +45,9 @@ export function ProjectCard(props: ProjectCardProps) {
             </Show>
           </div>
         </div>
-        <p class="mt-2 flex-grow text-sm text-muted-foreground">{props.project.description}</p>
+        <p class="mt-2 min-h-5 flex-grow text-sm text-muted-foreground">
+          {props.project.description}
+        </p>
 
         <div class="mt-4 flex flex-wrap items-center gap-2">
           <For each={props.project.tags}>
