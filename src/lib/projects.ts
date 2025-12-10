@@ -139,7 +139,7 @@ export const projects: Project[] = [
     url: 'https://zzz.rettend.me',
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
     tags: ['SolidJS', 'Cloudflare D1', 'Cloudflare Cron'],
-    hiddenTags: ['TypeScript', 'Cloudflare R2', 'UnoCSS', 'Iconify'],
+    hiddenTags: ['TypeScript', 'Drizzle', 'Cloudflare R2', 'UnoCSS', 'Iconify'],
     category: 'Apps',
   },
   {
@@ -165,15 +165,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/eemoji',
     tags: ['TypeScript'],
     category: 'CLI',
-  },
-  {
-    name: 'github-projects-milestone-progress',
-    description: 'Progress bar for milestones in GitHub Projects',
-    url: 'https://chromewebstore.google.com/detail/github-projects-milestone/midibmobbnmmbneompmcdkpjilddkjmd',
-    githubUrl: 'https://github.com/Rettend/github-projects-milestone-progress',
-    tags: ['TypeScript'],
-    category: 'Web Extensions',
-    resume: false,
   },
   {
     name: 'vscode-copy-open-files',
