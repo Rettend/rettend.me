@@ -3,7 +3,7 @@ if (import.meta.env.DEV) {
   const active = () => !!scroller && location.pathname.startsWith('/posts')
   const key = () => `dev-scroll:${location.pathname}${location.search}`
 
-  const read = (): { x?: number; y?: number } => {
+  const read = (): { x?: number, y?: number } => {
     try {
       return JSON.parse(sessionStorage.getItem(key()) || '{}')
     } catch {

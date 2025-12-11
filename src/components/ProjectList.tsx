@@ -10,7 +10,7 @@ interface ProjectListProps {
 }
 
 export function ProjectList(props: ProjectListProps) {
-  const allProjectTags = untrack(() => props.projects.flatMap(p => [...p.tags, ...(p.hiddenTags ?? [])]))
+  const allProjectTags = untrack(() => props.projects.flatMap(p => p.tags))
 
   const tagCounts = allProjectTags.reduce((acc, tag) => {
     acc[tag] = (acc[tag] || 0) + 1
@@ -32,7 +32,7 @@ export function ProjectList(props: ProjectListProps) {
 
     const tags = new Set(selectedTags())
     return props.projects.filter(p =>
-      [...p.tags, ...(p.hiddenTags ?? [])].some(tag => tags.has(tag)),
+      p.tags.some(tag => tags.has(tag)),
     )
   })
 

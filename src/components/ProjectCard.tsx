@@ -1,8 +1,7 @@
 import type { Project } from '~/lib/projects'
-import { For, Show } from 'solid-js'
+import { Show } from 'solid-js'
+import { DynamicTags } from '~/components/DynamicTags'
 import Link from '~/components/Link'
-
-import { Popover, PopoverContent, PopoverTrigger } from '~/components/ui/popover'
 import { cn } from '~/lib/utils'
 
 interface ProjectCardProps {
@@ -49,25 +48,7 @@ export function ProjectCard(props: ProjectCardProps) {
           {props.project.description}
         </p>
 
-        <div class="mt-4 flex flex-wrap items-center gap-2">
-          <For each={props.project.tags}>
-            {tag => <div class="border rounded-full px-2.5 py-0.5 text-xs font-semibold">{tag}</div>}
-          </For>
-          <Show when={props.project.hiddenTags && props.project.hiddenTags.length > 0}>
-            <Popover>
-              <PopoverTrigger class="flex">
-                <span class="i-ph:dots-three-outline-fill size-5" />
-              </PopoverTrigger>
-              <PopoverContent>
-                <div class="max-w-60 w-fit flex flex-wrap justify-center gap-2">
-                  <For each={props.project.hiddenTags}>
-                    {tag => <div class="border rounded-full px-2.5 py-0.5 text-xs font-semibold">{tag}</div>}
-                  </For>
-                </div>
-              </PopoverContent>
-            </Popover>
-          </Show>
-        </div>
+        <DynamicTags tags={props.project.tags} class="mt-4" />
       </div>
     </div>
   )
