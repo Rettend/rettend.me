@@ -106,6 +106,13 @@ export const projects: Project[] = [
     category: 'Packages',
   },
   {
+    name: 'shadcn-map',
+    description: 'shadcn style Map component for Svelte',
+    githubUrl: 'https://github.com/Rettend/shadcn-map',
+    tags: ['TypeScript', 'Svelte', 'Shadcn', 'Protomaps', 'MapLibre GL', 'UnoCSS'],
+    category: 'Packages',
+  },
+  {
     name: 'start-typed-routes',
     description: 'Add strong types to SolidStart routes',
     githubUrl: 'https://github.com/Rettend/start-typed-routes',
@@ -158,6 +165,14 @@ export const projects: Project[] = [
     tags: ['TypeScript'],
     category: 'VSCode Extensions',
     resume: false,
+  },
+  {
+    name: 'GitButler Fork',
+    description: 'I added a ton of features and Windows fixes',
+    githubUrl: 'https://github.com/Rettend/gitbutler',
+    tags: ['TypeScript', 'Svelte', 'Tauri'],
+    category: 'Forks',
+    resume: true,
   },
   {
     name: 'GitHub Desktop Fork',
