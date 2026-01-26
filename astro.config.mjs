@@ -1,5 +1,4 @@
 // @ts-check
-
 import mdx from '@astrojs/mdx'
 import SolidJS from '@astrojs/solid-js'
 import { defineConfig } from 'astro/config'
