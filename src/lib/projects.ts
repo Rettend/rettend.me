@@ -38,10 +38,12 @@ export const projects: Project[] = [
     category: 'Current Focus',
   },
   {
-    name: 'Stealth App',
-    description: '',
+    name: 'Splaash',
+    description: 'Saas for companies and car washes to manage their operations',
+    url: 'https://splaash.hu/',
     tags: ['Svelte', 'Gau', 'Tauri', 'Turso', 'Lin', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
-    category: 'Current Focus',
+    category: 'Apps',
+    team: 2,
   },
   {
     name: 'ARCO',
