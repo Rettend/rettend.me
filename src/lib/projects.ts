@@ -177,12 +177,12 @@ export const projects: Project[] = [
     resume: true,
   },
   {
-    name: 'GitHub Desktop Fork',
-    description: 'I added Secondary and Third Editor options',
-    githubUrl: 'https://github.com/Rettend/desktop',
-    tags: ['TypeScript'],
+    name: 'Cloudflare Agents Fork',
+    description: 'Added SolidJS integration',
+    githubUrl: 'https://github.com/Rettend/agents',
+    tags: ['TypeScript', 'Solid', 'Cloudflare DO', 'Cloudflare Workers'],
     category: 'Forks',
-    resume: false,
+    resume: true,
   },
   {
     name: 'Pinia Generic',
