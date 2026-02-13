@@ -19,7 +19,7 @@ export const projects: Project[] = [
     name: 'Yuo 2.0',
     description: 'End-to-end LLM-powered language learning app',
     url: 'https://yuo.rettend.workers.dev',
-    tags: ['SolidJS', 'Gau', 'Turso', 'Cloudflare Agents', 'TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
+    tags: ['SolidJS', 'Gau', 'Turso', 'Agents', 'TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
     category: 'Current Focus',
   },
   {
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     description: 'Personal everything app: llm chat, todo list',
     url: 'https://oneday.rettend.workers.dev',
     githubUrl: 'https://github.com/Rettend/oneday',
-    tags: ['SolidJS', 'Gau', 'Tauri', 'Cloudflare Agents', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK', 'Turso'],
+    tags: ['SolidJS', 'Gau', 'Tauri', 'Agents', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK', 'Turso'],
     category: 'Current Focus',
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     name: 'Bun Test UI',
     description: 'Test runner UI for Bun, similar to Vitest UI',
     githubUrl: 'https://github.com/Rettend/bun-test-ui',
-    tags: ['TypeScript', 'SolidJS', 'UnoCSS', 'Bun Bake', 'Bun'],
+    tags: ['TypeScript', 'SolidJS', 'UnoCSS', 'Bake', 'Bun'],
     category: 'Packages',
   },
   {
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     description: 'LLM registry for AI SDK that auto-updates from Artificial Analysis',
     url: 'https://llm.rettend.me/openapi',
     githubUrl: 'https://github.com/Rettend/llm',
-    tags: ['Elysia', 'Cloudflare Cron', 'Cloudflare KV', 'TypeScript', 'AI SDK'],
+    tags: ['Elysia', 'Cron', 'KV', 'TypeScript', 'AI SDK'],
     category: 'Packages',
   },
   {
@@ -134,7 +134,14 @@ export const projects: Project[] = [
     description: 'Automated tool to calculate your pull strategy for Zenless Zone Zero',
     url: 'https://zzz.rettend.me',
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
-    tags: ['SolidJS', 'Cloudflare D1', 'Cloudflare Cron', 'TypeScript', 'Drizzle', 'Cloudflare R2', 'UnoCSS', 'Iconify'],
+    tags: ['SolidJS', 'Cloudflare D1', 'Cron', 'TypeScript', 'Drizzle', 'R2', 'UnoCSS', 'Iconify'],
+    category: 'Apps',
+  },
+  {
+    name: 'CivUp',
+    description: 'Champ select for Civ VI that\'s a Discord Activity',
+    githubUrl: 'https://github.com/Rettend/civup',
+    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'Cloudflare D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Apps',
   },
   {
@@ -177,10 +184,10 @@ export const projects: Project[] = [
     resume: true,
   },
   {
-    name: 'Cloudflare Agents Fork',
+    name: 'Agents Fork',
     description: 'Added SolidJS integration',
     githubUrl: 'https://github.com/Rettend/agents',
-    tags: ['TypeScript', 'Solid', 'Cloudflare DO', 'Cloudflare Workers'],
+    tags: ['TypeScript', 'Solid', 'DO', 'Workers'],
     category: 'Forks',
     resume: true,
   },

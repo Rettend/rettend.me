@@ -13,6 +13,19 @@ const DEFAULT_CONTAINER_WIDTH = 352
 const MORE_BUTTON_WIDTH = 28
 const GAP = 8
 
+const TAG_TOOLTIP: Record<string, string> = {
+  'KV': 'Cloudflare KV',
+  'D1': 'Cloudflare D1',
+  'R2': 'Cloudflare R2',
+  'DO': 'Cloudflare DO',
+  'Workers': 'Cloudflare Workers',
+  'Agents': 'Cloudflare Agents',
+  'Cron': 'Cloudflare Cron',
+  'Bake': 'Bun Bake',
+  'AI SDK': 'Vercel AI SDK',
+  'Embedded App SDK': 'Discord Embedded App SDK',
+}
+
 function estimateTagWidth(tag: string): number {
   return TAG_PADDING + (tag.length * CHAR_WIDTH)
 }
@@ -76,7 +89,10 @@ export function DynamicTags(props: DynamicTagsProps) {
         <div class={props.showAll ? 'contents' : 'min-w-0 flex flex-1 items-center gap-2'}>
           <For each={visibleTags()}>
             {tag => (
-              <span class="whitespace-nowrap border rounded-full px-2.5 py-0.5 text-xs font-semibold">
+              <span 
+                class="whitespace-nowrap border rounded-full px-2.5 py-0.5 text-xs font-semibold"
+                title={TAG_TOOLTIP[tag]}
+              >
                 {tag}
               </span>
             )}
@@ -90,7 +106,7 @@ export function DynamicTags(props: DynamicTagsProps) {
             <PopoverContent>
               <div class="max-w-60 w-fit flex flex-wrap justify-center gap-2">
                 <For each={hiddenTags()}>
-                  {tag => <span class="border rounded-full px-2.5 py-0.5 text-xs font-semibold">{tag}</span>}
+                  {tag => <span class="border rounded-full px-2.5 py-0.5 text-xs font-semibold" title={TAG_TOOLTIP[tag]}>{tag}</span>}
                 </For>
               </div>
             </PopoverContent>
