@@ -134,14 +134,14 @@ export const projects: Project[] = [
     description: 'Automated tool to calculate your pull strategy for Zenless Zone Zero',
     url: 'https://zzz.rettend.me',
     githubUrl: 'https://github.com/Rettend/zzz-pull-planner',
-    tags: ['SolidJS', 'Cloudflare D1', 'Cron', 'TypeScript', 'Drizzle', 'R2', 'UnoCSS', 'Iconify'],
+    tags: ['SolidJS', 'D1', 'Cron', 'TypeScript', 'Drizzle', 'R2', 'UnoCSS', 'Iconify'],
     category: 'Apps',
   },
   {
     name: 'CivUp',
     description: 'Champ select for Civ VI that\'s a Discord Activity',
     githubUrl: 'https://github.com/Rettend/civup',
-    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'Cloudflare D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
+    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Apps',
   },
   {
