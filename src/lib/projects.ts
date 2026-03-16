@@ -23,10 +23,10 @@ export const projects: Project[] = [
     category: 'Current Focus',
   },
   {
-    name: 'Yuo',
-    description: 'Language learning app that lets you create your own lessons using LLMs',
-    url: 'https://yuo.app',
-    tags: ['SolidJS', 'Auth.js', 'SQLite WASM', 'Turso', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
+    name: 'CivUp',
+    description: 'Draft bot for Civ VI inside a Discord Activity',
+    githubUrl: 'https://github.com/Rettend/civup',
+    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Apps',
   },
   {
@@ -138,10 +138,10 @@ export const projects: Project[] = [
     category: 'Apps',
   },
   {
-    name: 'CivUp',
-    description: 'Champ select for Civ VI that\'s a Discord Activity',
-    githubUrl: 'https://github.com/Rettend/civup',
-    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
+    name: 'Yuo',
+    description: 'Language learning app that lets you create your own lessons using LLMs',
+    url: 'https://yuo.app',
+    tags: ['SolidJS', 'Auth.js', 'SQLite WASM', 'Turso', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
     category: 'Apps',
   },
   {
