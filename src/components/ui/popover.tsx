@@ -5,6 +5,22 @@ import { Dynamic, Portal } from 'solid-js/web'
 import { cn } from '~/lib/utils'
 
 type Placement = 'top' | 'bottom' | 'left' | 'right'
+type HandlerEvent<T extends HTMLElement, E extends Event> = Parameters<JSX.EventHandler<T, E>>[0]
+
+function callEventHandler<T extends HTMLElement, E extends Event>(
+  handler: JSX.EventHandlerUnion<T, E> | undefined,
+  event: HandlerEvent<T, E>,
+) {
+  if (!handler)
+    return
+
+  if (typeof handler === 'function') {
+    handler(event)
+    return
+  }
+
+  handler[0](handler[1], event)
+}
 
 interface PopoverContextValue {
   open: () => boolean
@@ -223,11 +239,11 @@ function PopoverContent(props: PopoverContentProps) {
           }}
           onMouseEnter={(event) => {
             ctx.cancelTimers()
-            local.onMouseEnter?.(event)
+            callEventHandler(local.onMouseEnter, event)
           }}
           onMouseLeave={(event) => {
             ctx.closeSoon()
-            local.onMouseLeave?.(event)
+            callEventHandler(local.onMouseLeave, event)
           }}
           {...others}
         >
@@ -259,18 +275,18 @@ function PopoverTrigger(props: PopoverTriggerProps) {
       type={component() === 'button' ? 'button' : undefined}
       aria-expanded={ctx.open()}
       class={cn('focus-visible:outline-none', local.class)}
-      onClick={(event: MouseEvent) => {
+      onClick={(event: HandlerEvent<HTMLElement, MouseEvent>) => {
         ctx.cancelTimers()
         ctx.setOpen(!ctx.open())
-        local.onClick?.(event)
+        callEventHandler(local.onClick, event)
       }}
-      onMouseEnter={(event: MouseEvent) => {
+      onMouseEnter={(event: HandlerEvent<HTMLElement, MouseEvent>) => {
         ctx.openSoon()
-        local.onMouseEnter?.(event)
+        callEventHandler(local.onMouseEnter, event)
       }}
-      onMouseLeave={(event: MouseEvent) => {
+      onMouseLeave={(event: HandlerEvent<HTMLElement, MouseEvent>) => {
         ctx.closeSoon()
-        local.onMouseLeave?.(event)
+        callEventHandler(local.onMouseLeave, event)
       }}
       {...others}
     >
