@@ -6,7 +6,7 @@ import pp from '~/assets/pp.png'
 import { getImage, Image } from 'astro:assets'
 import pkg from '../../package.json'
 import { person, socials, interests, handles } from '~/lib/constants'
-import { getEntry } from 'astro:content'
+import { getEntry, render } from 'astro:content'
 
 const optimizedPP = await getImage({
   src: pp,
@@ -17,7 +17,7 @@ const optimizedPP = await getImage({
 const buildId = pkg.version
 const entry = await getEntry('sections', 'intro')
 if (!entry) throw new Error('Intro section not found')
-const { Content: Intro } = await entry.render()
+const { Content: Intro } = await render(entry)
 ---
 
 <Layout>
