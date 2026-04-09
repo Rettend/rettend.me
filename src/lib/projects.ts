@@ -16,25 +16,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'Yuo 2.0',
-    description: 'End-to-end LLM-powered language learning app',
-    url: 'https://yuo.rettend.workers.dev',
-    tags: ['SolidJS', 'Gau', 'Turso', 'Agents', 'TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
-    category: 'Current Focus',
-  },
-  {
     name: 'CivUp',
     description: 'Draft bot for Civ VI inside a Discord Activity',
     githubUrl: 'https://github.com/Rettend/civup',
     tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
-    category: 'Apps',
+    category: 'Current Focus',
   },
   {
-    name: 'Oneday',
-    description: 'Personal everything app: llm chat, todo list',
-    url: 'https://oneday.rettend.workers.dev',
-    githubUrl: 'https://github.com/Rettend/oneday',
-    tags: ['SolidJS', 'Gau', 'Tauri', 'Agents', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK', 'Turso'],
+    name: 'Yuo 2.0',
+    description: 'End-to-end LLM-powered language learning app',
+    url: 'https://yuo.rettend.workers.dev',
+    tags: ['SolidJS', 'Gau', 'Turso', 'Agents', 'TypeScript', 'Tauri', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK'],
     category: 'Current Focus',
   },
   {
@@ -106,6 +98,14 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/starlight-plugin-icons',
     tags: ['Astro', 'Starlight', 'UnoCSS', 'TypeScript', 'Iconify'],
     category: 'Packages',
+  },
+  {
+    name: 'Oneday',
+    description: 'Personal everything app: llm chat, todo list',
+    url: 'https://oneday.rettend.workers.dev',
+    githubUrl: 'https://github.com/Rettend/oneday',
+    tags: ['SolidJS', 'Gau', 'Tauri', 'Agents', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify', 'AI SDK', 'Turso'],
+    category: 'Current Focus',
   },
   {
     name: 'shadcn-map',
