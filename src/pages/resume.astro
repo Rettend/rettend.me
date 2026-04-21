@@ -1,6 +1,6 @@
 ---
 import ResumeLayout from '../layouts/ResumeLayout.astro'
-import { projects, categoryOrder, type Project } from '../lib/projects'
+import { projects, resumeCategoryOrder, type Project, type ResumeCategory } from '../lib/projects'
 import { education } from '../lib/education'
 import { experience } from '../lib/experience'
 import { Button } from '~/components/ui/button'
@@ -8,14 +8,15 @@ import Link from '~/components/Link'
 import { person, contactLinks, languages, tagline } from '~/lib/constants'
 
 const included = projects.filter((p) => p.resume !== false)
+const getResumeCategory = (project: Project): ResumeCategory => typeof project.resume === 'string' ? project.resume : project.category
 
-const grouped = categoryOrder.reduce(
+const grouped = resumeCategoryOrder.reduce(
   (acc, cat) => {
-    const list = included.filter((p) => p.category === cat)
+    const list = included.filter((p) => getResumeCategory(p) === cat)
     if (list.length) acc.push({ category: cat, items: list })
     return acc
   },
-  [] as { category: (typeof categoryOrder)[number]; items: Project[] }[],
+  [] as { category: ResumeCategory; items: Project[] }[],
 )
 
 const allTags = included.flatMap((p) => p.tags)
@@ -121,7 +122,6 @@ const sortedTags = Object.entries(tagCounts)
           }
         </ul>
       </section>
-
       <section class="mt-10 resume-skills">
         <h2 class="section-title text-xl font-semibold">Technologies</h2>
         <div class="skills-list mt-3 flex flex-wrap gap-2 text-sm">
@@ -150,6 +150,9 @@ const sortedTags = Object.entries(tagCounts)
                         <span>{p.name}</span>
                       </div>
                       <div class="text-xs text-foreground/60 whitespace-nowrap flex items-center gap-2">
+                        {p.period && (
+                          <span class="font-mono tabular-nums">{p.period}</span>
+                        )}
                         {p.url && (
                           <span>
                             <Link href={p.url} external variant="underline" class="text-xs">
@@ -167,6 +170,7 @@ const sortedTags = Object.entries(tagCounts)
                       </div>
                     </div>
                     <p class="mt-1 text-sm text-muted-foreground">{p.description}</p>
+                    {p.highlights && <p class="mt-1.5 text-sm text-muted-foreground/80 border-l-2 border-foreground/15 pl-2.5">{p.highlights}</p>}
                     <div class="tags-list mt-2 text-xs text-foreground/70 flex flex-wrap gap-1.5">
                       {p.tags.map((tag) => (
                         <span class="border rounded-full px-2 py-0.5">{tag}</span>

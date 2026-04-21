@@ -1,5 +1,7 @@
 export const categoryOrder = ['Current Focus', 'Apps', 'Packages', 'CLI', 'Sites', 'Web Extensions', 'VSCode Extensions', 'Starter Templates', 'Contributions', 'Forks', 'Past'] as const
 export type Category = typeof categoryOrder[number]
+export const resumeCategoryOrder = ['Freelance', ...categoryOrder] as const
+export type ResumeCategory = typeof resumeCategoryOrder[number]
 
 export interface Project {
   name: string
@@ -11,16 +13,20 @@ export interface Project {
   category: Category
   image?: string
   team?: number
-  resume?: boolean
+  resume?: ResumeCategory | false
+  highlights?: string
+  period?: string
 }
 
 export const projects: Project[] = [
   {
     name: 'CivUp',
     description: 'Draft bot for Civ VI inside a Discord Activity',
+    url: 'https://discord.gg/pTBUz4bgfR',
     githubUrl: 'https://github.com/Rettend/civup',
     tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Current Focus',
+    highlights: 'Used by PPL, a 2,000-member competitive Civ VI Discord server, with ~300 weekly active users and ~50 drafts completed daily. Built to handle up to ~200 drafts/day on Cloudflare\'s free tier.',
   },
   {
     name: 'Yuo 2.0',
@@ -36,6 +42,8 @@ export const projects: Project[] = [
     tags: ['Svelte', 'Gau', 'Tauri', 'Turso', 'Lin', 'TypeScript', 'Drizzle', 'Shadcn', 'UnoCSS', 'Iconify'],
     category: 'Apps',
     team: 2,
+    resume: 'Freelance',
+    period: '2025-2026',
   },
   {
     name: 'ARCO',
@@ -181,7 +189,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/gitbutler',
     tags: ['TypeScript', 'Svelte', 'Tauri'],
     category: 'Forks',
-    resume: true,
   },
   {
     name: 'Agents Fork',
@@ -189,7 +196,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Rettend/agents',
     tags: ['TypeScript', 'Solid', 'DO', 'Workers'],
     category: 'Forks',
-    resume: true,
   },
   {
     name: 'Pinia Generic',
@@ -240,6 +246,8 @@ export const projects: Project[] = [
     tags: ['Astro', 'Vue', 'UnoCSS', 'Shadcn', 'Astro DB', 'TypeScript', 'Drizzle', 'Iconify'],
     category: 'Sites',
     team: 2,
+    resume: 'Freelance',
+    period: '2024',
   },
   {
     name: 'Safari Game',
