@@ -31,6 +31,9 @@ const sortedTags = Object.entries(tagCounts)
   .sort(([, a], [, b]) => b - a)
   .map(([tag, count]) => ({ tag, count }))
   .filter(({ count }) => count >= 2)
+
+const pplDiscordUrl = 'https://discord.gg/QpSvkQsTXE'
+const pplHighlightPrefix = 'Used by PPL'
 ---
 
 <ResumeLayout>
@@ -170,7 +173,19 @@ const sortedTags = Object.entries(tagCounts)
                       </div>
                     </div>
                     <p class="mt-1 text-sm text-muted-foreground">{p.description}</p>
-                    {p.highlights && <p class="mt-1.5 text-sm text-muted-foreground/80 border-l-2 border-foreground/15 pl-2.5">{p.highlights}</p>}
+                    {p.highlights && (
+                      <p class="mt-1.5 text-sm text-muted-foreground/80 border-l-2 border-foreground/15 pl-2.5">
+                        {p.highlights.startsWith(pplHighlightPrefix)
+                          ? (
+                            <>
+                              Used by
+                              {' '}
+                              <Link href={pplDiscordUrl} external variant="underline">PPL</Link>{p.highlights.slice(pplHighlightPrefix.length)}
+                            </>
+                            )
+                          : p.highlights}
+                      </p>
+                    )}
                     <div class="tags-list mt-2 text-xs text-foreground/70 flex flex-wrap gap-1.5">
                       {p.tags.map((tag) => (
                         <span class="border rounded-full px-2 py-0.5">{tag}</span>
