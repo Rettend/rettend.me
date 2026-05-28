@@ -24,9 +24,9 @@ export const projects: Project[] = [
     description: 'Draft bot for Civ VI inside a Discord Activity',
     url: 'https://discord.gg/pTBUz4bgfR',
     githubUrl: 'https://github.com/Rettend/civup',
-    tags: ['SolidJS', 'Embedded App SDK', 'Partykit', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
+    tags: ['SolidJS', 'Embedded App SDK', 'Partyserver', 'discord-hono', 'Workers', 'KV', 'D1', 'Hono', 'TypeScript', 'Drizzle', 'UnoCSS'],
     category: 'Current Focus',
-    highlights: 'Used by PPL, a 2,000-member competitive Civ VI Discord server, with ~300 weekly active users and ~50 drafts completed daily. Built to handle up to ~200 drafts/day on Cloudflare\'s free tier.',
+    highlights: 'Used by PPL, a 2,400-member competitive Civ VI Discord server, with ~400 weekly active users and ~60 drafts completed daily. Built to handle up to ~300 drafts/day on Cloudflare\'s free tier.',
   },
   {
     name: 'Yuo 2.0',
