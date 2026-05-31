@@ -28,6 +28,7 @@
     "@antfu/eslint-config": "^9.0.0",
     "@iconify-json/ph": "^1.2.2",
     "@typescript/native-preview": "^7.0.0-dev.20260527.2",
+    "@unocss/astro": "66.7.0",
     "@unocss/eslint-plugin": "^66.7.0",
     "@unocss/reset": "^66.7.0",
     "astro-eslint-parser": "^1.4.0",
